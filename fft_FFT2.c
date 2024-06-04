@@ -8,13 +8,19 @@ int fft_FFT2(fixed fr[], fixed fi[], int m, int inverse)
 
     fixed qr,qi;		//even input
     fixed tr,ti;		//odd input
+    fixed ur,ui;		//even output
+    fixed vr,vi;		//odd output
     fixed wr,wi;		//twiddle factor
-    WUR_a_r((signed)tr);
-    WUR_a_i((signed)ti);
-    WUR_b_r((signed)qr);
-    WUR_b_i((signed)qi);
-    WUR_w_r((signed)wr);
-    WUR_w_i((signed)wi);
+    WUR_a_r(tr);
+    WUR_a_i(ti);
+    WUR_b_r(qr);
+    WUR_b_i(qi);
+    WUR_u_r(ur);
+    WUR_u_i(ui);
+    WUR_v_r(vr);
+    WUR_v_i(vi);
+    WUR_w_r(wr);
+    WUR_w_i(wi);
 
     //number of input data
     n = 1<<m;
@@ -94,7 +100,6 @@ int fft_FFT2(fixed fr[], fixed fi[], int m, int inverse)
                 wi >>= 1;
             }
 
-            FFT_2_w_LD();
             for(i=m; i<n; i+=istep)
             {
 
@@ -115,10 +120,10 @@ int fft_FFT2(fixed fr[], fixed fi[], int m, int inverse)
                 FFT_2_f_LD();
 
                 FFT_2_FFT();
-                fr[j] = tr;
-                fi[j] = ti;
-                fr[i] = qr;
-                fi[i] = qi;
+                fr[j] = ur;
+                fi[j] = ui;
+                fr[i] = vr;
+                fi[i] = vi;
             }
         }
         --k;
