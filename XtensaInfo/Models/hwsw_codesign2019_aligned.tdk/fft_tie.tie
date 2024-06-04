@@ -1,0 +1,128 @@
+
+package "fft_tie" ""
+
+
+
+
+
+operation FFT_SIMPLE_MUL {out AR c, in AR a, in AR b}{}
+{
+	wire [31:0] product = TIEmul(a[31:0],b[31:0],1'b1); // signed multiplication
+	assign c = product;         // accumulation
+}
+
+/*
+ * Complex mult
+ */
+
+operation FFT_COM_MUL {inout AR a_r, in AR b_r, inout AR a_i, in AR b_i}{}
+{
+	wire [31:0] product1r = TIEmul(a_r[15:0],b_r[15:0],1'b1); // signed multiplication
+	wire [31:0] product2r = TIEmul(a_r[15:0],b_i[15:0],1'b1); // signed multiplication
+	wire [31:0] product1i = TIEmul(a_i[15:0],b_i[15:0],1'b1); // signed multiplication
+	wire [31:0] product2i = TIEmul(a_i[15:0],b_r[15:0],1'b1); // signed multiplication
+	assign a_r = product1r[30:15] - product1i[30:15];
+	assign a_i = product2r[30:15] + product2i[30:15];
+}
+
+
+
+state w_r		16 add_read_write
+state w_i		16 add_read_write
+
+
+
+state a_r		16 add_read_write
+state a_i		16 add_read_write
+state b_r		16 add_read_write
+state b_i		16 add_read_write
+state u_r		16 add_read_write
+state u_i		16 add_read_write
+state v_r		16 add_read_write
+state v_i		16 add_read_write
+state q_r		16 add_read_write
+state q_i		16 add_read_write
+
+operation FFT_2_f_LD {}
+			{in b_r, in b_i, out q_r, out q_i}
+{
+	
+	assign q_r = b_r;
+	assign q_i = b_i;
+}
+
+function [31:0]COMPLEX_MUL ([15:0] a_r, [15:0] b_r, [15:0] a_i, [15:0] b_i)
+{
+	wire [31:0] product1r = TIEmul(a_r[15:0],b_r[15:0],1'b1); // signed multiplication
+	wire [31:0] product2r = TIEmul(a_r[15:0],b_i[15:0],1'b1); // signed multiplication
+	wire [31:0] product1i = TIEmul(a_i[15:0],b_i[15:0],1'b1); // signed multiplication
+	wire [31:0] product2i = TIEmul(a_i[15:0],b_r[15:0],1'b1); // signed multiplication
+	wire [15:0] mult1 = product1r[30:15] - product1i[30:15];
+	wire [15:0] mult2 = product2r[30:15] + product2i[30:15];
+	assign COMPLEX_MUL = {mult2, mult1};
+}
+
+operation FFT_2_FFT {}{in a_r, in a_i, in w_r, in w_i, in b_r, in b_i, out u_r, out u_i, out v_r, out v_i}
+{
+
+	wire [31:0] com_mul = COMPLEX_MUL(a_r[15:0], w_r[15:0], a_i[15:0], w_i[15:0]);
+	wire [15:0] t_r = com_mul[15:0];
+	wire [15:0] t_i = com_mul[31:16];
+	
+	assign u_r = b_r - t_r;
+	assign u_i = b_i - t_i;
+	assign v_r = b_r + t_r;
+	assign v_i = b_i + t_i;
+	
+}
+
+schedule FFT_2_FFT_schedule {FFT_2_FFT}{
+	use a_r 1;
+	use a_i 1;
+	use w_r 1;
+	use w_i 1;
+	def u_r 2;
+	def u_i 2;
+	def v_r 2;
+	def v_i 2;
+
+}
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+endpackage "fft_tie"

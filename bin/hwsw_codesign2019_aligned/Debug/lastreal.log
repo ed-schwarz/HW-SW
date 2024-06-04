@@ -1,4 +1,4 @@
-**** Incremental Build [Di, 4 Jun 2024 15:38:45] ****
+**** Incremental Build [Di, 4 Jun 2024 15:46:26] ****
  Project: FFT_HS
  Configuration: hwsw_codesign2019_aligned
  Build Target: Debug
@@ -6,20 +6,20 @@
 Compiling TIE source(s) attached to configuration "hwsw_codesign2019_aligned" ...
 C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/bin/tc --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned -d C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -libdebug   -Y -noerrformat  -name fft_tie C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\XtensaInfo\TIEFiles\fft_tie.tie
 0 error(s), 0 warning(s) 0 message(s)
-Time taken: 10359 ms
+Time taken: 10078 ms
 C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT_HS" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT_HS/fft_mult.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT_HS/bin/hwsw_codesign2019_aligned/Debug/fft_mult.o"
-Time taken: 781 ms
+Time taken: 750 ms
 C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT_HS" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT_HS/main.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT_HS/bin/hwsw_codesign2019_aligned/Debug/main.o"
-Time taken: 797 ms
+Time taken: 781 ms
 C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT_HS" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT_HS/fft_FFT2.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT_HS/bin/hwsw_codesign2019_aligned/Debug/fft_FFT2.o"
-Time taken: 578 ms
+Time taken: 593 ms
 C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT_HS" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT_HS/fft.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT_HS/bin/hwsw_codesign2019_aligned/Debug/fft.o"
-Time taken: 671 ms
+Time taken: 610 ms
 C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xc++ -Wl,@C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT_HS/bin/hwsw_codesign2019_aligned/Debug/objfiles.list -o C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT_HS/bin/hwsw_codesign2019_aligned/Debug/FFT_HS.minsize -mlsp=sim -Wl,-r -nostdlib --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
-Time taken: 297 ms
+Time taken: 282 ms
 C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xc++ -Wl,@C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT_HS/bin/hwsw_codesign2019_aligned/Debug/objfiles.list -o C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT_HS/bin/hwsw_codesign2019_aligned/Debug/FFT_HS -mlsp=sim --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
-Time taken: 453 ms
+Time taken: 532 ms
 ******* ************** *****
 Build successful !!
-Total time taken: 13.516 secs
-**** Build Finished [Di, 4 Jun 2024 15:38:58] ****
+Total time taken: 13.235 secs
+**** Build Finished [Di, 4 Jun 2024 15:46:40] ****
