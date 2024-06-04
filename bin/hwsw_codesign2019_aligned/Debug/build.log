@@ -1,0 +1,16 @@
+**** Incremental Build [Di, 4 Jun 2024 14:31:26] ****
+ Project: FFT_HS
+ Configuration: hwsw_codesign2019_aligned
+ Build Target: Debug
+********************************
+Compiling TIE source(s) attached to configuration "hwsw_codesign2019_aligned" ...
+C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/bin/tc --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned -d C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -libdebug   -Y -noerrformat  -name fft_tie C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\XtensaInfo\TIEFiles\fft_tie.tie
+File: fft_tie.tie, Line: 95, Error: (TIE_SCHED_ILLEGAL_USE_NAME), Illegal use name "com_mul" for instruction(s) "FFT_2_FFT".  A legal use name must be the name of a predefined input variable for the instruction.
+File: fft_tie.tie, Line: 96, Error: (TIE_SCHED_ILLEGAL_USE_NAME), Illegal use name "t_r" for instruction(s) "FFT_2_FFT".  A legal use name must be the name of a predefined input variable for the instruction.
+File: fft_tie.tie, Line: 97, Error: (TIE_SCHED_ILLEGAL_USE_NAME), Illegal use name "t_i" for instruction(s) "FFT_2_FFT".  A legal use name must be the name of a predefined input variable for the instruction.
+File: fft_tie.tie, Line: 100, Error: (TIE_SCHED_ILLEGAL_USE_NAME), Illegal use name "b_r" for instruction(s) "FFT_2_FFT".  A legal use name must be the name of a predefined input variable for the instruction.
+File: fft_tie.tie, Line: 101, Error: (TIE_SCHED_ILLEGAL_USE_NAME), Illegal use name "b_i" for instruction(s) "FFT_2_FFT".  A legal use name must be the name of a predefined input variable for the instruction.
+5 error(s), 0 warning(s) 0 message(s)
+Build error encountered... cannot continue further.
+Total time taken: 2.031 secs
+**** Build Finished [Di, 4 Jun 2024 14:31:28] ****
