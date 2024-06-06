@@ -99,7 +99,8 @@ int fft_FFT2(fixed fr[], fixed fi[], int m, int inverse)
                 wr >>= 1;
                 wi >>= 1;
             }
-
+            WUR_w_r(wr);
+            WUR_w_i(wi);
             for(i=m; i<n; i+=istep)
             {
 
@@ -117,9 +118,20 @@ int fft_FFT2(fixed fr[], fixed fi[], int m, int inverse)
                         qi >>= 1;
                 }
 
+                WUR_a_r(tr);
+                WUR_a_i(ti);
+                WUR_b_r(qr);
+                WUR_b_i(qi);
+
                 FFT_2_f_LD();
 
                 FFT_2_FFT();
+
+                ur = RUR_u_r();
+                ui = RUR_u_i();
+                vr = RUR_v_r();
+                vi = RUR_v_i();
+
                 fr[j] = ur;
                 fi[j] = ui;
                 fr[i] = vr;
