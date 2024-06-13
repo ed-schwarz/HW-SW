@@ -10,11 +10,11 @@ static inline uint32_t BitReverse(uint32_t n) {
 }
 
 uint32_t Prepare_Data(cplx* __restrict const x, const uint32_t N,
-		const uint32_t lg2_N) {
+		const uint32_t lg2_N, const uint32_t a_start) {
 	// Decimate
 	{
 		const uint32_t shift_amount = 32 - lg2_N;
-		uint32_t a = 0;
+		uint32_t a = a_start;
 		uint32_t c = 0;
 		for (; a < N; ++a) {
 			c = a;
@@ -31,17 +31,25 @@ uint32_t Prepare_Data(cplx* __restrict const x, const uint32_t N,
 	return 0;
 }
 
-int fft_FFT8(cplx*__restrict f, int m, int inverse) {
-	int mr, nn, i, j, l, k, istep, n, scale, shift;
+uint32_t Between_Shuffle(cplx* __restrict const x, const uint32_t N,
+		const uint32_t lg2_N, const uint32_t length) {
 
+	int i;
+	for (i = 0; i < length / N; i++) {
+		Prepare_Data(x, N, lg2_N, i * N);
+	}
+}
+
+int fft_FFT8(cplx*__restrict f, int m, int inverse) {
+	int mr, nn, i, j, l, k, r, istep, n, scale, shift;
+	//number of input data
+	n = 1 << m;
 	cplx q; //even input
 	cplx t; //odd input
 	cplx u; //even output
 	cplx v; //odd output
-	cplx w; //twiddle factor
-
-	//number of input data
-	n = 1 << m;
+	cplx w[n / 2]; //twiddle factor
+	uint32_t lg2_l = 0;
 
 	if (n > N_WAVE)
 		return -1;
@@ -49,29 +57,11 @@ int fft_FFT8(cplx*__restrict f, int m, int inverse) {
 	mr = 0;
 	nn = n - 1;
 	scale = 0;
+	r = 0;
 
 	/* decimation in time - re-order data */
 
-	Prepare_Data(f, n, m);
-
-	/*
-	 for(m=1; m<=nn; ++m) {
-	 l = n;
-	 do{
-	 l >>= 1;
-	 }while(mr+l > nn);
-	 mr = (mr & (l-1)) + l;
-
-	 if(mr <= m) continue;
-	 tr = fr[m];
-	 fr[m] = fr[mr];
-	 fr[mr] = tr;
-
-	 ti = fi[m];
-	 fi[m] = fi[mr];
-	 fi[mr] = ti;
-	 }
-	 */
+	Prepare_Data(f, n, m, 0);
 
 	l = 1;
 	k = LOG2_N_WAVE - 1;
@@ -105,53 +95,59 @@ int fft_FFT8(cplx*__restrict f, int m, int inverse) {
 
 		/* it may not be obvious, but the shift will be performed
 		 on each data point exactly once, during this pass. */
+
 		istep = l << 1; //step width of current butterfly
-		for (m = 0; m < l; ++m) {
-			j = m << k;
-			/* 0 <= j < N_WAVE/2 */
-			w.R = Sinewave[j + N_WAVE / 4];
-			w.I = -Sinewave[j];
+		Between_Shuffle(f, l, lg2_l, n);
+		lg2_l += 1;
 
-			if (inverse)
-				w.I = -w.I;
-			if (shift) {
-				w.R >>= 1;
-				w.I >>= 1;
-			}
-			WUR_w_r(w.R);
-			WUR_w_i(w.I);
-			//this loop with TIE instead
-			for (i = m; i < n; i += istep) {
+		while (r < n / 2) {
+			for (m = 0; m < l; ++m) {
+				j = m << k;
+				/* 0 <= j < N_WAVE/2 */
+				w[r].R = Sinewave[j + N_WAVE / 4];
+				w[r].I = -Sinewave[j];
 
-				j = i + l;
-
-				t = f[j];
-				q = f[i];
-
+				if (inverse)
+					w[r].I = -w[r].I;
 				if (shift) {
-					q.R >>= 1;
-					q.I >>= 1;
+					w[r].R >>= 1;
+					w[r].I >>= 1;
 				}
-
-				WUR_a_r(t.R);
-				WUR_a_i(t.I);
-				WUR_b_r(q.R);
-				WUR_b_i(q.I);
-
-				FFT_2_f_LD();
-
-				FFT_2_FFT();
-
-				u.R = RUR_u_r();
-				u.I = RUR_u_i();
-				v.R = RUR_v_r();
-				v.I = RUR_v_i();
-
-				f[j] = u;
-				f[i] = v;
-
+				r++;
 			}
 		}
+
+		for (i = 0; i < n; i += 2) {
+			j = i + 1;
+			WUR_w_r(w[i / 2].R);
+			WUR_w_i(w[i / 2].I);
+			t = f[j];
+			q = f[i];
+
+			if (shift) {
+				q.R >>= 1;
+				q.I >>= 1;
+			}
+
+			WUR_a_r(t.R);
+			WUR_a_i(t.I);
+			WUR_b_r(q.R);
+			WUR_b_i(q.I);
+
+			FFT_2_f_LD();
+
+			FFT_2_FFT();
+
+			u.R = RUR_u_r();
+			u.I = RUR_u_i();
+			v.R = RUR_v_r();
+			v.I = RUR_v_i();
+
+			f[j] = u;
+			f[i] = v;
+		}
+		//this loop with TIE instead
+
 		--k;
 		l = istep;
 	}

@@ -15,18 +15,21 @@ fixed real[N], imag[N], real_fix[N], imag_fix[N], real_mul[N], imag_mul[N];
 static cplx f[N];
 
 #if (FFT_Type==3)
-static cplx fwd_coeffs[N];
+static cplx fwd_coeffs[N/2];
 
-static void Test_SWOpt() {
-	//static cplx fwd_coeffs[N];
 
-	// Generate Input & coefficients
-	{
-		//GenerateComplexSignal(cplx_sig);
-		//GenerateComplexSignal(ref_cplx_sig);
-		GenerateCoefficients(fwd_coeffs, N, false);
-		//GenerateCoefficients(bwd_coeffs, N, true);
-	}
+static void
+Test_SWOpt()
+{
+    //static cplx fwd_coeffs[N];
+
+    // Generate Input & coefficients
+    {
+        //GenerateComplexSignal(cplx_sig);
+        //GenerateComplexSignal(ref_cplx_sig);
+        GenerateCoefficients(fwd_coeffs, N/2, false);
+        //GenerateCoefficients(bwd_coeffs, N, true);
+    }
 }
 #endif
 
@@ -102,11 +105,11 @@ int main() {
 		printf("%d: %d, %d\n", i, real_fix[i], imag_fix[i]);
 	}
 
-	fix_coeffs(real, imag, M, 0, fwd_coeffs);
+	fix_coeffs(real_mul, imag_mul, M, 0, fwd_coeffs);
 
 	printf("\nFFT Coefficients\n");
 	for (i = 0; i < N; i++) {
-		printf("%d: %d, %d\n", i, real[i], imag[i]);
+		printf("%d: %d, %d\n", i, real_mul[i], imag_mul[i]);
 	}
 
 #elif (FFT_Type==4)

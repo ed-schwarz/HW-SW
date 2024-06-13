@@ -18,7 +18,7 @@ export SHELL = cmd
 export PATH = C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\;C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\lib\iss\;C:\WINDOWS\system32
 
 all:
-	cmd /c "cd /D ""C:\\usr\\xtensa\\Xplorer-7.0.7-workspaces\\FFT\\FFT_HS\\bin\\hwsw_codesign2019_aligned\\Debug"" && $(MAKE) all  "
+	cmd /c "cd /D ""C:\\usr\\xtensa\\Xplorer-7.0.7-workspaces\\FFT\\FFT_HW_SW\\bin\\hwsw_codesign2019_aligned\\Debug"" && $(MAKE) all  "
 
 clean:
-	cmd /c "cd /D ""C:\\usr\\xtensa\\Xplorer-7.0.7-workspaces\\FFT\\FFT_HS\\bin\\hwsw_codesign2019_aligned\\Debug"" && $(MAKE) clean  "
+	cmd /c "cd /D ""C:\\usr\\xtensa\\Xplorer-7.0.7-workspaces\\FFT\\FFT_HW_SW\\bin\\hwsw_codesign2019_aligned\\Debug"" && $(MAKE) clean  "

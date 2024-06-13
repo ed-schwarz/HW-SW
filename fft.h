@@ -35,7 +35,9 @@ void GenerateCoefficients(cplx* __restrict out_coeff, const uint32_t N,
 		bool inverse);
 static inline uint32_t BitReverse(uint32_t n);
 uint32_t Prepare_Data(cplx* __restrict const x, const uint32_t N,
-		const uint32_t lg2_N);
+		const uint32_t lg2_N, const uint32_t a_start);
+uint32_t Between_Shuffle(cplx* __restrict const x, const uint32_t N,
+		const uint32_t lg2_N, const uint32_t length);
 int fft_FFT8(cplx*__restrict f, int m, int inverse);
 
 #endif	//FFT_H
