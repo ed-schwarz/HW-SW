@@ -16,7 +16,7 @@ uint32_t Prepare_Data(cplx* __restrict const x, const uint32_t N,
 		const uint32_t shift_amount = 32 - lg2_N;
 		uint32_t a = a_start;
 		uint32_t c = 0;
-		for (; a < N; ++a) {
+		for (; a < N + a_start; ++a) {
 			c = a;
 			FFT_BIT_REVERSE(c);
 			const uint32_t b = c >> shift_amount;
@@ -35,8 +35,10 @@ uint32_t Between_Shuffle(cplx* __restrict const x, const uint32_t N,
 		const uint32_t lg2_N, const uint32_t length) {
 
 	int i;
-	for (i = 0; i < length / N; i++) {
-		Prepare_Data(x, N, lg2_N, i * N);
+	if (N != 2) {
+		for (i = 0; i < length / N; i++) {
+			Prepare_Data(x, N, lg2_N, i * N);
+		}
 	}
 }
 
@@ -97,9 +99,18 @@ int fft_FFT8(cplx*__restrict f, int m, int inverse) {
 		 on each data point exactly once, during this pass. */
 
 		istep = l << 1; //step width of current butterfly
-		Between_Shuffle(f, l, lg2_l, n);
+		printf("\nInput Data Shuffled Before\n");
+		for (i = 0; i < n; i++) {
+			printf("%d: %d, %d\n", i, f[i].R, f[i].I);
+		}
+		printf("%d, %d, %d\n", l*2, lg2_l+1, n);
+		Between_Shuffle(f, l*2, lg2_l+1, n);
+		printf("\nInput Data Shuffled After\n");
+		for (i = 0; i < n; i++) {
+			printf("%d: %d, %d\n", i, f[i].R, f[i].I);
+		}
 		lg2_l += 1;
-
+		r = 0;
 		while (r < n / 2) {
 			for (m = 0; m < l; ++m) {
 				j = m << k;
@@ -115,6 +126,10 @@ int fft_FFT8(cplx*__restrict f, int m, int inverse) {
 				}
 				r++;
 			}
+		}
+		printf("\nCoefficients\n");
+		for (i = 0; i < n / 2; i++) {
+			printf("%d: %d, %d\n", i, w[i].R, w[i].I);
 		}
 
 		for (i = 0; i < n; i += 2) {
