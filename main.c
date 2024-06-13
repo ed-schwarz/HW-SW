@@ -4,14 +4,31 @@
 #include        <stdio.h>
 #include        <math.h>
 
-#define DO_FFT	1
+#define FFT_Type	4
 
 #define M       3
 
 //number of points
 #define N       (1<<M)
 
-fixed real[N], imag[N], real_fix[N], imag_fix[N], real_mul[N], imag_mul[N], real_2[N], imag_2[N];
+fixed real[N], imag[N], real_fix[N], imag_fix[N], real_mul[N], imag_mul[N];
+static cplx f[N];
+
+#if (FFT_Type==3)
+static cplx fwd_coeffs[N];
+
+static void Test_SWOpt() {
+	//static cplx fwd_coeffs[N];
+
+	// Generate Input & coefficients
+	{
+		//GenerateComplexSignal(cplx_sig);
+		//GenerateComplexSignal(ref_cplx_sig);
+		GenerateCoefficients(fwd_coeffs, N, false);
+		//GenerateCoefficients(bwd_coeffs, N, true);
+	}
+}
+#endif
 
 int main() {
 	int i;
@@ -23,52 +40,90 @@ int main() {
 		imag_fix[i] = imag[i];
 		real_mul[i] = real[i];
 		imag_mul[i] = imag[i];
-		real_2[i] = real[i];
-		imag_2[i] = imag[i];
+
+		f[i].R = real[i];
+		f[i].I = imag[i];
 	}
+
+
+#if (FFT_Type==3)
+	Test_SWOpt();
+#endif
 
 	printf("\nInput Data\n");
 	for (i = 0; i < N; i++) {
 		printf("%d: %d, %d\n", i, real[i], imag[i]);
 	}
+	printf("\nInput Data Complex\n");
+		for (i = 0; i < N; i++) {
+			printf("%d: %d, %d\n", i, f[i].R, f[i].I);
+		}
+
 	//FFT
 
-#if (DO_FFT==1)
+#if (FFT_Type==0)
+
+	fix_fft(real, imag, M, 0);
+
+	printf("\nFFT pure C\n");
+	for (i = 0; i < N; i++) {
+		printf("%d: %d, %d\n", i, real[i], imag[i]);
+	}
+
+#elif (FFT_Type==1)
+	fft_mul(real, imag, M, 0);
+
+	printf("\nFFT TIE complex multiplication\n");
+	for (i = 0; i < N; i++) {
+		printf("%d: %d, %d\n", i, real[i], imag[i]);
+	}
+
+#elif (FFT_Type==2)
 
 	fix_fft(real_fix, imag_fix, M, 0);
 
-	printf("\nFFT\n");
-	for (i=0; i<N; i++)
-	{
+	printf("\nFFT pure C\n");
+	for (i = 0; i < N; i++) {
 		printf("%d: %d, %d\n", i, real_fix[i], imag_fix[i]);
 	}
 
-	fft_mul(real_mul, imag_mul, M, 0);
+	fft_FFT2(real_mul, imag_mul, M, 0);
 
-	printf("\nFFT\n");
-	for (i=0; i<N; i++)
-	{
+	printf("\nFFT TIE Node\n");
+	for (i = 0; i < N; i++) {
 		printf("%d: %d, %d\n", i, real_mul[i], imag_mul[i]);
 	}
 
-	fft_FFT2(real_2, imag_2, M, 0);
+#elif (FFT_Type==3)
+	fix_fft(real_fix, imag_fix, M, 0);
 
-	printf("\nFFT\n");
-	for (i=0; i<N; i++)
-	{
-		printf("%d: %d, %d\n", i, real_2[i], imag_2[i]);
+	printf("\nFFT pure C\n");
+	for (i = 0; i < N; i++) {
+		printf("%d: %d, %d\n", i, real_fix[i], imag_fix[i]);
 	}
-#elif (DO_FFT==2)
-	int a_r = 2;
-	int a_i = 0;
-	int b_r = 3;
-	int b_i = 0;
-	FFT_COM_MUL(a_r, b_r, a_i, b_i);
-	printf("%d, %d, %d, %d\n", a_r, b_r, a_i, b_i);
 
-	a_r = 4;
-	FFT_COM_MUL(a_r, b_r, a_i, b_i);
-	printf("%d, %d, %d, %d\n", a_r, b_r, a_i, b_i);
+	fix_coeffs(real, imag, M, 0, fwd_coeffs);
+
+	printf("\nFFT Coefficients\n");
+	for (i = 0; i < N; i++) {
+		printf("%d: %d, %d\n", i, real[i], imag[i]);
+	}
+
+#elif (FFT_Type==4)
+
+	fix_fft(real_fix, imag_fix, M, 0);
+
+	printf("\nFFT pure C\n");
+	for (i = 0; i < N; i++) {
+		printf("%d: %d, %d\n", i, real_fix[i], imag_fix[i]);
+	}
+
+	fft_FFT8(f, M, 0);
+
+	printf("\nFFT TIE Node\n");
+	for (i = 0; i < N; i++) {
+		printf("%d: %d, %d\n", i, f[i].R, f[i].I);
+	}
 
 #else
 
