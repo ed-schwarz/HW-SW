@@ -117,6 +117,8 @@ int fix_coeffs(fixed fr[], fixed fi[], int m, int inverse, const cplx* __restric
            on each data point exactly once, during this pass. */
         istep = l << 1;		//step width of current butterfly
         int c = 0 ;
+        //stepsize = stepsize >> 1;
+
         for(m=0; m<l; ++m)
                {
                    //j = m << k;
@@ -128,8 +130,8 @@ int fix_coeffs(fixed fr[], fixed fi[], int m, int inverse, const cplx* __restric
                    fixed w_r = coeff.R;
                    fixed w_i = coeff.I;
                   // c = c+1;
-                   c = c+stepsize;
-                   stepsize = stepsize <<1;
+                   c = c + stepsize;
+                   //stepsize = stepsize >>1;
                    if(inverse) wi = -wi;
                    if(shift)
                    {
@@ -174,6 +176,7 @@ int fix_coeffs(fixed fr[], fixed fi[], int m, int inverse, const cplx* __restric
                }
                --k;
                l = istep;
+               stepsize = stepsize >> 1;
            }
 
            return scale;

@@ -4,7 +4,7 @@
 #include        <stdio.h>
 #include        <math.h>
 
-#define FFT_Type	4
+#define FFT_Type	3
 
 #define M       3
 
