@@ -42,8 +42,12 @@ uint32_t Between_Shuffle(cplx* __restrict const x, const uint32_t N,
 	}
 }
 
-uint32_t fft_exec(const intptr_t f, const intptr_t w, const uint32_t n) {
+uint32_t fft_exec(const intptr_t f, const intptr_t w, const uint32_t n, int shift) {
 	int i;
+	WUR_ptr_data(f);
+	WUR_ptr_w(w);
+	WUR_n(n);
+	WUR_shift(shift);
 	while (RUR_done() == 0) {
 		for (i = 0; i < 8; i++) {
 			FFT_LOAD_EVEN();
@@ -56,7 +60,6 @@ uint32_t fft_exec(const intptr_t f, const intptr_t w, const uint32_t n) {
 			FFT_STORE_ODD();
 		}
 		FFT_UPDATE();
-
 	}
 }
 

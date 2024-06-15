@@ -128,6 +128,22 @@ int main() {
 		printf("%d: %d, %d\n", i, f[i].R, f[i].I);
 	}
 
+#elif (FFT_Type==5)
+
+	fix_fft(real_fix, imag_fix, M, 0);
+
+	printf("\nFFT pure C\n");
+	for (i = 0; i < N; i++) {
+		printf("%d: %d, %d\n", i, real_fix[i], imag_fix[i]);
+	}
+
+	fft_adv(f, M, 0, fwd_coeffs);
+
+	printf("\nFFT TIE Node\n");
+	for (i = 0; i < N; i++) {
+		printf("%d: %d, %d\n", i, f[i].R, f[i].I);
+	}
+
 #else
 
 	//IFFT
