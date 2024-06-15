@@ -121,7 +121,7 @@ int main() {
 		printf("%d: %d, %d\n", i, real_fix[i], imag_fix[i]);
 	}
 
-	fft_FFT8(f, M, 0);
+	fft_FFT8(f, M, 0, fwd_coeffs);
 
 	printf("\nFFT TIE Node\n");
 	for (i = 0; i < N; i++) {

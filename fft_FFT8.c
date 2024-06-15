@@ -42,7 +42,7 @@ uint32_t Between_Shuffle(cplx* __restrict const x, const uint32_t N,
 	}
 }
 
-int fft_FFT8(cplx*__restrict f, int m, int inverse) {
+int fft_FFT8(cplx*__restrict f, int m, int inverse, const cplx* __restrict coeffs) {
 	int mr, nn, i, j, l, k, r, istep, n, scale, shift;
 	//number of input data
 	n = 1 << m;
@@ -65,108 +65,105 @@ int fft_FFT8(cplx*__restrict f, int m, int inverse) {
 
 	Prepare_Data(f, n, m, 0);
 
-	l = 1;
-	k = LOG2_N_WAVE - 1;
-	while (l < n) {
-		if (inverse) {
-			/* variable scaling, depending upon data */
-			shift = 0;
-			for (i = 0; i < n; ++i) {
-				j = f[i].R;
-				if (j < 0)
-					j = -j;
+    l = 1;
+    k = LOG2_N_WAVE-1;
+    while(l < n)
+    {
+        if(inverse)
+        {
+            /* variable scaling, depending upon data */
+            shift = 0;
+            for(i=0; i<n; ++i)
+            {
+                j = fr[i];
+                if(j < 0) j = -j;
 
-				m = f[i].I;
-				if (m < 0)
-					m = -m;
+                m = fi[i];
+                if(m < 0) m = -m;
 
-				if (j > 16383 || m > 16383) {
-					shift = 1;
-					break;
-				}
-			}
-			if (shift)
-				++scale;
-		} else {
-			/* fixed scaling, for proper normalization -
-			 there will be log2(n) passes, so this
-			 results in an overall factor of 1/n,
-			 distributed to maximize arithmetic accuracy. */
-			shift = 1;
-		}
+                if(j > 16383 || m > 16383)
+                {
+                    shift = 1;
+                    break;
+                }
+            }
+            if(shift) ++scale;
+        }
+        else
+        {
+            /* fixed scaling, for proper normalization -
+               there will be log2(n) passes, so this
+               results in an overall factor of 1/n,
+               distributed to maximize arithmetic accuracy. */
+            shift = 1;
+        }
 
-		/* it may not be obvious, but the shift will be performed
-		 on each data point exactly once, during this pass. */
+        /* it may not be obvious, but the shift will be performed
+           on each data point exactly once, during this pass. */
+        istep = l << 1;		//step width of current butterfly
+        for(m=0; m < n/2; m++){
+        	//m = odd
+        	//m + istep = even
 
-		istep = l << 1; //step width of current butterfly
-		printf("\nInput Data Shuffled Before\n");
-		for (i = 0; i < n; i++) {
-			printf("%d: %d, %d\n", i, f[i].R, f[i].I);
-		}
-		printf("%d, %d, %d\n", l*2, lg2_l+1, n);
-		Between_Shuffle(f, l*2, lg2_l+1, n);
-		printf("\nInput Data Shuffled After\n");
-		for (i = 0; i < n; i++) {
-			printf("%d: %d, %d\n", i, f[i].R, f[i].I);
-		}
-		lg2_l += 1;
-		r = 0;
-		while (r < n / 2) {
-			for (m = 0; m < l; ++m) {
-				j = m << k;
-				/* 0 <= j < N_WAVE/2 */
-				w[r].R = Sinewave[j + N_WAVE / 4];
-				w[r].I = -Sinewave[j];
+        }
 
-				if (inverse)
-					w[r].I = -w[r].I;
-				if (shift) {
-					w[r].R >>= 1;
-					w[r].I >>= 1;
-				}
-				r++;
-			}
-		}
-		printf("\nCoefficients\n");
-		for (i = 0; i < n / 2; i++) {
-			printf("%d: %d, %d\n", i, w[i].R, w[i].I);
-		}
 
-		for (i = 0; i < n; i += 2) {
-			j = i + 1;
-			WUR_w_r(w[i / 2].R);
-			WUR_w_i(w[i / 2].I);
-			t = f[j];
-			q = f[i];
 
-			if (shift) {
-				q.R >>= 1;
-				q.I >>= 1;
-			}
+        for(m=0; m<l; ++m)
+        {
+            j = m << k;
+            /* 0 <= j < N_WAVE/2 */
+            wr =  Sinewave[j+N_WAVE/4];
+            wi = -Sinewave[j];
 
-			WUR_a_r(t.R);
-			WUR_a_i(t.I);
-			WUR_b_r(q.R);
-			WUR_b_i(q.I);
+            if(inverse) wi = -wi;
+            if(shift)
+            {
+                wr >>= 1;
+                wi >>= 1;
+            }
+            WUR_w_r(wr);
+            WUR_w_i(wi);
+            for(i=m; i<n; i+=istep)
+            {
 
-			FFT_2_f_LD();
+                j = i + l;
 
-			FFT_2_FFT();
+                tr = fr[j];
+                ti = fi[j];
+                qr = fr[i];
+                qi = fi[i];
 
-			u.R = RUR_u_r();
-			u.I = RUR_u_i();
-			v.R = RUR_v_r();
-			v.I = RUR_v_i();
 
-			f[j] = u;
-			f[i] = v;
-		}
-		//this loop with TIE instead
+                if(shift)
+                {
+                        qr >>= 1;
+                        qi >>= 1;
+                }
 
-		--k;
-		l = istep;
-	}
+                WUR_a_r(tr);
+                WUR_a_i(ti);
+                WUR_b_r(qr);
+                WUR_b_i(qi);
 
-	return scale;
+                FFT_2_f_LD();
+
+                FFT_2_FFT();
+
+                ur = RUR_u_r();
+                ui = RUR_u_i();
+                vr = RUR_v_r();
+                vi = RUR_v_i();
+
+                fr[j] = ur;
+                fi[j] = ui;
+                fr[i] = vr;
+                fi[i] = vi;
+            }
+        }
+        --k;
+        l = istep;
+    }
+
+    return scale;
 }
-
