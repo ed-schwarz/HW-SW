@@ -4,7 +4,7 @@
 #include        <stdio.h>
 #include        <math.h>
 
-#define FFT_Type	3
+#define FFT_Type	5
 
 #define M       3
 
@@ -14,7 +14,7 @@
 fixed real[N], imag[N], real_fix[N], imag_fix[N], real_mul[N], imag_mul[N];
 static cplx f[N];
 
-#if (FFT_Type==3)
+#if (FFT_Type>=3)
 static cplx fwd_coeffs[N/2];
 
 
@@ -49,7 +49,7 @@ int main() {
 	}
 
 
-#if (FFT_Type==3)
+#if (FFT_Type>=3)
 	Test_SWOpt();
 #endif
 

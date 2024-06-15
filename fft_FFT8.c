@@ -1,5 +1,5 @@
 #include "fft.h"
-
+/*
 static inline uint32_t BitReverse(uint32_t n) {
 	n = (n & 0xffff0000) >> 16 | (n & 0x0000ffff) << 16;
 	n = (n & 0xff00ff00) >> 8 | (n & 0x00ff00ff) << 8;
@@ -61,7 +61,7 @@ int fft_FFT8(cplx*__restrict f, int m, int inverse, const cplx* __restrict coeff
 	scale = 0;
 	r = 0;
 
-	/* decimation in time - re-order data */
+
 
 	Prepare_Data(f, n, m, 0);
 
@@ -71,14 +71,14 @@ int fft_FFT8(cplx*__restrict f, int m, int inverse, const cplx* __restrict coeff
     {
         if(inverse)
         {
-            /* variable scaling, depending upon data */
+
             shift = 0;
             for(i=0; i<n; ++i)
             {
-                j = fr[i];
+                j = f[i].R;
                 if(j < 0) j = -j;
 
-                m = fi[i];
+                m = f[i].I;
                 if(m < 0) m = -m;
 
                 if(j > 16383 || m > 16383)
@@ -91,15 +91,11 @@ int fft_FFT8(cplx*__restrict f, int m, int inverse, const cplx* __restrict coeff
         }
         else
         {
-            /* fixed scaling, for proper normalization -
-               there will be log2(n) passes, so this
-               results in an overall factor of 1/n,
-               distributed to maximize arithmetic accuracy. */
+
             shift = 1;
         }
 
-        /* it may not be obvious, but the shift will be performed
-           on each data point exactly once, during this pass. */
+
         istep = l << 1;		//step width of current butterfly
         for(m=0; m < n/2; m++){
         	//m = odd
@@ -112,7 +108,7 @@ int fft_FFT8(cplx*__restrict f, int m, int inverse, const cplx* __restrict coeff
         for(m=0; m<l; ++m)
         {
             j = m << k;
-            /* 0 <= j < N_WAVE/2 */
+
             wr =  Sinewave[j+N_WAVE/4];
             wi = -Sinewave[j];
 
@@ -167,3 +163,4 @@ int fft_FFT8(cplx*__restrict f, int m, int inverse, const cplx* __restrict coeff
 
     return scale;
 }
+*/

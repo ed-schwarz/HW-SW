@@ -19,160 +19,22 @@
 							<tool errorParsers="org.eclipse.cdt.core.VCErrorParser;org.eclipse.cdt.core.GASErrorParser" id="org.eclipse.cdt.build.core.settings.holder.1532864034" name="Assembly" superClass="org.eclipse.cdt.build.core.settings.holder">
 								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.1941955292" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
 									<listOptionValue builtIn="false" value="C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT_HW_SW"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/lib/xcc/include"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk/include"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/xtensa-elf/arch/include"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/xtensa-elf/include"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/xtensa-elf/include"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/xtensa-elf/include/xcc/c++"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/xtensa-elf/include/xcc/c++/xtensa-elf"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/xtensa-elf/include/xcc/c++/backward"/>
 								</option>
-								<option id="org.eclipse.cdt.build.core.settings.holder.symbols.947597428" name="Symbols" superClass="org.eclipse.cdt.build.core.settings.holder.symbols" valueType="definedSymbols">
-									<listOptionValue builtIn="false" value="__CHAR_BIT__=8"/>
-									<listOptionValue builtIn="false" value="__WCHAR_MAX__=65535U"/>
-									<listOptionValue builtIn="false" value="__FLT_EVAL_METHOD__=0"/>
-									<listOptionValue builtIn="false" value="__FINITE_MATH_ONLY__=0"/>
-									<listOptionValue builtIn="false" value="__SHRT_MAX__=32767"/>
-									<listOptionValue builtIn="false" value="__UINTMAX_TYPE__=long"/>
-									<listOptionValue builtIn="false" value="__CHAR_UNSIGNED__=1"/>
-									<listOptionValue builtIn="false" value="__XCC__=11000"/>
-									<listOptionValue builtIn="false" value="__SCHAR_MAX__=127"/>
-									<listOptionValue builtIn="false" value="__USER_LABEL_PREFIX__"/>
-									<listOptionValue builtIn="false" value="__STDC_HOSTED__=1"/>
-									<listOptionValue builtIn="false" value="__XTENSA_EL__=1"/>
-									<listOptionValue builtIn="false" value="__XCC_MINOR__=4"/>
-									<listOptionValue builtIn="false" value="__GNUC__=4"/>
-									<listOptionValue builtIn="false" value="__LONG_LONG_MAX__=9223372036854775807LL"/>
-									<listOptionValue builtIn="false" value="__GXX_ABI_VERSION=1002"/>
-									<listOptionValue builtIn="false" value="__REGISTER_PREFIX__"/>
-									<listOptionValue builtIn="false" value="__NO_INLINE__=1"/>
-									<listOptionValue builtIn="false" value="__VERSION__=&quot;4.2.0"/>
-									<listOptionValue builtIn="false" value="__XTENSA_SOFT_FLOAT__=1"/>
-									<listOptionValue builtIn="false" value="__SIZE_TYPE__=unsigned"/>
-									<listOptionValue builtIn="false" value="__ELF__=1"/>
-									<listOptionValue builtIn="false" value="__xtensa__=1"/>
-									<listOptionValue builtIn="false" value="__LONG_MAX__=2147483647L"/>
-									<listOptionValue builtIn="false" value="__WCHAR_TYPE__=short"/>
-									<listOptionValue builtIn="false" value="__INT_MAX__=2147483647"/>
-									<listOptionValue builtIn="false" value="__WINT_TYPE__=unsigned"/>
-									<listOptionValue builtIn="false" value="__XTENSA_WINDOWED_ABI__=1"/>
-									<listOptionValue builtIn="false" value="__XTENSA__=1"/>
-									<listOptionValue builtIn="false" value="__GNUC_PATCHLEVEL__=0"/>
-									<listOptionValue builtIn="false" value="__INTMAX_MAX__=9223372036854775807LL"/>
-									<listOptionValue builtIn="false" value="__INTMAX_TYPE__=long"/>
-									<listOptionValue builtIn="false" value="__XTENSA_SOFT_DOUBLE__=1"/>
-									<listOptionValue builtIn="false" value="__GNUC_MINOR__=2"/>
-									<listOptionValue builtIn="false" value="__STDC__=1"/>
-									<listOptionValue builtIn="false" value="__PTRDIFF_TYPE__=int"/>
-									<listOptionValue builtIn="false" value="__GNUC_GNU_INLINE__=1"/>
-								</option>
+								<option id="org.eclipse.cdt.build.core.settings.holder.symbols.947597428" name="Symbols" superClass="org.eclipse.cdt.build.core.settings.holder.symbols" valueType="definedSymbols"/>
 								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.1371830814" languageId="org.eclipse.cdt.core.assembly" languageName="Assembly" sourceContentType="org.eclipse.cdt.core.asmSource" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
 							</tool>
 							<tool errorParsers="org.eclipse.cdt.core.VCErrorParser;org.eclipse.cdt.core.GASErrorParser" id="org.eclipse.cdt.build.core.settings.holder.919071831" name="GNU C++" superClass="org.eclipse.cdt.build.core.settings.holder">
 								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.1313498143" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
 									<listOptionValue builtIn="false" value="C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT_HW_SW"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/lib/xcc/include"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk/include"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/xtensa-elf/arch/include"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/xtensa-elf/include"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/xtensa-elf/include"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/xtensa-elf/include/xcc/c++"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/xtensa-elf/include/xcc/c++/xtensa-elf"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/xtensa-elf/include/xcc/c++/backward"/>
 								</option>
-								<option id="org.eclipse.cdt.build.core.settings.holder.symbols.42555103" name="Symbols" superClass="org.eclipse.cdt.build.core.settings.holder.symbols" valueType="definedSymbols">
-									<listOptionValue builtIn="false" value="__CHAR_BIT__=8"/>
-									<listOptionValue builtIn="false" value="__WCHAR_MAX__=65535U"/>
-									<listOptionValue builtIn="false" value="__FLT_EVAL_METHOD__=0"/>
-									<listOptionValue builtIn="false" value="__FINITE_MATH_ONLY__=0"/>
-									<listOptionValue builtIn="false" value="__SHRT_MAX__=32767"/>
-									<listOptionValue builtIn="false" value="__UINTMAX_TYPE__=long"/>
-									<listOptionValue builtIn="false" value="__CHAR_UNSIGNED__=1"/>
-									<listOptionValue builtIn="false" value="__XCC__=11000"/>
-									<listOptionValue builtIn="false" value="__SCHAR_MAX__=127"/>
-									<listOptionValue builtIn="false" value="__USER_LABEL_PREFIX__"/>
-									<listOptionValue builtIn="false" value="__STDC_HOSTED__=1"/>
-									<listOptionValue builtIn="false" value="__XTENSA_EL__=1"/>
-									<listOptionValue builtIn="false" value="__XCC_MINOR__=4"/>
-									<listOptionValue builtIn="false" value="__GNUC__=4"/>
-									<listOptionValue builtIn="false" value="__LONG_LONG_MAX__=9223372036854775807LL"/>
-									<listOptionValue builtIn="false" value="__GXX_ABI_VERSION=1002"/>
-									<listOptionValue builtIn="false" value="__REGISTER_PREFIX__"/>
-									<listOptionValue builtIn="false" value="__NO_INLINE__=1"/>
-									<listOptionValue builtIn="false" value="__VERSION__=&quot;4.2.0"/>
-									<listOptionValue builtIn="false" value="__XTENSA_SOFT_FLOAT__=1"/>
-									<listOptionValue builtIn="false" value="__SIZE_TYPE__=unsigned"/>
-									<listOptionValue builtIn="false" value="__ELF__=1"/>
-									<listOptionValue builtIn="false" value="__xtensa__=1"/>
-									<listOptionValue builtIn="false" value="__LONG_MAX__=2147483647L"/>
-									<listOptionValue builtIn="false" value="__WCHAR_TYPE__=short"/>
-									<listOptionValue builtIn="false" value="__INT_MAX__=2147483647"/>
-									<listOptionValue builtIn="false" value="__WINT_TYPE__=unsigned"/>
-									<listOptionValue builtIn="false" value="__XTENSA_WINDOWED_ABI__=1"/>
-									<listOptionValue builtIn="false" value="__XTENSA__=1"/>
-									<listOptionValue builtIn="false" value="__GNUC_PATCHLEVEL__=0"/>
-									<listOptionValue builtIn="false" value="__INTMAX_MAX__=9223372036854775807LL"/>
-									<listOptionValue builtIn="false" value="__INTMAX_TYPE__=long"/>
-									<listOptionValue builtIn="false" value="__XTENSA_SOFT_DOUBLE__=1"/>
-									<listOptionValue builtIn="false" value="__GNUC_MINOR__=2"/>
-									<listOptionValue builtIn="false" value="__STDC__=1"/>
-									<listOptionValue builtIn="false" value="__PTRDIFF_TYPE__=int"/>
-									<listOptionValue builtIn="false" value="__GNUC_GNU_INLINE__=1"/>
-								</option>
+								<option id="org.eclipse.cdt.build.core.settings.holder.symbols.42555103" name="Symbols" superClass="org.eclipse.cdt.build.core.settings.holder.symbols" valueType="definedSymbols"/>
 								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.1326821312" languageId="org.eclipse.cdt.core.g++" languageName="GNU C++" sourceContentType="org.eclipse.cdt.core.cxxSource,org.eclipse.cdt.core.cxxHeader" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
 							</tool>
 							<tool errorParsers="org.eclipse.cdt.core.VCErrorParser;org.eclipse.cdt.core.GASErrorParser" id="org.eclipse.cdt.build.core.settings.holder.1310739568" name="GNU C" superClass="org.eclipse.cdt.build.core.settings.holder">
 								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.1308578634" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
 									<listOptionValue builtIn="false" value="C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT_HW_SW"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/lib/xcc/include"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk/include"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/xtensa-elf/arch/include"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/xtensa-elf/include"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/xtensa-elf/include"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/xtensa-elf/include/xcc/c++"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/xtensa-elf/include/xcc/c++/xtensa-elf"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/xtensa-elf/include/xcc/c++/backward"/>
 								</option>
-								<option id="org.eclipse.cdt.build.core.settings.holder.symbols.1158542448" name="Symbols" superClass="org.eclipse.cdt.build.core.settings.holder.symbols" valueType="definedSymbols">
-									<listOptionValue builtIn="false" value="__CHAR_BIT__=8"/>
-									<listOptionValue builtIn="false" value="__WCHAR_MAX__=65535U"/>
-									<listOptionValue builtIn="false" value="__FLT_EVAL_METHOD__=0"/>
-									<listOptionValue builtIn="false" value="__FINITE_MATH_ONLY__=0"/>
-									<listOptionValue builtIn="false" value="__SHRT_MAX__=32767"/>
-									<listOptionValue builtIn="false" value="__UINTMAX_TYPE__=long"/>
-									<listOptionValue builtIn="false" value="__CHAR_UNSIGNED__=1"/>
-									<listOptionValue builtIn="false" value="__XCC__=11000"/>
-									<listOptionValue builtIn="false" value="__SCHAR_MAX__=127"/>
-									<listOptionValue builtIn="false" value="__USER_LABEL_PREFIX__"/>
-									<listOptionValue builtIn="false" value="__STDC_HOSTED__=1"/>
-									<listOptionValue builtIn="false" value="__XTENSA_EL__=1"/>
-									<listOptionValue builtIn="false" value="__XCC_MINOR__=4"/>
-									<listOptionValue builtIn="false" value="__GNUC__=4"/>
-									<listOptionValue builtIn="false" value="__LONG_LONG_MAX__=9223372036854775807LL"/>
-									<listOptionValue builtIn="false" value="__GXX_ABI_VERSION=1002"/>
-									<listOptionValue builtIn="false" value="__REGISTER_PREFIX__"/>
-									<listOptionValue builtIn="false" value="__NO_INLINE__=1"/>
-									<listOptionValue builtIn="false" value="__VERSION__=&quot;4.2.0"/>
-									<listOptionValue builtIn="false" value="__XTENSA_SOFT_FLOAT__=1"/>
-									<listOptionValue builtIn="false" value="__SIZE_TYPE__=unsigned"/>
-									<listOptionValue builtIn="false" value="__ELF__=1"/>
-									<listOptionValue builtIn="false" value="__xtensa__=1"/>
-									<listOptionValue builtIn="false" value="__LONG_MAX__=2147483647L"/>
-									<listOptionValue builtIn="false" value="__WCHAR_TYPE__=short"/>
-									<listOptionValue builtIn="false" value="__INT_MAX__=2147483647"/>
-									<listOptionValue builtIn="false" value="__WINT_TYPE__=unsigned"/>
-									<listOptionValue builtIn="false" value="__XTENSA_WINDOWED_ABI__=1"/>
-									<listOptionValue builtIn="false" value="__XTENSA__=1"/>
-									<listOptionValue builtIn="false" value="__GNUC_PATCHLEVEL__=0"/>
-									<listOptionValue builtIn="false" value="__INTMAX_MAX__=9223372036854775807LL"/>
-									<listOptionValue builtIn="false" value="__INTMAX_TYPE__=long"/>
-									<listOptionValue builtIn="false" value="__XTENSA_SOFT_DOUBLE__=1"/>
-									<listOptionValue builtIn="false" value="__GNUC_MINOR__=2"/>
-									<listOptionValue builtIn="false" value="__STDC__=1"/>
-									<listOptionValue builtIn="false" value="__PTRDIFF_TYPE__=int"/>
-									<listOptionValue builtIn="false" value="__GNUC_GNU_INLINE__=1"/>
-								</option>
+								<option id="org.eclipse.cdt.build.core.settings.holder.symbols.1158542448" name="Symbols" superClass="org.eclipse.cdt.build.core.settings.holder.symbols" valueType="definedSymbols"/>
 								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.1760484248" languageId="org.eclipse.cdt.core.gcc" languageName="GNU C" sourceContentType="org.eclipse.cdt.core.cSource,org.eclipse.cdt.core.cHeader" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
 							</tool>
 						</toolChain>

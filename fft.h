@@ -38,6 +38,9 @@ uint32_t Prepare_Data(cplx* __restrict const x, const uint32_t N,
 		const uint32_t lg2_N, const uint32_t a_start);
 uint32_t Between_Shuffle(cplx* __restrict const x, const uint32_t N,
 		const uint32_t lg2_N, const uint32_t length);
-int fft_FFT8(cplx*__restrict f, int m, int inverse, const cplx* __restrict coeffs);
+int fft_FFT8(cplx*__restrict f, int m, int inverse,
+		const cplx* __restrict coeffs);
+int fft_adv(cplx*__restrict f, int m, int inverse,
+		const cplx* __restrict coeffs);
 
 #endif	//FFT_H

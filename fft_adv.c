@@ -42,28 +42,39 @@ uint32_t Between_Shuffle(cplx* __restrict const x, const uint32_t N,
 	}
 }
 
-uint32_t fft_exec(const intptr_t f, const intptr_t w, const uint32_t n, int shift) {
-	int i;
+uint32_t fft_exec(const intptr_t f, const intptr_t w, const uint32_t n, const uint32_t lg2_n, int shift) {
+	int i, done, l, even_i, step;
+	done = 0;
 	WUR_ptr_data(f);
 	WUR_ptr_w(w);
 	WUR_n(n);
+	WUR_lg2_n(lg2_n);
 	WUR_shift(shift);
-	while (RUR_done() == 0) {
-		for (i = 0; i < 8; i++) {
+	WUR_step(1);
+	while (done == 0) {
+		step = RUR_step();
+		for (i = 0; i < 4; i++) {
+			even_i = RUR_even_i();
 			FFT_LOAD_EVEN();
 			FFT_LOAD_ODD();
 			FFT_LOAD_W();
+			even_i = RUR_even_i();
 		}
 		FFT_8_FFT();
-		for (i = 0; i < 8; i++) {
+		even_i = RUR_even_i();
+		for (i = 0; i < 4; i++) {
 			FFT_STORE_EVEN();
 			FFT_STORE_ODD();
 		}
+		even_i = RUR_even_i();
 		FFT_UPDATE();
+		done = RUR_done();
+		l = RUR_l();
+		even_i = RUR_even_i();
 	}
 }
 
-int fft_FFT8(cplx*__restrict f, int m, int inverse,
+int fft_adv(cplx*__restrict f, int m, int inverse,
 		const cplx* __restrict coeffs) {
 	int mr, nn, i, j, l, k, r, istep, n, scale, shift;
 	//number of input data
@@ -73,7 +84,7 @@ int fft_FFT8(cplx*__restrict f, int m, int inverse,
 	cplx u; //even output
 	cplx v; //odd output
 	cplx w[n / 2]; //twiddle factor
-	uint32_t lg2_l = 0;
+	uint32_t lg2_n = m;
 
 	if (n > N_WAVE)
 		return -1;
@@ -87,8 +98,33 @@ int fft_FFT8(cplx*__restrict f, int m, int inverse,
 
 	Prepare_Data(f, n, m, 0);
 
-	l = 1;
-	k = LOG2_N_WAVE - 1;
+	if (inverse) {
+		/* variable scaling, depending upon data */
+		shift = 0;
+		for (i = 0; i < n; ++i) {
+			j = f[i].R;
+			if (j < 0)
+				j = -j;
+
+			m = f[i].I;
+			if (m < 0)
+				m = -m;
+
+			if (j > 16383 || m > 16383) {
+				shift = 1;
+				break;
+			}
+		}
+		if (shift)
+			++scale;
+	} else {
+		/* fixed scaling, for proper normalization -
+		 there will be log2(n) passes, so this
+		 results in an overall factor of 1/n,
+		 distributed to maximize arithmetic accuracy. */
+		shift = 1;
+	}
+	fft_exec((intptr_t)f, (intptr_t)coeffs, n, lg2_n, shift);
 
 	return scale;
 }
