@@ -1,0 +1,16 @@
+IsaUseWideBranches = 1
+iss-tie-dll=lib-i686-MSWin32/libcas-fft_tie.dll
+iss-tie-debug-dll=lib-i686-MSWin32/libcas-fft_tied.dll
+fiss-base-dll=lib-i686-MSWin32/libfiss-fft_tie.dll
+fiss-ref-base-dll=
+isa-tie-dll=lib-i686-MSWin32/libisa-fft_tie.dll
+ctype-tie-dll=lib-i686-MSWin32/libctype-fft_tie.dll
+xml-tie-dll=lib-i686-MSWin32/libtie-fft_tie.dll
+xtensa-tie-header=include/xtensa/tie/fft_tie.h
+tie-includedir=include
+tie-ident=477352
+tdk-dir=.
+tie-checksum-0 = 0x74eaa824
+tie-checksum-1 = 0xd1b1d60f
+tie-checksum-2 = 0xd122948d
+tie-checksum-3 = 0x7e86b389

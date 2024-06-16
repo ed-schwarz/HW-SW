@@ -1,0 +1,383 @@
+**** Incremental Build [So, 16 Jun 2024 14:11:55] ****
+ Project: FFT_HS
+ Configuration: hwsw_codesign2019_aligned
+ Build Target: Debug
+********************************
+Compiling TIE source(s) attached to configuration "hwsw_codesign2019_aligned" ...
+
+C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/bin/tc --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned -d C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -libdebug   -Y -noerrformat  -name fft_tie  -swtie C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\XtensaInfo\TIEFiles\fft_tie.tie
+File: fft_tie.tie, Line: 1, Error: (TIE_CONSTRUCT_NOT_SUPPORT), The hardware-related TIE construct is not supported in Software-Only TIE.
+File: fft_tie.tie, Line: 2, Error: (TIE_CONSTRUCT_NOT_SUPPORT), The hardware-related TIE construct is not supported in Software-Only TIE.
+File: fft_tie.tie, Line: 6, Error: (TIE_CONSTRUCT_NOT_SUPPORT), The hardware-related TIE construct is not supported in Software-Only TIE.
+File: fft_tie.tie, Line: 7, Error: (TIE_CONSTRUCT_NOT_SUPPORT), The hardware-related TIE construct is not supported in Software-Only TIE.
+File: fft_tie.tie, Line: 8, Error: (TIE_CONSTRUCT_NOT_SUPPORT), The hardware-related TIE construct is not supported in Software-Only TIE.
+File: fft_tie.tie, Line: 9, Error: (TIE_CONSTRUCT_NOT_SUPPORT), The hardware-related TIE construct is not supported in Software-Only TIE.
+File: fft_tie.tie, Line: 10, Error: (TIE_CONSTRUCT_NOT_SUPPORT), The hardware-related TIE construct is not supported in Software-Only TIE.
+File: fft_tie.tie, Line: 11, Error: (TIE_CONSTRUCT_NOT_SUPPORT), The hardware-related TIE construct is not supported in Software-Only TIE.
+File: fft_tie.tie, Line: 12, Error: (TIE_CONSTRUCT_NOT_SUPPORT), The hardware-related TIE construct is not supported in Software-Only TIE.
+File: fft_tie.tie, Line: 13, Error: (TIE_CONSTRUCT_NOT_SUPPORT), The hardware-related TIE construct is not supported in Software-Only TIE.
+
+	Found 10 Error(s) of type TIE_CONSTRUCT_NOT_SUPPORT
+	Same Error will not be reported
+
+46 error(s), 0 warning(s) 0 message(s)
+
+Build error encountered... cannot continue further.
+Total time taken: 3.594 secs
+**** Build Finished [So, 16 Jun 2024 14:11:58] ****
+**** Incremental Build [So, 16 Jun 2024 14:21:59] ****
+ Project: FFT_HS
+ Configuration: hwsw_codesign2019_aligned
+ Build Target: Debug
+********************************
+Compiling TIE source(s) attached to configuration "hwsw_codesign2019_aligned" ...
+
+C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/bin/tc --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned -d C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -libdebug   -Y -noerrformat  -name fft_tie  -swtie C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\XtensaInfo\TIEFiles\fft_tie.tie
+File: fft_tie.tie, Line: 1, Error: (TIE_CONSTRUCT_NOT_SUPPORT), The hardware-related TIE construct is not supported in Software-Only TIE.
+File: fft_tie.tie, Line: 2, Error: (TIE_CONSTRUCT_NOT_SUPPORT), The hardware-related TIE construct is not supported in Software-Only TIE.
+File: fft_tie.tie, Line: 6, Error: (TIE_CONSTRUCT_NOT_SUPPORT), The hardware-related TIE construct is not supported in Software-Only TIE.
+File: fft_tie.tie, Line: 7, Error: (TIE_CONSTRUCT_NOT_SUPPORT), The hardware-related TIE construct is not supported in Software-Only TIE.
+File: fft_tie.tie, Line: 8, Error: (TIE_CONSTRUCT_NOT_SUPPORT), The hardware-related TIE construct is not supported in Software-Only TIE.
+File: fft_tie.tie, Line: 9, Error: (TIE_CONSTRUCT_NOT_SUPPORT), The hardware-related TIE construct is not supported in Software-Only TIE.
+File: fft_tie.tie, Line: 10, Error: (TIE_CONSTRUCT_NOT_SUPPORT), The hardware-related TIE construct is not supported in Software-Only TIE.
+File: fft_tie.tie, Line: 11, Error: (TIE_CONSTRUCT_NOT_SUPPORT), The hardware-related TIE construct is not supported in Software-Only TIE.
+File: fft_tie.tie, Line: 12, Error: (TIE_CONSTRUCT_NOT_SUPPORT), The hardware-related TIE construct is not supported in Software-Only TIE.
+File: fft_tie.tie, Line: 13, Error: (TIE_CONSTRUCT_NOT_SUPPORT), The hardware-related TIE construct is not supported in Software-Only TIE.
+
+	Found 10 Error(s) of type TIE_CONSTRUCT_NOT_SUPPORT
+	Same Error will not be reported
+
+46 error(s), 0 warning(s) 0 message(s)
+
+Build error encountered... cannot continue further.
+Total time taken: 2.141 secs
+**** Build Finished [So, 16 Jun 2024 14:22:01] ****
+**** Incremental Build [So, 16 Jun 2024 14:28:12] ****
+ Project: FFT
+ Configuration: hwsw_codesign2019_aligned
+ Build Target: Debug
+********************************
+Compiling TIE source(s) attached to configuration "hwsw_codesign2019_aligned" ...
+
+C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/bin/tc --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned -d C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -libdebug -Y -noerrformat  -name ff_tie C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\TIEFiles\ff_tie.tie
+File: ff_tie.tie, Line: 111, Error: (TIE_OPERATION_VERIFY_INVALID), even_const is not an interface or state
+File: ff_tie.tie, Line: 204, Error: (TIE_OPERATION_VERIFY_INVALID), odd_ix is not an interface or state
+File: ff_tie.tie, Line: 204, Error: (TIE_OPERATION_VERIFY_INVALID), shift is not an interface or state
+File: ff_tie.tie, Line: 223, Error: (TIE_OPERATION_VERIFY_INVALID), odd_ix is not an interface or state
+File: ff_tie.tie, Line: 223, Error: (TIE_OPERATION_VERIFY_INVALID), shift is not an interface or state
+File: ff_tie.tie, Line: 238, Error: (TIE_OPERATION_VERIFY_INVALID), shift is not an interface or state
+File: ff_tie.tie, Line: 263, Error: (TIE_OPERATION_VERIFY_INVALID), odd_ix is not an interface or state
+File: ff_tie.tie, Line: 263, Error: (TIE_OPERATION_VERIFY_INVALID), shift is not an interface or state
+File: ff_tie.tie, Line: 280, Error: (TIE_OPERATION_VERIFY_INVALID), odd_ix is not an interface or state
+File: ff_tie.tie, Line: 280, Error: (TIE_OPERATION_VERIFY_INVALID), shift is not an interface or state
+
+	Found 10 Error(s) of type TIE_OPERATION_VERIFY_INVALID
+	Same Error will not be reported
+
+12 error(s), 0 warning(s) 0 message(s)
+
+Build error encountered... cannot continue further.
+Total time taken: 1.984 secs
+**** Build Finished [So, 16 Jun 2024 14:28:14] ****
+**** Incremental Build [So, 16 Jun 2024 14:29:14] ****
+ Project: FFT
+ Configuration: hwsw_codesign2019_aligned
+ Build Target: Debug
+********************************
+Compiling TIE source(s) attached to configuration "hwsw_codesign2019_aligned" ...
+
+C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/bin/tc --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned -d C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -libdebug -Y -noerrformat  -name ff_tie C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\TIEFiles\ff_tie.tie
+File: ff_tie.tie, Line: 207, Error: (TIE_OPERATION_VERIFY_INVALID), odd_ix is not an interface or state
+File: ff_tie.tie, Line: 207, Error: (TIE_OPERATION_VERIFY_INVALID), shift is not an interface or state
+File: ff_tie.tie, Line: 226, Error: (TIE_OPERATION_VERIFY_INVALID), odd_ix is not an interface or state
+File: ff_tie.tie, Line: 226, Error: (TIE_OPERATION_VERIFY_INVALID), shift is not an interface or state
+File: ff_tie.tie, Line: 241, Error: (TIE_OPERATION_VERIFY_INVALID), shift is not an interface or state
+File: ff_tie.tie, Line: 266, Error: (TIE_OPERATION_VERIFY_INVALID), odd_ix is not an interface or state
+File: ff_tie.tie, Line: 266, Error: (TIE_OPERATION_VERIFY_INVALID), shift is not an interface or state
+File: ff_tie.tie, Line: 283, Error: (TIE_OPERATION_VERIFY_INVALID), odd_ix is not an interface or state
+File: ff_tie.tie, Line: 283, Error: (TIE_OPERATION_VERIFY_INVALID), shift is not an interface or state
+File: ff_tie.tie, Line: 283, Error: (TIE_OPERATION_VERIFY_INVALID), m_ix is not an interface or state
+
+	Found 10 Error(s) of type TIE_OPERATION_VERIFY_INVALID
+	Same Error will not be reported
+
+10 error(s), 0 warning(s) 0 message(s)
+
+Build error encountered... cannot continue further.
+Total time taken: 1.813 secs
+**** Build Finished [So, 16 Jun 2024 14:29:16] ****
+**** Incremental Build [So, 16 Jun 2024 14:30:16] ****
+ Project: FFT
+ Configuration: hwsw_codesign2019_aligned
+ Build Target: Debug
+********************************
+Compiling TIE source(s) attached to configuration "hwsw_codesign2019_aligned" ...
+
+C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/bin/tc --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned -d C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -libdebug -Y -noerrformat  -name ff_tie C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\TIEFiles\ff_tie.tie
+File: ff_tie.tie, Line: 202, Error: (TIE_NOT_DECL), done is not declared as a valid variable in operation FFT_INIT. Valid variables in an operation body are the arguments declared in its argument list and state interface list. Valid variables in a function body are the inputs declared in the argument list and the function name which is also the output of the function.
+File: ff_tie.tie, Line: 203, Error: (TIE_NOT_DECL), even_ix is not declared as a valid variable in operation FFT_INIT. Valid variables in an operation body are the arguments declared in its argument list and state interface list. Valid variables in a function body are the inputs declared in the argument list and the function name which is also the output of the function.
+File: ff_tie.tie, Line: 204, Error: (TIE_NOT_DECL), od_ix is not declared as a valid variable in operation FFT_INIT. Valid variables in an operation body are the arguments declared in its argument list and state interface list. Valid variables in a function body are the inputs declared in the argument list and the function name which is also the output of the function.
+File: ff_tie.tie, Line: 205, Error: (TIE_NOT_DECL), w_ix is not declared as a valid variable in operation FFT_INIT. Valid variables in an operation body are the arguments declared in its argument list and state interface list. Valid variables in a function body are the inputs declared in the argument list and the function name which is also the output of the function.
+File: ff_tie.tie, Line: 206, Error: (TIE_NOT_DECL), m_ix is not declared as a valid variable in operation FFT_INIT. Valid variables in an operation body are the arguments declared in its argument list and state interface list. Valid variables in a function body are the inputs declared in the argument list and the function name which is also the output of the function.
+File: ff_tie.tie, Line: 207, Error: (TIE_NOT_DECL), l is not declared as a valid variable in operation FFT_INIT. Valid variables in an operation body are the arguments declared in its argument list and state interface list. Valid variables in a function body are the inputs declared in the argument list and the function name which is also the output of the function.
+File: ff_tie.tie, Line: 208, Error: (TIE_NOT_DECL), step is not declared as a valid variable in operation FFT_INIT. Valid variables in an operation body are the arguments declared in its argument list and state interface list. Valid variables in a function body are the inputs declared in the argument list and the function name which is also the output of the function.
+File: ff_tie.tie, Line: 252, Error: (TIE_NOT_DECL), even_ix is not declared as a valid variable in operation FFT_LOAD_W. Valid variables in an operation body are the arguments declared in its argument list and state interface list. Valid variables in a function body are the inputs declared in the argument list and the function name which is also the output of the function.
+File: ff_tie.tie, Line: 256, Error: (TIE_NOT_DECL), even_ix is not declared as a valid variable in operation FFT_LOAD_W. Valid variables in an operation body are the arguments declared in its argument list and state interface list. Valid variables in a function body are the inputs declared in the argument list and the function name which is also the output of the function.
+File: ff_tie.tie, Line: 257, Error: (TIE_NO_WRITE), Cannot write to "w_ix" in operation FFT_LOAD_W because it is not an output of operation FFT_LOAD_W.
+File: ff_tie.tie, Line: 276, Error: (TIE_NOT_DECL), MemDataIn32 is not declared as a valid variable in operation FFT_STORE_EVEN. Valid variables in an operation body are the arguments declared in its argument list and state interface list. Valid variables in a function body are the inputs declared in the argument list and the function name which is also the output of the function.
+
+	Found 10 Error(s) of type TIE_NOT_DECL
+	Same Error will not be reported
+File: ff_tie.tie, Line: 287, Error: (TIE_OPERATION_VERIFY_MISSING), Interface or state "step" is of type "in", but is not being used in any computation in the operation reference.
+
+16 error(s), 0 warning(s) 0 message(s)
+
+Build error encountered... cannot continue further.
+Total time taken: 1.875 secs
+**** Build Finished [So, 16 Jun 2024 14:30:18] ****
+**** Incremental Build [So, 16 Jun 2024 14:31:50] ****
+ Project: FFT
+ Configuration: hwsw_codesign2019_aligned
+ Build Target: Debug
+********************************
+Compiling TIE source(s) attached to configuration "hwsw_codesign2019_aligned" ...
+
+C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/bin/tc --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned -d C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -libdebug -Y -noerrformat  -name ff_tie C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\TIEFiles\ff_tie.tie
+File: ff_tie.tie, Line: 252, Error: (TIE_NOT_DECL), even_ix is not declared as a valid variable in operation FFT_LOAD_W. Valid variables in an operation body are the arguments declared in its argument list and state interface list. Valid variables in a function body are the inputs declared in the argument list and the function name which is also the output of the function.
+File: ff_tie.tie, Line: 256, Error: (TIE_NOT_DECL), even_ix is not declared as a valid variable in operation FFT_LOAD_W. Valid variables in an operation body are the arguments declared in its argument list and state interface list. Valid variables in a function body are the inputs declared in the argument list and the function name which is also the output of the function.
+File: ff_tie.tie, Line: 257, Error: (TIE_NO_WRITE), Cannot write to "w_ix" in operation FFT_LOAD_W because it is not an output of operation FFT_LOAD_W.
+File: ff_tie.tie, Line: 287, Error: (TIE_OPERATION_VERIFY_MISSING), Interface or state "step" is of type "in", but is not being used in any computation in the operation reference.
+File: ff_tie.tie, Line: 292, Error: (TIE_NOT_DECL), bv is not declared as a valid variable in operation FFT_STORE_ODD. Valid variables in an operation body are the arguments declared in its argument list and state interface list. Valid variables in a function body are the inputs declared in the argument list and the function name which is also the output of the function.
+File: ff_tie.tie, Line: 315, Error: (TIE_NOT_DECL), n is not declared as a valid variable in operation FFT_UPDATE. Valid variables in an operation body are the arguments declared in its argument list and state interface list. Valid variables in a function body are the inputs declared in the argument list and the function name which is also the output of the function.
+File: ff_tie.tie, Line: 321, Error: (TIE_NOT_DECL), lg2_n is not declared as a valid variable in operation FFT_UPDATE. Valid variables in an operation body are the arguments declared in its argument list and state interface list. Valid variables in a function body are the inputs declared in the argument list and the function name which is also the output of the function.
+File: ff_tie.tie, Line: 230, Warning: (TIE_NO_USE), Input shift is never used
+
+7 error(s), 1 warning(s) 0 message(s)
+
+Build error encountered... cannot continue further.
+Total time taken: 1.843 secs
+**** Build Finished [So, 16 Jun 2024 14:31:52] ****
+**** Incremental Build [So, 16 Jun 2024 14:34:52] ****
+ Project: FFT
+ Configuration: hwsw_codesign2019_aligned
+ Build Target: Debug
+********************************
+Compiling TIE source(s) attached to configuration "hwsw_codesign2019_aligned" ...
+
+C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/bin/tc --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned -d C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -libdebug -Y -noerrformat  -name ff_tie C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\TIEFiles\ff_tie.tie
+File: ff_tie.tie, Line: 289, Error: (TIE_OPERATION_VERIFY_MISSING), Interface or state "step" is of type "in", but is not being used in any computation in the operation reference.
+File: ff_tie.tie, Line: 294, Error: (TIE_NOT_DECL), bv is not declared as a valid variable in operation FFT_STORE_ODD. Valid variables in an operation body are the arguments declared in its argument list and state interface list. Valid variables in a function body are the inputs declared in the argument list and the function name which is also the output of the function.
+File: ff_tie.tie, Line: 317, Error: (TIE_NOT_DECL), n is not declared as a valid variable in operation FFT_UPDATE. Valid variables in an operation body are the arguments declared in its argument list and state interface list. Valid variables in a function body are the inputs declared in the argument list and the function name which is also the output of the function.
+File: ff_tie.tie, Line: 323, Error: (TIE_NOT_DECL), lg2_n is not declared as a valid variable in operation FFT_UPDATE. Valid variables in an operation body are the arguments declared in its argument list and state interface list. Valid variables in a function body are the inputs declared in the argument list and the function name which is also the output of the function.
+File: ff_tie.tie, Line: 232, Warning: (TIE_NO_USE), Input shift is never used
+File: ff_tie.tie, Line: 247, Warning: (TIE_NO_USE), Input shift is never used
+File: ff_tie.tie, Line: 272, Warning: (TIE_NO_USE), Input shift is never used
+
+4 error(s), 3 warning(s) 0 message(s)
+
+Build error encountered... cannot continue further.
+Total time taken: 1.813 secs
+**** Build Finished [So, 16 Jun 2024 14:34:54] ****
+**** Incremental Build [So, 16 Jun 2024 14:35:29] ****
+ Project: FFT
+ Configuration: hwsw_codesign2019_aligned
+ Build Target: Debug
+********************************
+Compiling TIE source(s) attached to configuration "hwsw_codesign2019_aligned" ...
+
+C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/bin/tc --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned -d C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -libdebug -Y -noerrformat  -name ff_tie C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\TIEFiles\ff_tie.tie
+File: ff_tie.tie, Line: 289, Error: (TIE_OPERATION_VERIFY_MISSING), Interface or state "step" is of type "in", but is not being used in any computation in the operation reference.
+File: ff_tie.tie, Line: 232, Warning: (TIE_NO_USE), Input shift is never used
+File: ff_tie.tie, Line: 247, Warning: (TIE_NO_USE), Input shift is never used
+File: ff_tie.tie, Line: 272, Warning: (TIE_NO_USE), Input shift is never used
+
+1 error(s), 3 warning(s) 0 message(s)
+
+Build error encountered... cannot continue further.
+Total time taken: 1.859 secs
+**** Build Finished [So, 16 Jun 2024 14:35:31] ****
+**** Incremental Build [So, 16 Jun 2024 14:36:13] ****
+ Project: FFT
+ Configuration: hwsw_codesign2019_aligned
+ Build Target: Debug
+********************************
+Compiling TIE source(s) attached to configuration "hwsw_codesign2019_aligned" ...
+
+C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/bin/tc --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned -d C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -libdebug -Y -noerrformat  -name ff_tie C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\TIEFiles\ff_tie.tie
+File: ff_tie.tie, Line: 328, Error: (TIE_SCHED_ILLEGAL_USE_NAME), Illegal use name "done_temp" for instruction(s) "FFT_UPDATE".  A legal use name must be the name of a predefined input variable for the instruction.
+File: ff_tie.tie, Line: 232, Warning: (TIE_NO_USE), Input shift is never used
+File: ff_tie.tie, Line: 232, Warning: (TIE_SEM_NO_DEP), Semantic "FFT_LOAD_ODD", input "shift" of instruction "FFT_LOAD_ODD" is not used to compute any of its outputs. Please review the semantic description carefully, because this warning is indicative of incorrect TIE code.
+File: ff_tie.tie, Line: 247, Warning: (TIE_NO_USE), Input shift is never used
+File: ff_tie.tie, Line: 247, Warning: (TIE_SEM_NO_DEP), Semantic "FFT_LOAD_W", input "shift" of instruction "FFT_LOAD_W" is not used to compute any of its outputs. Please review the semantic description carefully, because this warning is indicative of incorrect TIE code.
+File: ff_tie.tie, Line: 272, Warning: (TIE_NO_USE), Input shift is never used
+File: ff_tie.tie, Line: 272, Warning: (TIE_SEM_NO_DEP), Semantic "FFT_STORE_EVEN", input "shift" of instruction "FFT_STORE_EVEN" is not used to compute any of its outputs. Please review the semantic description carefully, because this warning is indicative of incorrect TIE code.
+File: ff_tie.tie, Line: 289, Warning: (TIE_NO_USE), Input shift is never used
+File: ff_tie.tie, Line: 289, Warning: (TIE_SEM_NO_DEP), Semantic "FFT_STORE_ODD", input "shift" of instruction "FFT_STORE_ODD" is not used to compute any of its outputs. Please review the semantic description carefully, because this warning is indicative of incorrect TIE code.
+
+1 error(s), 8 warning(s) 0 message(s)
+
+Build error encountered... cannot continue further.
+Total time taken: 2.234 secs
+**** Build Finished [So, 16 Jun 2024 14:36:16] ****
+**** Incremental Build [So, 16 Jun 2024 14:37:07] ****
+ Project: FFT
+ Configuration: hwsw_codesign2019_aligned
+ Build Target: Debug
+********************************
+Compiling TIE source(s) attached to configuration "hwsw_codesign2019_aligned" ...
+
+C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/bin/tc --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned -d C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -libdebug -Y -noerrformat  -name ff_tie C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\TIEFiles\ff_tie.tie
+File: ff_tie.tie, Line: 232, Warning: (TIE_NO_USE), Input shift is never used
+File: ff_tie.tie, Line: 232, Warning: (TIE_SEM_NO_DEP), Semantic "FFT_LOAD_ODD", input "shift" of instruction "FFT_LOAD_ODD" is not used to compute any of its outputs. Please review the semantic description carefully, because this warning is indicative of incorrect TIE code.
+File: ff_tie.tie, Line: 247, Warning: (TIE_NO_USE), Input shift is never used
+File: ff_tie.tie, Line: 247, Warning: (TIE_SEM_NO_DEP), Semantic "FFT_LOAD_W", input "shift" of instruction "FFT_LOAD_W" is not used to compute any of its outputs. Please review the semantic description carefully, because this warning is indicative of incorrect TIE code.
+File: ff_tie.tie, Line: 272, Warning: (TIE_NO_USE), Input shift is never used
+File: ff_tie.tie, Line: 272, Warning: (TIE_SEM_NO_DEP), Semantic "FFT_STORE_EVEN", input "shift" of instruction "FFT_STORE_EVEN" is not used to compute any of its outputs. Please review the semantic description carefully, because this warning is indicative of incorrect TIE code.
+File: ff_tie.tie, Line: 289, Warning: (TIE_NO_USE), Input shift is never used
+File: ff_tie.tie, Line: 289, Warning: (TIE_SEM_NO_DEP), Semantic "FFT_STORE_ODD", input "shift" of instruction "FFT_STORE_ODD" is not used to compute any of its outputs. Please review the semantic description carefully, because this warning is indicative of incorrect TIE code.
+
+0 error(s), 8 warning(s) 0 message(s)
+Time taken: 14641 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft_mult.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_mult.o" 
+In file included from C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft_mult.c:1:
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft.h:3:32: error: xtensa/tie/fft_tie.h: No such file or directory
+Time taken: 203 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/main.o" 
+In file included from C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c:3:
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft.h:3:32: error: xtensa/tie/fft_tie.h: No such file or directory
+Time taken: 203 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft_adv.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_adv.o" 
+In file included from C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft_adv.c:1:
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft.h:3:32: error: xtensa/tie/fft_tie.h: No such file or directory
+Time taken: 203 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft_coeffs.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_coeffs.o" 
+In file included from C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft_coeffs.c:34:
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft.h:3:32: error: xtensa/tie/fft_tie.h: No such file or directory
+Time taken: 219 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft_FFT8.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_FFT8.o" 
+In file included from C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft_FFT8.c:1:
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft.h:3:32: error: xtensa/tie/fft_tie.h: No such file or directory
+Time taken: 218 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft_FFT2.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_FFT2.o" 
+In file included from C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft_FFT2.c:1:
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft.h:3:32: error: xtensa/tie/fft_tie.h: No such file or directory
+Time taken: 219 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft.o" 
+In file included from C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft.c:34:
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft.h:3:32: error: xtensa/tie/fft_tie.h: No such file or directory
+Time taken: 219 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/GenerateCoefficients.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/GenerateCoefficients.o" 
+In file included from C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/GenerateCoefficients.c:1:
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft.h:3:32: error: xtensa/tie/fft_tie.h: No such file or directory
+Time taken: 297 ms 
+
+Build error encountered... cannot continue further.
+Total time taken: 17.125 secs
+**** Build Finished [So, 16 Jun 2024 14:37:24] ****
+**** Incremental Build [So, 16 Jun 2024 14:39:44] ****
+ Project: FFT
+ Configuration: hwsw_codesign2019_aligned
+ Build Target: Debug
+********************************
+Compiling TIE source(s) attached to configuration "hwsw_codesign2019_aligned" ...
+
+C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/bin/tc --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned -d C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -libdebug -Y -noerrformat  -name fft_tie C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\TIEFiles\fft_tie.tie
+File: fft_tie.tie, Line: 232, Warning: (TIE_NO_USE), Input shift is never used
+File: fft_tie.tie, Line: 232, Warning: (TIE_SEM_NO_DEP), Semantic "FFT_LOAD_ODD", input "shift" of instruction "FFT_LOAD_ODD" is not used to compute any of its outputs. Please review the semantic description carefully, because this warning is indicative of incorrect TIE code.
+File: fft_tie.tie, Line: 247, Warning: (TIE_NO_USE), Input shift is never used
+File: fft_tie.tie, Line: 247, Warning: (TIE_SEM_NO_DEP), Semantic "FFT_LOAD_W", input "shift" of instruction "FFT_LOAD_W" is not used to compute any of its outputs. Please review the semantic description carefully, because this warning is indicative of incorrect TIE code.
+File: fft_tie.tie, Line: 272, Warning: (TIE_NO_USE), Input shift is never used
+File: fft_tie.tie, Line: 272, Warning: (TIE_SEM_NO_DEP), Semantic "FFT_STORE_EVEN", input "shift" of instruction "FFT_STORE_EVEN" is not used to compute any of its outputs. Please review the semantic description carefully, because this warning is indicative of incorrect TIE code.
+File: fft_tie.tie, Line: 289, Warning: (TIE_NO_USE), Input shift is never used
+File: fft_tie.tie, Line: 289, Warning: (TIE_SEM_NO_DEP), Semantic "FFT_STORE_ODD", input "shift" of instruction "FFT_STORE_ODD" is not used to compute any of its outputs. Please review the semantic description carefully, because this warning is indicative of incorrect TIE code.
+
+0 error(s), 8 warning(s) 0 message(s)
+Time taken: 13579 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft_mult.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_mult.o" 
+Time taken: 2640 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/main.o" 
+Time taken: 2656 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft_coeffs.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_coeffs.o" 
+Time taken: 641 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft_adv.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_adv.o" 
+Time taken: 750 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft_FFT8.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_FFT8.o" 
+Time taken: 672 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft_FFT2.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_FFT2.o" 
+Time taken: 562 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft.o" 
+Time taken: 672 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/GenerateCoefficients.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/GenerateCoefficients.o" 
+Time taken: 703 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xc++ -Wl,@C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/objfiles.list -o C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT.minsize -mlsp=sim -Wl,-r -nostdlib --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk 
+Time taken: 422 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xc++ -Wl,@C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/objfiles.list -o C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT -mlsp=sim --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk 
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_adv.o: In function `fft_exec':
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:57: undefined reference to `RUR_even_i'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:61: undefined reference to `RUR_even_i'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:64: undefined reference to `RUR_even_i'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:69: undefined reference to `RUR_even_i'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:73: undefined reference to `RUR_even_i'
+Time taken: 828 ms 
+
+Build error encountered... cannot continue further.
+Total time taken: 20.968 secs
+**** Build Finished [So, 16 Jun 2024 14:40:05] ****
+**** Incremental Build [So, 16 Jun 2024 14:40:37] ****
+ Project: FFT
+ Configuration: hwsw_codesign2019_aligned
+ Build Target: Debug
+********************************
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft_adv.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_adv.o" 
+Time taken: 453 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xc++ -Wl,@C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/objfiles.list -o C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT.minsize -mlsp=sim -Wl,-r -nostdlib --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk 
+Time taken: 266 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xc++ -Wl,@C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/objfiles.list -o C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT -mlsp=sim --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk 
+Time taken: 406 ms 
+
+******* Code size summary *****
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-size -C C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT 
+TYPE   	   text	 rodata	   data	    bss	    dec    hex	filename
+code   	  47800	      0	      0	      0	  47800	   bab8	C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT
+literal	    888	      0	      0	      0	    888	    378	C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT
+other  	   1631	   1916	   4608	    256	   8411	   20db	C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT
+Total  	  50319	   1916	   4608	    256	  57099	   df0b	C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT
+
+Time taken: 203 ms 
+
+******* ************** *****
+
+Build successful !!
+Total time taken: 2.234 secs
+**** Build Finished [So, 16 Jun 2024 14:40:40] ****
+**** Incremental Build [So, 16 Jun 2024 14:40:44] ****
+ Project: FFT
+ Configuration: hwsw_codesign2019_aligned
+ Build Target: Debug
+********************************
+
+Nothing to build.
+Total time taken: 0.0 secs
+**** Build Finished [So, 16 Jun 2024 14:40:44] ****

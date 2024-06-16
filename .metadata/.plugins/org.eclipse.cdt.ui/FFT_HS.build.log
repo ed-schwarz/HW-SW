@@ -1,0 +1,27 @@
+**** Incremental Build [So, 16 Jun 2024 14:21:59] ****
+ Project: FFT_HS
+ Configuration: hwsw_codesign2019_aligned
+ Build Target: Debug
+********************************
+Compiling TIE source(s) attached to configuration "hwsw_codesign2019_aligned" ...
+
+C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/bin/tc --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned -d C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -libdebug   -Y -noerrformat  -name fft_tie  -swtie C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\XtensaInfo\TIEFiles\fft_tie.tie
+File: fft_tie.tie, Line: 1, Error: (TIE_CONSTRUCT_NOT_SUPPORT), The hardware-related TIE construct is not supported in Software-Only TIE.
+File: fft_tie.tie, Line: 2, Error: (TIE_CONSTRUCT_NOT_SUPPORT), The hardware-related TIE construct is not supported in Software-Only TIE.
+File: fft_tie.tie, Line: 6, Error: (TIE_CONSTRUCT_NOT_SUPPORT), The hardware-related TIE construct is not supported in Software-Only TIE.
+File: fft_tie.tie, Line: 7, Error: (TIE_CONSTRUCT_NOT_SUPPORT), The hardware-related TIE construct is not supported in Software-Only TIE.
+File: fft_tie.tie, Line: 8, Error: (TIE_CONSTRUCT_NOT_SUPPORT), The hardware-related TIE construct is not supported in Software-Only TIE.
+File: fft_tie.tie, Line: 9, Error: (TIE_CONSTRUCT_NOT_SUPPORT), The hardware-related TIE construct is not supported in Software-Only TIE.
+File: fft_tie.tie, Line: 10, Error: (TIE_CONSTRUCT_NOT_SUPPORT), The hardware-related TIE construct is not supported in Software-Only TIE.
+File: fft_tie.tie, Line: 11, Error: (TIE_CONSTRUCT_NOT_SUPPORT), The hardware-related TIE construct is not supported in Software-Only TIE.
+File: fft_tie.tie, Line: 12, Error: (TIE_CONSTRUCT_NOT_SUPPORT), The hardware-related TIE construct is not supported in Software-Only TIE.
+File: fft_tie.tie, Line: 13, Error: (TIE_CONSTRUCT_NOT_SUPPORT), The hardware-related TIE construct is not supported in Software-Only TIE.
+
+	Found 10 Error(s) of type TIE_CONSTRUCT_NOT_SUPPORT
+	Same Error will not be reported
+
+46 error(s), 0 warning(s) 0 message(s)
+
+Build error encountered... cannot continue further.
+Total time taken: 2.141 secs
+**** Build Finished [So, 16 Jun 2024 14:22:01] ****
