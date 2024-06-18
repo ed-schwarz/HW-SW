@@ -77,10 +77,22 @@ function [15:0]LEFT_SHIFT ([15:0] a)
 	assign LEFT_SHIFT =	shift_temp;
 }
 
+function [15:0]LEFT_SHIFT_SIGNED ([15:0] a)
+{
+	wire [15:0] shift_temp = a[15] ? {a[15], a[13:0], 1'b0} : {a[15], a[13:0], 1'b1};
+	assign LEFT_SHIFT_SIGNED =	shift_temp;
+}
+
 function [15:0]RIGHT_SHIFT ([15:0] a)
 {
-	wire [15:0] shift_temp = {1'b0, a[13:1]};
+	wire [15:0] shift_temp = {1'b0, a[15:1]};
 	assign RIGHT_SHIFT = shift_temp;
+}
+
+function [15:0]RIGHT_SHIFT_SIGNED ([15:0] a)
+{
+	wire [15:0] shift_temp = a[15] ? {a[15], 1'b1, a[14:1]} : {a[15], 1'b0, a[14:1]};
+	assign RIGHT_SHIFT_SIGNED = shift_temp;
 }
 
 function [31:0]LEFT_SHIFT_32 ([31:0] a)
@@ -248,8 +260,8 @@ operation FFT_LOAD_EVEN {}{in even_ix, out odd_ix, in ptr_data, in done, in step
 	assign odd_ix = even_ix + step;
 	
 	wire [31:0] data_temp = MemDataIn32;
-	wire [15:0] data_temp_r = RIGHT_SHIFT(data_temp[15:0]);
-	wire [15:0] data_temp_i = RIGHT_SHIFT(data_temp[31:16]);
+	wire [15:0] data_temp_r = RIGHT_SHIFT_SIGNED(data_temp[15:0]);
+	wire [15:0] data_temp_i = RIGHT_SHIFT_SIGNED(data_temp[31:16]);
 	assign bv = shift ? {data_temp_i[15:0], data_temp_r[15:0], bv[127:32]} : {data_temp[31:0], bv[127:32]};
 	
 }
@@ -289,9 +301,10 @@ operation FFT_LOAD_W {}{inout w_ix, inout even_ix, in ptr_w, in done, in shift, 
 	assign LoadByteDisable = {16{done}};
 	
 	wire [31:0] data_temp = MemDataIn32;
-	wire [15:0] data_temp_r = RIGHT_SHIFT(data_temp[15:0]);
-	wire [15:0] data_temp_i = RIGHT_SHIFT(data_temp[31:16]);
+	wire [15:0] data_temp_r = RIGHT_SHIFT_SIGNED(data_temp[15:0]);
+	wire [15:0] data_temp_i = RIGHT_SHIFT_SIGNED(data_temp[31:16]);
 	assign wv = shift ? {data_temp_i[15:0], data_temp_r[15:0], wv[127:32]} : {data_temp[31:0], wv[127:32]};
+
 
 	
 	wire [15:0] even_temp = even_ix + 16'h1;

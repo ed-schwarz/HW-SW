@@ -1,4 +1,5 @@
 all.xtensa.project.upgraded.version=3.0
+com.tensilica.xide.cdt.pref_tiewires_query=true
 eclipse.preferences.version=1
 isCPerspectiveReactivated=true
 isDebugPerspectiveReactivated=true

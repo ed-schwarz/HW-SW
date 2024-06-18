@@ -15,7 +15,7 @@ power estimate during the early phases of the design and validate the
 estimated power using hardware synthesis tool as design attains maturity.
 ------------------------------ DISCLAIMER ------------------------------
 
-  788407 TIE
+  789979 TIE
             4266 TIE_decoder (0.54%)
                0 TIE_AR_Regfile [additional power] (0.00%)
              419 TIE_w_r_State (0.05%)
@@ -114,19 +114,19 @@ estimated power using hardware synthesis tool as design attains maturity.
              753 TIE_slot0_semantic_qv_r_rur_sem (0.10%)
             1477 TIE_slot0_semantic_qv_i_wur_sem (0.19%)
              753 TIE_slot0_semantic_qv_i_rur_sem (0.10%)
-           66968 TIE_slot0_semantic_FFT_SIMPLE_MUL (8.49%)
-           84060 TIE_slot0_semantic_FFT_COM_MUL (10.66%)
+           66968 TIE_slot0_semantic_FFT_SIMPLE_MUL (8.48%)
+           84060 TIE_slot0_semantic_FFT_COM_MUL (10.64%)
               35 TIE_slot0_semantic_FFT_2_f_LD (0.00%)
-           87966 TIE_slot0_semantic_FFT_2_FFT (11.16%)
-          351759 TIE_slot0_semantic_FFT_8_FFT (44.62%)
+           87966 TIE_slot0_semantic_FFT_2_FFT (11.14%)
+          351759 TIE_slot0_semantic_FFT_8_FFT (44.53%)
             6420 TIE_slot0_semantic_FFT_BIT_REVERSE (0.81%)
               35 TIE_slot0_semantic_FFT_INIT (0.00%)
-           10909 TIE_slot0_semantic_FFT_LOAD_EVEN (1.38%)
+           11695 TIE_slot0_semantic_FFT_LOAD_EVEN (1.48%)
             6686 TIE_slot0_semantic_FFT_LOAD_ODD (0.85%)
-           15971 TIE_slot0_semantic_FFT_LOAD_W (2.03%)
+           16757 TIE_slot0_semantic_FFT_LOAD_W (2.12%)
             5935 TIE_slot0_semantic_FFT_STORE_EVEN (0.75%)
            10997 TIE_slot0_semantic_FFT_STORE_ODD (1.39%)
-            5482 TIE_slot0_semantic_FFT_UPDATE (0.70%)
+            5482 TIE_slot0_semantic_FFT_UPDATE (0.69%)
             1386 TIE_slot0_operand_opnd_FFT_SIMPLE_MUL_b (0.18%)
             1386 TIE_slot0_operand_opnd_FFT_SIMPLE_MUL_a (0.18%)
             1386 TIE_slot0_operand_opnd_FFT_SIMPLE_MUL_c (0.18%)
@@ -135,7 +135,7 @@ estimated power using hardware synthesis tool as design attains maturity.
             1386 TIE_slot0_operand_opnd_FFT_COM_MUL_b_r (0.18%)
             1386 TIE_slot0_operand_opnd_FFT_COM_MUL_a_r (0.18%)
             1386 TIE_slot0_operand_opnd_FFT_BIT_REVERSE_n (0.18%)
-           39196 TIE toplogic for muxing and pipeline management (4.97%)
+           39196 TIE toplogic for muxing and pipeline management (4.96%)
 
 
   ACTIVATED BLOCK POWER BEGIN
@@ -337,9 +337,9 @@ estimated power using hardware synthesis tool as design attains maturity.
   fft_8_fft                               nop  315.683
   fft_bit_reverse                         nop    5.735
   fft_init                                nop    0.789
-  fft_load_even                          load   10.561
+  fft_load_even                          load   11.263
   fft_load_odd                           load    6.724
-  fft_load_w                             load   14.778
+  fft_load_w                             load   15.480
   fft_store_even                        store    6.005
   fft_store_odd                         store   10.770
   fft_update                              nop    5.392
@@ -349,4 +349,4 @@ estimated power using hardware synthesis tool as design attains maturity.
 
 
 
-cpu_seconds 0.14
+cpu_seconds 0.06
