@@ -277,7 +277,7 @@ schedule fft_load_odd_schedule {FFT_LOAD_ODD} {
 	def av 3;
 }
 
-operation FFT_LOAD_W {}{inout w_ix, inout even_ix, in ptr_w, in done, inout wv, in step, out VAddr, in MemDataIn32, out LoadByteDisable, out debug_reg}
+operation FFT_LOAD_W {}{inout w_ix, inout even_ix, in ptr_w, in done, in shift, inout wv, in step, out VAddr, in MemDataIn32, out LoadByteDisable, out debug_reg}
 {
 	wire [31:0] w_ix_ext = {16'h0, w_ix};
 	wire [31:0] w_ix_ext_shift = LEFT_SHIFT_32(w_ix_ext);
