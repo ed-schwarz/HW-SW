@@ -61,6 +61,7 @@ uint32_t fft_exec(const intptr_t f, const intptr_t w, const uint32_t n, const ui
 			FFT_LOAD_ODD();
 			debug_reg = RUR_debug_reg();
 			FFT_LOAD_W();
+			debug_reg = RUR_debug_reg();
 
 		}
 		FFT_8_FFT();

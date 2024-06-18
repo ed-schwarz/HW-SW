@@ -1719,3 +1719,553 @@ Command-line arguments:  -os win32 -ws win32 -arch x86 256m -application org.ecl
 
 !ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:26:10.011
 !MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:33:50.183
+!MESSAGE Run: /C:/usr/xtensa/Xplorer-7.0.7/eclipse/plugins/other.xide.external.utils_7.0.7.2000/os/i686-MSWin32/runjob.exe  C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/bin/tc --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned -d C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -libdebug -Y -noerrformat  -name fft_tie C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\TIEFiles\fft_tie.tie
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:33:51.871
+!MESSAGE Return Code: 1
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:33:52.043
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -v C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:33:52.121
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:33:52.121
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:33:52.168
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:33:52.168
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -v C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:33:52.214
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:33:52.214
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:33:52.246
+!MESSAGE Return Code: 2
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-06-18 13:33:52.386
+!MESSAGE Indexed 'FFT' (8 sources, 14 headers) in 0,12 sec: 225 declarations; 992 references; 21 unresolved inclusions; 0 syntax errors; 44 unresolved names (3,49 %)
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:33:54.105
+!MESSAGE Run: /C:/usr/xtensa/Xplorer-7.0.7/eclipse/plugins/other.xide.external.utils_7.0.7.2000/os/i686-MSWin32/runjob.exe  C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/bin/tc --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned -d C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -libdebug -Y -noerrformat  -name fft_tie C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\TIEFiles\fft_tie.tie
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:33:55.761
+!MESSAGE Return Code: 1
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:33:55.902
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -v C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:33:55.964
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:33:55.980
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:33:56.011
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:33:56.011
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -v C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:33:56.043
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:33:56.043
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:33:56.074
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:34:16.714
+!MESSAGE Run: /C:/usr/xtensa/Xplorer-7.0.7/eclipse/plugins/other.xide.external.utils_7.0.7.2000/os/i686-MSWin32/runjob.exe  C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/bin/tc --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned -d C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -libdebug -Y -noerrformat  -name fft_tie C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\TIEFiles\fft_tie.tie
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:34:29.215
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:34:34.574
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -t -C C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:34:34.746
+!MESSAGE Return Code: 0
+
+!ENTRY org.eclipse.ui 4 4 2024-06-18 13:34:36.543
+!MESSAGE Part already exists in page layout: org.eclipse.ui.views.ProblemView.
+
+!ENTRY org.eclipse.ui 4 4 2024-06-18 13:34:36.543
+!MESSAGE Part already exists in page layout: org.eclipse.cdt.dsf.debug.ui.disassembly.view.
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:34:36.933
+!MESSAGE xt-run working directory <C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT>
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:34:36.933
+!MESSAGE xt-run launch <C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-run --xtensa-core=hwsw_codesign2019_aligned --xtensa-system=C:\usr\xtensa\XtDevTools\install\builds\RF-2016.4-win32\hwsw_codesign2019_aligned\config --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk --console --gdbserve=0 C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT\bin\hwsw_codesign2019_aligned\Debug\FFT >
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:34:37.402
+!MESSAGE Run: /C:/usr/xtensa/Xplorer-7.0.7/eclipse/plugins/other.xide.external.utils_7.0.7.2000/os/i686-MSWin32/runjob.exe  C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\tc --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned -y -Y --allow-tdk  -name fft_tie -noerrformat C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\TIEFiles\fft_tie.tie
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:34:39.337
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:34:39.383
+!MESSAGE C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-gdb --xtensa-core=hwsw_codesign2019_aligned --xtensa-system=C:\usr\xtensa\XtDevTools\install\builds\RF-2016.4-win32\hwsw_codesign2019_aligned\config --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk --quiet --nw --interpreter=mi2 C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT\bin\hwsw_codesign2019_aligned\Debug\FFT
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:34:40.777
+!MESSAGE Function disassembly requested for function: main, startaddress: 0x60001ee8, endaddr: 0x600020cc, source: binary, sync: on
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:34:40.855
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk -d -C -w --no-show-raw-insn --start-address=0x60001ee8 --stop-address=0x600020cc --section=.text C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:34:40.918
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:34:42.168
+!MESSAGE Function disassembly requested for function: fft_exec, startaddress: 0x6000169c, endaddr: 0x60001749, source: binary, sync: on
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:34:42.230
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk -d -C -w --no-show-raw-insn --start-address=0x6000169c --stop-address=0x60001749 --section=.text C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:34:42.339
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:35:17.839
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -t -C C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:35:17.996
+!MESSAGE Return Code: 0
+
+!ENTRY org.eclipse.ui 4 4 2024-06-18 13:35:19.371
+!MESSAGE Part already exists in page layout: org.eclipse.ui.views.ProblemView.
+
+!ENTRY org.eclipse.ui 4 4 2024-06-18 13:35:19.371
+!MESSAGE Part already exists in page layout: org.eclipse.cdt.dsf.debug.ui.disassembly.view.
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:35:19.746
+!MESSAGE xt-run working directory <C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT>
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:35:19.746
+!MESSAGE xt-run launch <C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-run --xtensa-core=hwsw_codesign2019_aligned --xtensa-system=C:\usr\xtensa\XtDevTools\install\builds\RF-2016.4-win32\hwsw_codesign2019_aligned\config --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk --console --gdbserve=0 C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT\bin\hwsw_codesign2019_aligned\Debug\FFT >
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:35:20.168
+!MESSAGE C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-gdb --xtensa-core=hwsw_codesign2019_aligned --xtensa-system=C:\usr\xtensa\XtDevTools\install\builds\RF-2016.4-win32\hwsw_codesign2019_aligned\config --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk --quiet --nw --interpreter=mi2 C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT\bin\hwsw_codesign2019_aligned\Debug\FFT
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:35:21.261
+!MESSAGE Function disassembly requested for function: main, startaddress: 0x60001ef0, endaddr: 0x600020d4, source: binary, sync: on
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:35:21.277
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk -d -C -w --no-show-raw-insn --start-address=0x60001ef0 --stop-address=0x600020d4 --section=.text C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:35:21.386
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:35:28.433
+!MESSAGE Function disassembly requested for function: fft_exec, startaddress: 0x6000169c, endaddr: 0x6000174e, source: binary, sync: on
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:35:28.480
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk -d -C -w --no-show-raw-insn --start-address=0x6000169c --stop-address=0x6000174e --section=.text C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:35:28.558
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:38:21.574
+!MESSAGE Run: /C:/usr/xtensa/Xplorer-7.0.7/eclipse/plugins/other.xide.external.utils_7.0.7.2000/os/i686-MSWin32/runjob.exe  C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/bin/tc --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned -d C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -libdebug -Y -noerrformat  -name fft_tie C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\TIEFiles\fft_tie.tie
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:38:34.324
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:38:39.386
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -t -C C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:38:39.543
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:38:41.293
+!MESSAGE xt-run working directory <C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT>
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:38:41.293
+!MESSAGE xt-run launch <C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-run --xtensa-core=hwsw_codesign2019_aligned --xtensa-system=C:\usr\xtensa\XtDevTools\install\builds\RF-2016.4-win32\hwsw_codesign2019_aligned\config --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk --console C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT\bin\hwsw_codesign2019_aligned\Debug\FFT >
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:40:45.605
+!MESSAGE Run: /C:/usr/xtensa/Xplorer-7.0.7/eclipse/plugins/other.xide.external.utils_7.0.7.2000/os/i686-MSWin32/runjob.exe  C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/bin/tc --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned -d C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -libdebug -Y -noerrformat  -name fft_tie C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\TIEFiles\fft_tie.tie
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:40:47.418
+!MESSAGE Return Code: 1
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:40:47.558
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -v C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:40:47.636
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:40:47.636
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:40:47.668
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:40:47.668
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -v C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:40:47.699
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:40:47.699
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:40:47.730
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:40:52.918
+!MESSAGE Run: /C:/usr/xtensa/Xplorer-7.0.7/eclipse/plugins/other.xide.external.utils_7.0.7.2000/os/i686-MSWin32/runjob.exe  C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/bin/tc --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned -d C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -libdebug -Y -noerrformat  -name fft_tie C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\TIEFiles\fft_tie.tie
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:40:54.636
+!MESSAGE Return Code: 1
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:40:54.761
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -v C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:40:54.808
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:40:54.808
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:40:54.855
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:40:54.855
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -v C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:40:54.886
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:40:54.886
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:40:54.918
+!MESSAGE Return Code: 2
+!SESSION 2024-06-18 13:41:08.464 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.7.0_21
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  256m -application org.eclipse.ui.ide.workbench
+Command-line arguments:  -os win32 -ws win32 -arch x86 256m -application org.eclipse.ui.ide.workbench
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2024-06-18 13:41:36.215
+!MESSAGE No repository found at http://xpg.cadence.com/xplorer/update/xx_707/.
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:41:36.621
+!MESSAGE Run: /C:/usr/xtensa/Xplorer-7.0.7/eclipse/plugins/other.xide.external.utils_7.0.7.2000/os/i686-MSWin32/runjob.exe  C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/bin/tc --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned -d C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -libdebug -Y -noerrformat  -name fft_tie C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\TIEFiles\fft_tie.tie
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:41:38.511
+!MESSAGE Return Code: 1
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:41:38.699
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -v C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:41:38.761
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:41:38.761
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:41:38.793
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:41:38.793
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -v C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:41:38.824
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:41:38.824
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:41:38.855
+!MESSAGE Return Code: 2
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-06-18 13:41:39.402
+!MESSAGE Indexed 'FFT' (8 sources, 14 headers) in 0,53 sec: 225 declarations; 994 references; 21 unresolved inclusions; 0 syntax errors; 44 unresolved names (3,48 %)
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:41:43.246
+!MESSAGE Run: /C:/usr/xtensa/Xplorer-7.0.7/eclipse/plugins/other.xide.external.utils_7.0.7.2000/os/i686-MSWin32/runjob.exe  C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/bin/tc --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned -d C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -libdebug -Y -noerrformat  -name fft_tie C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\TIEFiles\fft_tie.tie
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:41:45.340
+!MESSAGE Return Code: 1
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:41:45.480
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -v C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:41:45.558
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:41:45.574
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:41:45.605
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:41:45.605
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -v C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:41:45.636
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:41:45.636
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:41:45.668
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:41:54.230
+!MESSAGE Run: /C:/usr/xtensa/Xplorer-7.0.7/eclipse/plugins/other.xide.external.utils_7.0.7.2000/os/i686-MSWin32/runjob.exe  C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\tc --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned -y -Y --allow-tdk  -name fft_tie -noerrformat C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\TIEFiles\fft_tie.tie
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:41:55.902
+!MESSAGE Return Code: 1
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:42:52.027
+!MESSAGE Run: /C:/usr/xtensa/Xplorer-7.0.7/eclipse/plugins/other.xide.external.utils_7.0.7.2000/os/i686-MSWin32/runjob.exe  C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/bin/tc --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned -d C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -libdebug -Y -noerrformat  -name fft_tie C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\TIEFiles\fft_tie.tie
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:42:53.839
+!MESSAGE Return Code: 1
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:42:53.980
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -v C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:42:54.043
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:42:54.043
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:42:54.074
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:42:54.074
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -v C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:42:54.105
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:42:54.105
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:42:54.136
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:43:37.652
+!MESSAGE Run: /C:/usr/xtensa/Xplorer-7.0.7/eclipse/plugins/other.xide.external.utils_7.0.7.2000/os/i686-MSWin32/runjob.exe  C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/bin/tc --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned -d C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -libdebug -Y -noerrformat  -name fft_tie C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\TIEFiles\fft_tie.tie
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:43:41.121
+!MESSAGE Return Code: 1
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:43:41.293
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -v C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:43:41.371
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:43:41.371
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:43:41.402
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:43:41.402
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -v C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:43:41.433
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:43:41.433
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:43:41.464
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:45:20.855
+!MESSAGE Run: /C:/usr/xtensa/Xplorer-7.0.7/eclipse/plugins/other.xide.external.utils_7.0.7.2000/os/i686-MSWin32/runjob.exe  C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/bin/tc --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned -d C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -libdebug -Y -noerrformat  -name fft_tie C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\TIEFiles\fft_tie.tie
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:45:22.652
+!MESSAGE Return Code: 1
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:45:22.808
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -v C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:45:22.871
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:45:22.871
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:45:22.918
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:45:22.918
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -v C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:45:22.949
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:45:22.949
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:45:22.996
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:45:40.089
+!MESSAGE Run: /C:/usr/xtensa/Xplorer-7.0.7/eclipse/plugins/other.xide.external.utils_7.0.7.2000/os/i686-MSWin32/runjob.exe  C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/bin/tc --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned -d C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -libdebug -Y -noerrformat  -name fft_tie C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\TIEFiles\fft_tie.tie
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:45:41.918
+!MESSAGE Return Code: 1
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:45:42.043
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -v C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:45:42.136
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:45:42.136
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:45:42.168
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:45:42.183
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -v C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:45:42.230
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:45:42.230
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:45:42.261
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:45:48.199
+!MESSAGE Run: /C:/usr/xtensa/Xplorer-7.0.7/eclipse/plugins/other.xide.external.utils_7.0.7.2000/os/i686-MSWin32/runjob.exe  C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/bin/tc --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned -d C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -libdebug -Y -noerrformat  -name fft_tie C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\TIEFiles\fft_tie.tie
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:45:50.027
+!MESSAGE Return Code: 1
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:45:50.183
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -v C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:45:50.246
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:45:50.246
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:45:50.277
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:45:50.277
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -v C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:45:50.324
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:45:50.324
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:45:50.355
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:47:31.964
+!MESSAGE Run: /C:/usr/xtensa/Xplorer-7.0.7/eclipse/plugins/other.xide.external.utils_7.0.7.2000/os/i686-MSWin32/runjob.exe  C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/bin/tc --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned -d C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -libdebug -Y -noerrformat  -name fft_tie C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\TIEFiles\fft_tie.tie
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:47:45.496
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:47:50.933
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -t -C C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:47:51.121
+!MESSAGE Return Code: 0
+
+!ENTRY org.eclipse.debug.ui 4 0 2024-06-18 13:48:19.980
+!MESSAGE Tab group extension: com.tensilica.xide.cdt.launch.AttachTabGroup for type com.tensilica.xide.cdt.launch.AttachLaunch for the * mode has been replaced by extension: com.tensilica.xide.cdt.launch.AttachTabGroup
+
+!ENTRY org.eclipse.ui 4 4 2024-06-18 13:48:19.980
+!MESSAGE Part already exists in page layout: org.eclipse.ui.views.ProblemView.
+
+!ENTRY org.eclipse.ui 4 4 2024-06-18 13:48:19.996
+!MESSAGE Part already exists in page layout: org.eclipse.cdt.dsf.debug.ui.disassembly.view.
+
+!ENTRY org.eclipse.osgi 2 1 2024-06-18 13:48:20.152
+!MESSAGE NLS unused message: // in: com.tensilica.xide.dsf.core.reset.ResetMessages
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:48:20.527
+!MESSAGE xt-run working directory <C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT>
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:48:20.527
+!MESSAGE xt-run launch <C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-run --xtensa-core=hwsw_codesign2019_aligned --xtensa-system=C:\usr\xtensa\XtDevTools\install\builds\RF-2016.4-win32\hwsw_codesign2019_aligned\config --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk --console --gdbserve=0 C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT\bin\hwsw_codesign2019_aligned\Debug\FFT >
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:48:21.121
+!MESSAGE Run: /C:/usr/xtensa/Xplorer-7.0.7/eclipse/plugins/other.xide.external.utils_7.0.7.2000/os/i686-MSWin32/runjob.exe  C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\tc --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned -y -Y --allow-tdk  -name fft_tie -noerrformat C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\TIEFiles\fft_tie.tie
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:48:23.074
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:48:23.136
+!MESSAGE C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-gdb --xtensa-core=hwsw_codesign2019_aligned --xtensa-system=C:\usr\xtensa\XtDevTools\install\builds\RF-2016.4-win32\hwsw_codesign2019_aligned\config --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk --quiet --nw --interpreter=mi2 C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT\bin\hwsw_codesign2019_aligned\Debug\FFT
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:48:24.855
+!MESSAGE Function disassembly requested for function: main, startaddress: 0x60001ef0, endaddr: 0x600020d4, source: binary, sync: on
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:48:24.871
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk -d -C -w --no-show-raw-insn --start-address=0x60001ef0 --stop-address=0x600020d4 --section=.text C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:48:25.011
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:48:34.996
+!MESSAGE Function disassembly requested for function: fft_exec, startaddress: 0x6000169c, endaddr: 0x6000174e, source: binary, sync: on
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:48:35.074
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk -d -C -w --no-show-raw-insn --start-address=0x6000169c --stop-address=0x6000174e --section=.text C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:48:35.168
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:49:44.793
+!MESSAGE xt-run working directory <C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT>
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:49:44.793
+!MESSAGE xt-run launch <C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-run --xtensa-core=hwsw_codesign2019_aligned --xtensa-system=C:\usr\xtensa\XtDevTools\install\builds\RF-2016.4-win32\hwsw_codesign2019_aligned\config --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk --console --gdbserve=0 C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT\bin\hwsw_codesign2019_aligned\Debug\FFT >
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:49:45.152
+!MESSAGE C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-gdb --xtensa-core=hwsw_codesign2019_aligned --xtensa-system=C:\usr\xtensa\XtDevTools\install\builds\RF-2016.4-win32\hwsw_codesign2019_aligned\config --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk --quiet --nw --interpreter=mi2 C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT\bin\hwsw_codesign2019_aligned\Debug\FFT
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:49:46.074
+!MESSAGE Function disassembly requested for function: main, startaddress: 0x60001ef0, endaddr: 0x600020d4, source: binary, sync: on
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:49:46.183
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk -d -C -w --no-show-raw-insn --start-address=0x60001ef0 --stop-address=0x600020d4 --section=.text C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:49:46.277
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:49:46.886
+!MESSAGE Function disassembly requested for function: fft_exec, startaddress: 0x6000169c, endaddr: 0x6000174e, source: binary, sync: on
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:49:46.933
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk -d -C -w --no-show-raw-insn --start-address=0x6000169c --stop-address=0x6000174e --section=.text C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:49:47.027
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:58:48.261
+!MESSAGE xt-run working directory <C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT>
+
+!ENTRY com.tensilica.xide.core 1 0 2024-06-18 13:58:48.261
+!MESSAGE xt-run launch <C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-run --xtensa-core=hwsw_codesign2019_aligned --xtensa-system=C:\usr\xtensa\XtDevTools\install\builds\RF-2016.4-win32\hwsw_codesign2019_aligned\config --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk --console C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT\bin\hwsw_codesign2019_aligned\Debug\FFT >

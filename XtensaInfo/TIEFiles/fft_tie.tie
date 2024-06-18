@@ -277,13 +277,20 @@ schedule fft_load_odd_schedule {FFT_LOAD_ODD} {
 	def av 3;
 }
 
-operation FFT_LOAD_W {}{inout w_ix, inout even_ix, in ptr_w, in done, inout wv, in step, out VAddr, in MemDataIn32, out LoadByteDisable}
+operation FFT_LOAD_W {}{inout w_ix, inout even_ix, in ptr_w, in done, inout wv, in step, out VAddr, in MemDataIn32, out LoadByteDisable, out debug_reg}
 {
 	wire [31:0] w_ix_ext = {16'h0, w_ix};
-	assign VAddr = ptr_w + LEFT_SHIFT_32(LEFT_SHIFT_32(w_ix_ext));
+	wire [31:0] w_ix_ext_shift = LEFT_SHIFT_32(w_ix_ext);
+	wire [31:0] VAddr_temp = ptr_w + LEFT_SHIFT_32(w_ix_ext_shift);
+	assign debug_reg = VAddr_temp;
+	assign VAddr = ptr_w + LEFT_SHIFT_32(w_ix_ext_shift);
 	assign LoadByteDisable = {16{done}};
+	
 	wire [31:0] data_temp = MemDataIn32;
-	assign wv = {data_temp[31:0], wv[127:32]};
+	wire [15:0] data_temp_r = RIGHT_SHIFT(data_temp[15:0]);
+	wire [15:0] data_temp_i = RIGHT_SHIFT(data_temp[31:16]);
+	assign wv = shift ? {data_temp_i[15:0], data_temp_r[15:0], wv[127:32]} : {data_temp[31:0], wv[127:32]};
+
 	
 	wire [15:0] even_temp = even_ix + 16'h1;
 	wire [15:0] w_temp =  w_ix + 16'h1;
@@ -306,7 +313,8 @@ schedule fft_load_w_schedule {FFT_LOAD_W} {
 operation FFT_STORE_EVEN {} {in even_ix, out odd_ix, in ptr_data, in done, in step, inout bv, out VAddr, out MemDataOut32, out StoreByteDisable}
 {
 	wire [31:0] even_ix_ext = {16'h0, even_ix};
-	assign VAddr = ptr_data + LEFT_SHIFT_32(LEFT_SHIFT_32(even_ix_ext));
+	wire [31:0] even_ix_shift = LEFT_SHIFT_32(even_ix_ext);
+	assign VAddr = ptr_data + LEFT_SHIFT_32(even_ix_shift);
 	assign StoreByteDisable = {16{done}};
 	assign odd_ix = even_ix + step;
 	
@@ -324,7 +332,8 @@ schedule fft_store_even_schedule {FFT_STORE_EVEN} {
 operation FFT_STORE_ODD {} {in odd_ix, in ptr_data, in done, in step, inout av, inout m_ix, inout even_ix, out VAddr, out MemDataOut32, out StoreByteDisable}
 {
 	wire [31:0] odd_ix_ext = {16'h0, odd_ix};
-	assign VAddr = ptr_data + LEFT_SHIFT_32(LEFT_SHIFT_32(odd_ix_ext));
+	wire [31:0] even_ix_shift = LEFT_SHIFT_32(odd_ix_ext);
+	assign VAddr = ptr_data + LEFT_SHIFT_32(even_ix_shift);
 	assign StoreByteDisable = {16{done}};
 	
 	assign MemDataOut32 = av[31:0];
