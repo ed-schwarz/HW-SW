@@ -1,0 +1,352 @@
+ 
+----------------------------- DISCLAIMER ------------------------------
+The power reported here is an estimate of the actual power.
+The actual power should be obtained using hardware power analysis tools.
+The actual power depends on many factors beyond the control of the
+estimator. These factors include but are not limited to 
+technology process, standard cell library, synthesis tool quality,
+synthesis scripts, optimization switches, MHz / performance goal,
+and power goal. Furthermore, the power reported here is in pJ/cycle (uW/MHz)
+for 0.13 micron lv technology.
+
+Every attempt has been made to provide an accurate estimate, however,
+the actual power may vary. TIE developer is advised to rely on the 
+power estimate during the early phases of the design and validate the
+estimated power using hardware synthesis tool as design attains maturity.
+------------------------------ DISCLAIMER ------------------------------
+
+  783371 TIE
+            4262 TIE_decoder (0.54%)
+               0 TIE_AR_Regfile [additional power] (0.00%)
+             419 TIE_w_r_State (0.05%)
+             419 TIE_w_i_State (0.05%)
+             419 TIE_a_r_State (0.05%)
+             419 TIE_a_i_State (0.05%)
+             419 TIE_b_r_State (0.05%)
+             419 TIE_b_i_State (0.05%)
+            1290 TIE_u_r_State (0.16%)
+            1290 TIE_u_i_State (0.16%)
+            1290 TIE_v_r_State (0.16%)
+            1290 TIE_v_i_State (0.16%)
+            1290 TIE_q_r_State (0.16%)
+            1290 TIE_q_i_State (0.16%)
+            1810 TIE_wv_State (0.23%)
+           12767 TIE_av_State (1.63%)
+           12767 TIE_bv_State (1.63%)
+             573 TIE_done_State (0.07%)
+             159 TIE_shift_State (0.02%)
+            3608 TIE_even_ix_State (0.46%)
+            1290 TIE_odd_ix_State (0.16%)
+            1114 TIE_even_const_State (0.14%)
+             419 TIE_od_ix_State (0.05%)
+            2543 TIE_w_ix_State (0.32%)
+            2543 TIE_m_ix_State (0.32%)
+            2543 TIE_l_State (0.32%)
+             419 TIE_n_State (0.05%)
+             419 TIE_lg2_n_State (0.05%)
+            2055 TIE_step_State (0.26%)
+             684 TIE_ptr_data_State (0.09%)
+             684 TIE_ptr_w_State (0.09%)
+            2253 TIE_debug_reg_State (0.29%)
+            1185 TIE_qv_r_State (0.15%)
+            1185 TIE_qv_i_State (0.15%)
+              35 TIE_slot0_semantic_RUR_w_r (0.00%)
+             105 TIE_slot0_semantic_WUR_w_r (0.01%)
+              35 TIE_slot0_semantic_RUR_w_i (0.00%)
+             105 TIE_slot0_semantic_WUR_w_i (0.01%)
+              35 TIE_slot0_semantic_RUR_a_r (0.00%)
+             105 TIE_slot0_semantic_WUR_a_r (0.01%)
+              35 TIE_slot0_semantic_RUR_a_i (0.00%)
+             105 TIE_slot0_semantic_WUR_a_i (0.01%)
+              35 TIE_slot0_semantic_RUR_b_r (0.00%)
+             105 TIE_slot0_semantic_WUR_b_r (0.01%)
+              35 TIE_slot0_semantic_RUR_b_i (0.00%)
+             105 TIE_slot0_semantic_WUR_b_i (0.01%)
+              35 TIE_slot0_semantic_RUR_u_r (0.00%)
+              35 TIE_slot0_semantic_WUR_u_r (0.00%)
+              35 TIE_slot0_semantic_RUR_u_i (0.00%)
+              35 TIE_slot0_semantic_WUR_u_i (0.00%)
+              35 TIE_slot0_semantic_RUR_v_r (0.00%)
+              35 TIE_slot0_semantic_WUR_v_r (0.00%)
+              35 TIE_slot0_semantic_RUR_v_i (0.00%)
+              35 TIE_slot0_semantic_WUR_v_i (0.00%)
+              35 TIE_slot0_semantic_RUR_q_r (0.00%)
+              35 TIE_slot0_semantic_WUR_q_r (0.00%)
+              35 TIE_slot0_semantic_RUR_q_i (0.00%)
+              35 TIE_slot0_semantic_WUR_q_i (0.00%)
+            2849 TIE_slot0_semantic_wv_wur_sem (0.36%)
+            1296 TIE_slot0_semantic_wv_rur_sem (0.17%)
+            2699 TIE_slot0_semantic_av_wur_sem (0.34%)
+            1296 TIE_slot0_semantic_av_rur_sem (0.17%)
+            2699 TIE_slot0_semantic_bv_wur_sem (0.34%)
+            1296 TIE_slot0_semantic_bv_rur_sem (0.17%)
+              35 TIE_slot0_semantic_RUR_done (0.00%)
+              35 TIE_slot0_semantic_WUR_done (0.00%)
+              35 TIE_slot0_semantic_RUR_shift (0.00%)
+             105 TIE_slot0_semantic_WUR_shift (0.01%)
+              35 TIE_slot0_semantic_RUR_even_ix (0.00%)
+              35 TIE_slot0_semantic_WUR_even_ix (0.00%)
+              35 TIE_slot0_semantic_RUR_odd_ix (0.00%)
+              35 TIE_slot0_semantic_WUR_odd_ix (0.00%)
+              35 TIE_slot0_semantic_RUR_even_const (0.00%)
+              70 TIE_slot0_semantic_WUR_even_const (0.01%)
+              35 TIE_slot0_semantic_RUR_od_ix (0.00%)
+             105 TIE_slot0_semantic_WUR_od_ix (0.01%)
+              35 TIE_slot0_semantic_RUR_w_ix (0.00%)
+              35 TIE_slot0_semantic_WUR_w_ix (0.00%)
+              35 TIE_slot0_semantic_RUR_m_ix (0.00%)
+              35 TIE_slot0_semantic_WUR_m_ix (0.00%)
+              35 TIE_slot0_semantic_RUR_l (0.00%)
+              35 TIE_slot0_semantic_WUR_l (0.00%)
+              35 TIE_slot0_semantic_RUR_n (0.00%)
+             105 TIE_slot0_semantic_WUR_n (0.01%)
+              35 TIE_slot0_semantic_RUR_lg2_n (0.00%)
+             105 TIE_slot0_semantic_WUR_lg2_n (0.01%)
+              35 TIE_slot0_semantic_RUR_step (0.00%)
+              35 TIE_slot0_semantic_WUR_step (0.00%)
+              35 TIE_slot0_semantic_RUR_ptr_data (0.00%)
+             105 TIE_slot0_semantic_WUR_ptr_data (0.01%)
+              35 TIE_slot0_semantic_RUR_ptr_w (0.00%)
+             105 TIE_slot0_semantic_WUR_ptr_w (0.01%)
+              35 TIE_slot0_semantic_RUR_debug_reg (0.00%)
+              35 TIE_slot0_semantic_WUR_debug_reg (0.00%)
+            1477 TIE_slot0_semantic_qv_r_wur_sem (0.19%)
+             753 TIE_slot0_semantic_qv_r_rur_sem (0.10%)
+            1477 TIE_slot0_semantic_qv_i_wur_sem (0.19%)
+             753 TIE_slot0_semantic_qv_i_rur_sem (0.10%)
+           66968 TIE_slot0_semantic_FFT_SIMPLE_MUL (8.55%)
+           84060 TIE_slot0_semantic_FFT_COM_MUL (10.73%)
+              35 TIE_slot0_semantic_FFT_2_f_LD (0.00%)
+           87966 TIE_slot0_semantic_FFT_2_FFT (11.23%)
+          351759 TIE_slot0_semantic_FFT_8_FFT (44.90%)
+            6420 TIE_slot0_semantic_FFT_BIT_REVERSE (0.82%)
+              35 TIE_slot0_semantic_FFT_INIT (0.00%)
+           10909 TIE_slot0_semantic_FFT_LOAD_EVEN (1.39%)
+            6686 TIE_slot0_semantic_FFT_LOAD_ODD (0.85%)
+           11338 TIE_slot0_semantic_FFT_LOAD_W (1.45%)
+            5935 TIE_slot0_semantic_FFT_STORE_EVEN (0.76%)
+           10997 TIE_slot0_semantic_FFT_STORE_ODD (1.40%)
+            5482 TIE_slot0_semantic_FFT_UPDATE (0.70%)
+            1386 TIE_slot0_operand_opnd_FFT_SIMPLE_MUL_b (0.18%)
+            1386 TIE_slot0_operand_opnd_FFT_SIMPLE_MUL_a (0.18%)
+            1386 TIE_slot0_operand_opnd_FFT_SIMPLE_MUL_c (0.18%)
+            1386 TIE_slot0_operand_opnd_FFT_COM_MUL_b_i (0.18%)
+            1386 TIE_slot0_operand_opnd_FFT_COM_MUL_a_i (0.18%)
+            1386 TIE_slot0_operand_opnd_FFT_COM_MUL_b_r (0.18%)
+            1386 TIE_slot0_operand_opnd_FFT_COM_MUL_a_r (0.18%)
+            1386 TIE_slot0_operand_opnd_FFT_BIT_REVERSE_n (0.18%)
+           38797 TIE toplogic for muxing and pipeline management (4.95%)
+
+
+  ACTIVATED BLOCK POWER BEGIN
+
+  decoder     4.262 toplogic   38.797
+  Instruction                            core semantic    state  regfile
+  RUR_w_r                                 nop    0.035    0.000    0.000
+  WUR_w_r                                 nop    0.105    0.419    0.000
+  RUR_w_i                                 nop    0.035    0.000    0.000
+  WUR_w_i                                 nop    0.105    0.419    0.000
+  RUR_a_r                                 nop    0.035    0.000    0.000
+  WUR_a_r                                 nop    0.105    0.419    0.000
+  RUR_a_i                                 nop    0.035    0.000    0.000
+  WUR_a_i                                 nop    0.105    0.419    0.000
+  RUR_b_r                                 nop    0.035    0.000    0.000
+  WUR_b_r                                 nop    0.105    0.419    0.000
+  RUR_b_i                                 nop    0.035    0.000    0.000
+  WUR_b_i                                 nop    0.105    0.419    0.000
+  RUR_u_r                                 nop    0.035    0.000    0.000
+  WUR_u_r                                 nop    0.035    1.290    0.000
+  RUR_u_i                                 nop    0.035    0.000    0.000
+  WUR_u_i                                 nop    0.035    1.290    0.000
+  RUR_v_r                                 nop    0.035    0.000    0.000
+  WUR_v_r                                 nop    0.035    1.290    0.000
+  RUR_v_i                                 nop    0.035    0.000    0.000
+  WUR_v_i                                 nop    0.035    1.290    0.000
+  RUR_q_r                                 nop    0.035    0.000    0.000
+  WUR_q_r                                 nop    0.035    1.290    0.000
+  RUR_q_i                                 nop    0.035    0.000    0.000
+  WUR_q_i                                 nop    0.035    1.290    0.000
+  RUR_wv_0                                nop    1.296    0.000    0.000
+  WUR_wv_0                                nop    2.849    1.810    0.000
+  RUR_wv_1                                nop    1.296    0.000    0.000
+  WUR_wv_1                                nop    2.849    1.810    0.000
+  RUR_wv_2                                nop    1.296    0.000    0.000
+  WUR_wv_2                                nop    2.849    1.810    0.000
+  RUR_wv_3                                nop    1.296    0.000    0.000
+  WUR_wv_3                                nop    2.849    1.810    0.000
+  RUR_av_0                                nop    1.296    0.000    0.000
+  WUR_av_0                                nop    2.699   12.767    0.000
+  RUR_av_1                                nop    1.296    0.000    0.000
+  WUR_av_1                                nop    2.699   12.767    0.000
+  RUR_av_2                                nop    1.296    0.000    0.000
+  WUR_av_2                                nop    2.699   12.767    0.000
+  RUR_av_3                                nop    1.296    0.000    0.000
+  WUR_av_3                                nop    2.699   12.767    0.000
+  RUR_bv_0                                nop    1.296    0.000    0.000
+  WUR_bv_0                                nop    2.699   12.767    0.000
+  RUR_bv_1                                nop    1.296    0.000    0.000
+  WUR_bv_1                                nop    2.699   12.767    0.000
+  RUR_bv_2                                nop    1.296    0.000    0.000
+  WUR_bv_2                                nop    2.699   12.767    0.000
+  RUR_bv_3                                nop    1.296    0.000    0.000
+  WUR_bv_3                                nop    2.699   12.767    0.000
+  RUR_done                                nop    0.035    0.000    0.000
+  WUR_done                                nop    0.035    0.573    0.000
+  RUR_shift                               nop    0.035    0.000    0.000
+  WUR_shift                               nop    0.105    0.159    0.000
+  RUR_even_ix                             nop    0.035    0.000    0.000
+  WUR_even_ix                             nop    0.035    3.608    0.000
+  RUR_odd_ix                              nop    0.035    0.000    0.000
+  WUR_odd_ix                              nop    0.035    1.290    0.000
+  RUR_even_const                          nop    0.035    0.000    0.000
+  WUR_even_const                          nop    0.070    1.114    0.000
+  RUR_od_ix                               nop    0.035    0.000    0.000
+  WUR_od_ix                               nop    0.105    0.419    0.000
+  RUR_w_ix                                nop    0.035    0.000    0.000
+  WUR_w_ix                                nop    0.035    2.543    0.000
+  RUR_m_ix                                nop    0.035    0.000    0.000
+  WUR_m_ix                                nop    0.035    2.543    0.000
+  RUR_l                                   nop    0.035    0.000    0.000
+  WUR_l                                   nop    0.035    2.543    0.000
+  RUR_n                                   nop    0.035    0.000    0.000
+  WUR_n                                   nop    0.105    0.419    0.000
+  RUR_lg2_n                               nop    0.035    0.000    0.000
+  WUR_lg2_n                               nop    0.105    0.419    0.000
+  RUR_step                                nop    0.035    0.000    0.000
+  WUR_step                                nop    0.035    2.055    0.000
+  RUR_ptr_data                            nop    0.035    0.000    0.000
+  WUR_ptr_data                            nop    0.105    0.684    0.000
+  RUR_ptr_w                               nop    0.035    0.000    0.000
+  WUR_ptr_w                               nop    0.105    0.684    0.000
+  RUR_debug_reg                           nop    0.035    0.000    0.000
+  WUR_debug_reg                           nop    0.035    2.253    0.000
+  RUR_qv_r_0                              nop    0.753    0.000    0.000
+  WUR_qv_r_0                              nop    1.477    1.185    0.000
+  RUR_qv_r_1                              nop    0.753    0.000    0.000
+  WUR_qv_r_1                              nop    1.477    1.185    0.000
+  RUR_qv_i_0                              nop    0.753    0.000    0.000
+  WUR_qv_i_0                              nop    1.477    1.185    0.000
+  RUR_qv_i_1                              nop    0.753    0.000    0.000
+  WUR_qv_i_1                              nop    1.477    1.185    0.000
+  FFT_SIMPLE_MUL                          nop   66.968    0.000    0.000
+  FFT_COM_MUL                             nop   84.060    0.000    0.000
+  FFT_2_f_LD                              nop    0.035    2.580    0.000
+  FFT_2_FFT                               nop   87.966    5.160    0.000
+  FFT_8_FFT                               nop  351.759   29.142    0.000
+  FFT_BIT_REVERSE                         nop    6.420    0.000    0.000
+  FFT_INIT                                nop    0.035   15.155    0.000
+  FFT_UPDATE                              nop    5.482    9.893    0.000
+
+
+  ACTIVATED BLOCK POWER END
+
+
+
+  INSTRUCTION POWER BEGIN
+
+  rur.w_r                                 nop    0.031
+  wur.w_r                                 nop    0.115
+  rur.w_i                                 nop    0.031
+  wur.w_i                                 nop    0.115
+  rur.a_r                                 nop    0.031
+  wur.a_r                                 nop    0.115
+  rur.a_i                                 nop    0.031
+  wur.a_i                                 nop    0.115
+  rur.b_r                                 nop    0.031
+  wur.b_r                                 nop    0.115
+  rur.b_i                                 nop    0.031
+  wur.b_i                                 nop    0.115
+  rur.u_r                                 nop    0.031
+  wur.u_r                                 nop    0.096
+  rur.u_i                                 nop    0.031
+  wur.u_i                                 nop    0.096
+  rur.v_r                                 nop    0.031
+  wur.v_r                                 nop    0.096
+  rur.v_i                                 nop    0.031
+  wur.v_i                                 nop    0.096
+  rur.q_r                                 nop    0.031
+  wur.q_r                                 nop    0.096
+  rur.q_i                                 nop    0.031
+  wur.q_i                                 nop    0.096
+  rur.wv_0                                nop    1.158
+  wur.wv_0                                nop    2.636
+  rur.wv_1                                nop    1.158
+  wur.wv_1                                nop    2.636
+  rur.wv_2                                nop    1.158
+  wur.wv_2                                nop    2.636
+  rur.wv_3                                nop    1.158
+  wur.wv_3                                nop    2.636
+  rur.av_0                                nop    1.158
+  wur.av_0                                nop    3.049
+  rur.av_1                                nop    1.158
+  wur.av_1                                nop    3.049
+  rur.av_2                                nop    1.158
+  wur.av_2                                nop    3.049
+  rur.av_3                                nop    1.158
+  wur.av_3                                nop    3.049
+  rur.bv_0                                nop    1.158
+  wur.bv_0                                nop    3.049
+  rur.bv_1                                nop    1.158
+  wur.bv_1                                nop    3.049
+  rur.bv_2                                nop    1.158
+  wur.bv_2                                nop    3.049
+  rur.bv_3                                nop    1.158
+  wur.bv_3                                nop    3.049
+  rur.done                                nop    0.031
+  wur.done                                nop    0.060
+  rur.shift                               nop    0.031
+  wur.shift                               nop    0.102
+  rur.even_ix                             nop    0.031
+  wur.even_ix                             nop    0.212
+  rur.odd_ix                              nop    0.031
+  wur.odd_ix                              nop    0.096
+  rur.even_const                          nop    0.031
+  wur.even_const                          nop    0.118
+  rur.od_ix                               nop    0.031
+  wur.od_ix                               nop    0.115
+  rur.w_ix                                nop    0.031
+  wur.w_ix                                nop    0.158
+  rur.m_ix                                nop    0.031
+  wur.m_ix                                nop    0.158
+  rur.l                                   nop    0.031
+  wur.l                                   nop    0.158
+  rur.n                                   nop    0.031
+  wur.n                                   nop    0.115
+  rur.lg2_n                               nop    0.031
+  wur.lg2_n                               nop    0.115
+  rur.step                                nop    0.031
+  wur.step                                nop    0.134
+  rur.ptr_data                            nop    0.031
+  wur.ptr_data                            nop    0.128
+  rur.ptr_w                               nop    0.031
+  wur.ptr_w                               nop    0.128
+  rur.debug_reg                           nop    0.031
+  wur.debug_reg                           nop    0.144
+  rur.qv_r_0                              nop    0.673
+  wur.qv_r_0                              nop    1.379
+  rur.qv_r_1                              nop    0.673
+  wur.qv_r_1                              nop    1.379
+  rur.qv_i_0                              nop    0.673
+  wur.qv_i_0                              nop    1.379
+  rur.qv_i_1                              nop    0.673
+  wur.qv_i_1                              nop    1.379
+  fft_simple_mul                          nop   59.823
+  fft_com_mul                             nop   75.091
+  fft_2_f_ld                              nop    0.160
+  fft_2_fft                               nop   78.838
+  fft_8_fft                               nop  315.683
+  fft_bit_reverse                         nop    5.735
+  fft_init                                nop    0.789
+  fft_load_even                          load   10.561
+  fft_load_odd                           load    6.724
+  fft_load_w                             load   10.526
+  fft_store_even                        store    6.005
+  fft_store_odd                         store   10.770
+  fft_update                              nop    5.392
+
+
+  INSTRUCTION POWER END
+
+
+
+cpu_seconds 0.05

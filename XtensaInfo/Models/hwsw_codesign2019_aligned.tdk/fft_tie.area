@@ -1,0 +1,150 @@
+
+============================== DISCLAIMER ==============================
+The area reported here is an estimate of the actual area.
+The actual area should be obtained using hardware synthesis tools.
+The actual area depends on many factors beyond the control of the
+estimator. These factors include but are not limited to
+technology process, standard cell library, synthesis tool quality,
+synthesis scripts, optimization switches, MHz / performance goal,
+and area goal. Furthermore, the area reported here is in gates,
+where each gate is equivalent in area to NAND2 2x drive strength
+gate in commonly available standard cell library.
+
+The size of NAND2 2x gate is approximately equal to:
+   45 nm technology   : 1.56 sq micron
+   65 nm technology   : 2.6 sq micron
+   90 nm technology   : 4 sq micron
+  130 nm technology   : 8 sq micron
+  180 nm technology   : 16 sq micron
+
+The silicon area of the IP core is equal to gate area in square micron
+divided by the utilization ratio. The utilization ratio that can be
+used depends on many factors that include but are not limited to
+quality of tools for physical synthesis, placement, and routing;
+wiring requirements for a specific TIE design; number of metal layers;
+and routing congestion;
+
+Every attempt has been made to provide an accurate estimate, however,
+the actual area may vary. TIE developer is advised to rely on the
+area estimate during the early phases of the design and validate the
+estimated area using hardware synthesis tool as design attains maturity.
+============================== DISCLAIMER ==============================
+
+
+
+   54649 TIE
+             738 TIE_decoder (1.35%)
+              71 TIE_w_r_State (0.13%)
+              71 TIE_w_i_State (0.13%)
+              71 TIE_a_r_State (0.13%)
+              71 TIE_a_i_State (0.13%)
+              71 TIE_b_r_State (0.13%)
+              71 TIE_b_i_State (0.13%)
+             205 TIE_u_r_State (0.38%)
+             205 TIE_u_i_State (0.38%)
+             205 TIE_v_r_State (0.38%)
+             205 TIE_v_i_State (0.38%)
+             205 TIE_q_r_State (0.38%)
+             205 TIE_q_i_State (0.38%)
+             462 TIE_wv_State (0.85%)
+            1809 TIE_av_State (3.31%)
+            1809 TIE_bv_State (3.31%)
+              60 TIE_done_State (0.11%)
+              21 TIE_shift_State (0.04%)
+             305 TIE_even_ix_State (0.56%)
+             205 TIE_odd_ix_State (0.38%)
+             147 TIE_even_const_State (0.27%)
+              71 TIE_od_ix_State (0.13%)
+             251 TIE_w_ix_State (0.46%)
+             251 TIE_m_ix_State (0.46%)
+             251 TIE_l_State (0.46%)
+              71 TIE_n_State (0.13%)
+              71 TIE_lg2_n_State (0.13%)
+             221 TIE_step_State (0.40%)
+             127 TIE_ptr_data_State (0.23%)
+             127 TIE_ptr_w_State (0.23%)
+             398 TIE_debug_reg_State (0.73%)
+             239 TIE_qv_r_State (0.44%)
+             239 TIE_qv_i_State (0.44%)
+               8 TIE_slot0_semantic_RUR_w_r (0.01%)
+              24 TIE_slot0_semantic_WUR_w_r (0.04%)
+               8 TIE_slot0_semantic_RUR_w_i (0.01%)
+              24 TIE_slot0_semantic_WUR_w_i (0.04%)
+               8 TIE_slot0_semantic_RUR_a_r (0.01%)
+              24 TIE_slot0_semantic_WUR_a_r (0.04%)
+               8 TIE_slot0_semantic_RUR_a_i (0.01%)
+              24 TIE_slot0_semantic_WUR_a_i (0.04%)
+               8 TIE_slot0_semantic_RUR_b_r (0.01%)
+              24 TIE_slot0_semantic_WUR_b_r (0.04%)
+               8 TIE_slot0_semantic_RUR_b_i (0.01%)
+              24 TIE_slot0_semantic_WUR_b_i (0.04%)
+               8 TIE_slot0_semantic_RUR_u_r (0.01%)
+               8 TIE_slot0_semantic_WUR_u_r (0.01%)
+               8 TIE_slot0_semantic_RUR_u_i (0.01%)
+               8 TIE_slot0_semantic_WUR_u_i (0.01%)
+               8 TIE_slot0_semantic_RUR_v_r (0.01%)
+               8 TIE_slot0_semantic_WUR_v_r (0.01%)
+               8 TIE_slot0_semantic_RUR_v_i (0.01%)
+               8 TIE_slot0_semantic_WUR_v_i (0.01%)
+               8 TIE_slot0_semantic_RUR_q_r (0.01%)
+               8 TIE_slot0_semantic_WUR_q_r (0.01%)
+               8 TIE_slot0_semantic_RUR_q_i (0.01%)
+               8 TIE_slot0_semantic_WUR_q_i (0.01%)
+             278 TIE_slot0_semantic_wv_wur_sem (0.51%)
+             118 TIE_slot0_semantic_wv_rur_sem (0.22%)
+             226 TIE_slot0_semantic_av_wur_sem (0.41%)
+             118 TIE_slot0_semantic_av_rur_sem (0.22%)
+             226 TIE_slot0_semantic_bv_wur_sem (0.41%)
+             118 TIE_slot0_semantic_bv_rur_sem (0.22%)
+               8 TIE_slot0_semantic_RUR_done (0.01%)
+               8 TIE_slot0_semantic_WUR_done (0.01%)
+               8 TIE_slot0_semantic_RUR_shift (0.01%)
+              24 TIE_slot0_semantic_WUR_shift (0.04%)
+               8 TIE_slot0_semantic_RUR_even_ix (0.01%)
+               8 TIE_slot0_semantic_WUR_even_ix (0.01%)
+               8 TIE_slot0_semantic_RUR_odd_ix (0.01%)
+               8 TIE_slot0_semantic_WUR_odd_ix (0.01%)
+               8 TIE_slot0_semantic_RUR_even_const (0.01%)
+              16 TIE_slot0_semantic_WUR_even_const (0.03%)
+               8 TIE_slot0_semantic_RUR_od_ix (0.01%)
+              24 TIE_slot0_semantic_WUR_od_ix (0.04%)
+               8 TIE_slot0_semantic_RUR_w_ix (0.01%)
+               8 TIE_slot0_semantic_WUR_w_ix (0.01%)
+               8 TIE_slot0_semantic_RUR_m_ix (0.01%)
+               8 TIE_slot0_semantic_WUR_m_ix (0.01%)
+               8 TIE_slot0_semantic_RUR_l (0.01%)
+               8 TIE_slot0_semantic_WUR_l (0.01%)
+               8 TIE_slot0_semantic_RUR_n (0.01%)
+              24 TIE_slot0_semantic_WUR_n (0.04%)
+               8 TIE_slot0_semantic_RUR_lg2_n (0.01%)
+              24 TIE_slot0_semantic_WUR_lg2_n (0.04%)
+               8 TIE_slot0_semantic_RUR_step (0.01%)
+               8 TIE_slot0_semantic_WUR_step (0.01%)
+               8 TIE_slot0_semantic_RUR_ptr_data (0.01%)
+              24 TIE_slot0_semantic_WUR_ptr_data (0.04%)
+               8 TIE_slot0_semantic_RUR_ptr_w (0.01%)
+              24 TIE_slot0_semantic_WUR_ptr_w (0.04%)
+               8 TIE_slot0_semantic_RUR_debug_reg (0.01%)
+               8 TIE_slot0_semantic_WUR_debug_reg (0.01%)
+             151 TIE_slot0_semantic_qv_r_wur_sem (0.28%)
+              63 TIE_slot0_semantic_qv_r_rur_sem (0.12%)
+             151 TIE_slot0_semantic_qv_i_wur_sem (0.28%)
+              63 TIE_slot0_semantic_qv_i_rur_sem (0.12%)
+            2178 TIE_slot0_semantic_FFT_SIMPLE_MUL (3.99%)
+            4298 TIE_slot0_semantic_FFT_COM_MUL (7.86%)
+               8 TIE_slot0_semantic_FFT_2_f_LD (0.01%)
+            4602 TIE_slot0_semantic_FFT_2_FFT (8.42%)
+           18385 TIE_slot0_semantic_FFT_8_FFT (33.64%)
+               8 TIE_slot0_semantic_FFT_BIT_REVERSE (0.01%)
+               8 TIE_slot0_semantic_FFT_INIT (0.01%)
+            1441 TIE_slot0_semantic_FFT_LOAD_EVEN (2.64%)
+            1194 TIE_slot0_semantic_FFT_LOAD_ODD (2.18%)
+            1857 TIE_slot0_semantic_FFT_LOAD_W (3.40%)
+            1264 TIE_slot0_semantic_FFT_STORE_EVEN (2.31%)
+            1857 TIE_slot0_semantic_FFT_STORE_ODD (3.40%)
+             747 TIE_slot0_semantic_FFT_UPDATE (1.37%)
+             896 TIE instruction operand logic (1.64%)
+            4233 TIE toplogic for muxing and pipeline management (7.75%)
+
+
+cpu_seconds 0.16

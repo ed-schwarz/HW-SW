@@ -287,7 +287,7 @@ operation FFT_LOAD_W {}{inout w_ix, inout even_ix, in ptr_w, in done, inout wv, 
 	
 	wire [15:0] even_temp = even_ix + 16'h1;
 	wire [15:0] w_temp =  w_ix + 16'h1;
-	wire jump = (w_temp > step) ? 1'h1 : 1'h0;
+	wire jump = (w_temp < step) ? 1'h0 : 1'h1;
 	
 	assign even_ix = jump ? even_temp + step : even_temp;
 	assign w_ix = jump ? 16'h0 : w_temp;
@@ -308,7 +308,7 @@ operation FFT_STORE_EVEN {} {in even_ix, out odd_ix, in ptr_data, in done, in st
 	wire [31:0] even_ix_ext = {16'h0, even_ix};
 	assign VAddr = ptr_data + LEFT_SHIFT_32(LEFT_SHIFT_32(even_ix_ext));
 	assign StoreByteDisable = {16{done}};
-	assign odd_ix = even_ix + RIGHT_SHIFT(step);
+	assign odd_ix = even_ix + step;
 	
 	assign MemDataOut32 = bv[31:0];
 
@@ -333,7 +333,7 @@ operation FFT_STORE_ODD {} {in odd_ix, in ptr_data, in done, in step, inout av, 
 		
 	wire [15:0] even_temp = even_ix + 16'h1;
 	wire [15:0] m_temp =  m_ix + 16'h1;
-	wire jump = (m_temp > step) ? 1'h1 : 1'h0;
+	wire jump = (m_temp < step) ? 1'h0 : 1'h1;
 	
 	assign even_ix = jump ? even_temp + step : even_temp;
 	assign m_ix = jump ? 16'h0 : m_temp;

@@ -1,0 +1,130 @@
+use vars qw(%l24_x24_Inst_RUR_wv_0_ports);
+%l24_x24_Inst_RUR_wv_0_ports = (
+	'arr', ['AR', 'wr0', 32, 1]
+);
+use vars qw(%l24_x24_Inst_WUR_wv_0_ports);
+%l24_x24_Inst_WUR_wv_0_ports = (
+	'art', ['AR', 'rd1', 32, 1]
+);
+use vars qw(%l24_x24_Inst_RUR_wv_1_ports);
+%l24_x24_Inst_RUR_wv_1_ports = (
+	'arr', ['AR', 'wr0', 32, 1]
+);
+use vars qw(%l24_x24_Inst_WUR_wv_1_ports);
+%l24_x24_Inst_WUR_wv_1_ports = (
+	'art', ['AR', 'rd1', 32, 1]
+);
+use vars qw(%l24_x24_Inst_RUR_wv_2_ports);
+%l24_x24_Inst_RUR_wv_2_ports = (
+	'arr', ['AR', 'wr0', 32, 1]
+);
+use vars qw(%l24_x24_Inst_WUR_wv_2_ports);
+%l24_x24_Inst_WUR_wv_2_ports = (
+	'art', ['AR', 'rd1', 32, 1]
+);
+use vars qw(%l24_x24_Inst_RUR_wv_3_ports);
+%l24_x24_Inst_RUR_wv_3_ports = (
+	'arr', ['AR', 'wr0', 32, 1]
+);
+use vars qw(%l24_x24_Inst_WUR_wv_3_ports);
+%l24_x24_Inst_WUR_wv_3_ports = (
+	'art', ['AR', 'rd1', 32, 1]
+);
+use vars qw(%l24_x24_Inst_RUR_av_0_ports);
+%l24_x24_Inst_RUR_av_0_ports = (
+	'arr', ['AR', 'wr0', 32, 1]
+);
+use vars qw(%l24_x24_Inst_WUR_av_0_ports);
+%l24_x24_Inst_WUR_av_0_ports = (
+	'art', ['AR', 'rd1', 32, 1]
+);
+use vars qw(%l24_x24_Inst_RUR_av_1_ports);
+%l24_x24_Inst_RUR_av_1_ports = (
+	'arr', ['AR', 'wr0', 32, 1]
+);
+use vars qw(%l24_x24_Inst_WUR_av_1_ports);
+%l24_x24_Inst_WUR_av_1_ports = (
+	'art', ['AR', 'rd1', 32, 1]
+);
+use vars qw(%l24_x24_Inst_RUR_av_2_ports);
+%l24_x24_Inst_RUR_av_2_ports = (
+	'arr', ['AR', 'wr0', 32, 1]
+);
+use vars qw(%l24_x24_Inst_WUR_av_2_ports);
+%l24_x24_Inst_WUR_av_2_ports = (
+	'art', ['AR', 'rd1', 32, 1]
+);
+use vars qw(%l24_x24_Inst_RUR_av_3_ports);
+%l24_x24_Inst_RUR_av_3_ports = (
+	'arr', ['AR', 'wr0', 32, 1]
+);
+use vars qw(%l24_x24_Inst_WUR_av_3_ports);
+%l24_x24_Inst_WUR_av_3_ports = (
+	'art', ['AR', 'rd1', 32, 1]
+);
+use vars qw(%l24_x24_Inst_RUR_bv_0_ports);
+%l24_x24_Inst_RUR_bv_0_ports = (
+	'arr', ['AR', 'wr0', 32, 1]
+);
+use vars qw(%l24_x24_Inst_WUR_bv_0_ports);
+%l24_x24_Inst_WUR_bv_0_ports = (
+	'art', ['AR', 'rd1', 32, 1]
+);
+use vars qw(%l24_x24_Inst_RUR_bv_1_ports);
+%l24_x24_Inst_RUR_bv_1_ports = (
+	'arr', ['AR', 'wr0', 32, 1]
+);
+use vars qw(%l24_x24_Inst_WUR_bv_1_ports);
+%l24_x24_Inst_WUR_bv_1_ports = (
+	'art', ['AR', 'rd1', 32, 1]
+);
+use vars qw(%l24_x24_Inst_RUR_bv_2_ports);
+%l24_x24_Inst_RUR_bv_2_ports = (
+	'arr', ['AR', 'wr0', 32, 1]
+);
+use vars qw(%l24_x24_Inst_WUR_bv_2_ports);
+%l24_x24_Inst_WUR_bv_2_ports = (
+	'art', ['AR', 'rd1', 32, 1]
+);
+use vars qw(%l24_x24_Inst_RUR_bv_3_ports);
+%l24_x24_Inst_RUR_bv_3_ports = (
+	'arr', ['AR', 'wr0', 32, 1]
+);
+use vars qw(%l24_x24_Inst_WUR_bv_3_ports);
+%l24_x24_Inst_WUR_bv_3_ports = (
+	'art', ['AR', 'rd1', 32, 1]
+);
+use vars qw(%l24_x24_Inst_RUR_qv_r_0_ports);
+%l24_x24_Inst_RUR_qv_r_0_ports = (
+	'arr', ['AR', 'wr0', 32, 1]
+);
+use vars qw(%l24_x24_Inst_WUR_qv_r_0_ports);
+%l24_x24_Inst_WUR_qv_r_0_ports = (
+	'art', ['AR', 'rd1', 32, 1]
+);
+use vars qw(%l24_x24_Inst_RUR_qv_r_1_ports);
+%l24_x24_Inst_RUR_qv_r_1_ports = (
+	'arr', ['AR', 'wr0', 32, 1]
+);
+use vars qw(%l24_x24_Inst_WUR_qv_r_1_ports);
+%l24_x24_Inst_WUR_qv_r_1_ports = (
+	'art', ['AR', 'rd1', 32, 1]
+);
+use vars qw(%l24_x24_Inst_RUR_qv_i_0_ports);
+%l24_x24_Inst_RUR_qv_i_0_ports = (
+	'arr', ['AR', 'wr0', 32, 1]
+);
+use vars qw(%l24_x24_Inst_WUR_qv_i_0_ports);
+%l24_x24_Inst_WUR_qv_i_0_ports = (
+	'art', ['AR', 'rd1', 32, 1]
+);
+use vars qw(%l24_x24_Inst_RUR_qv_i_1_ports);
+%l24_x24_Inst_RUR_qv_i_1_ports = (
+	'arr', ['AR', 'wr0', 32, 1]
+);
+use vars qw(%l24_x24_Inst_WUR_qv_i_1_ports);
+%l24_x24_Inst_WUR_qv_i_1_ports = (
+	'art', ['AR', 'rd1', 32, 1]
+);
+
+1;

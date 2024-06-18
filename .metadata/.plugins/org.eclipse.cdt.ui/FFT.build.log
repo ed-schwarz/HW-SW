@@ -1,10 +1,9 @@
-**** Incremental Build [Di, 18 Jun 2024 13:16:21] ****
+**** Incremental Build [Di, 18 Jun 2024 13:25:56] ****
  Project: FFT
  Configuration: hwsw_codesign2019_aligned
  Build Target: Debug
 ********************************
-Compiling TIE source(s) attached to configuration "hwsw_codesign2019_aligned" ...
 
-Build error encountered... cannot continue further.
+Nothing to build.
 Total time taken: 0.016 secs
-**** Build Finished [Di, 18 Jun 2024 13:16:21] ****
+**** Build Finished [Di, 18 Jun 2024 13:25:56] ****
