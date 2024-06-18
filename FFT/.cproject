@@ -19,39 +19,18 @@
 							<tool errorParsers="org.eclipse.cdt.core.VCErrorParser;org.eclipse.cdt.core.GASErrorParser" id="org.eclipse.cdt.build.core.settings.holder.1385871057" name="Assembly" superClass="org.eclipse.cdt.build.core.settings.holder">
 								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.409336760" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
 									<listOptionValue builtIn="false" value="C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/lib/xcc/include"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/xtensa-elf/arch/include"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/xtensa-elf/include"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/xtensa-elf/include"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/xtensa-elf/include/xcc/c++"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/xtensa-elf/include/xcc/c++/xtensa-elf"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/xtensa-elf/include/xcc/c++/backward"/>
 								</option>
 								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.1361963416" languageId="org.eclipse.cdt.core.assembly" languageName="Assembly" sourceContentType="org.eclipse.cdt.core.asmSource" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
 							</tool>
 							<tool errorParsers="org.eclipse.cdt.core.VCErrorParser;org.eclipse.cdt.core.GASErrorParser" id="org.eclipse.cdt.build.core.settings.holder.1858339258" name="GNU C++" superClass="org.eclipse.cdt.build.core.settings.holder">
 								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.955179365" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
 									<listOptionValue builtIn="false" value="C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/lib/xcc/include"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/xtensa-elf/arch/include"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/xtensa-elf/include"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/xtensa-elf/include"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/xtensa-elf/include/xcc/c++"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/xtensa-elf/include/xcc/c++/xtensa-elf"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/xtensa-elf/include/xcc/c++/backward"/>
 								</option>
 								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.1623760252" languageId="org.eclipse.cdt.core.g++" languageName="GNU C++" sourceContentType="org.eclipse.cdt.core.cxxSource,org.eclipse.cdt.core.cxxHeader" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
 							</tool>
 							<tool errorParsers="org.eclipse.cdt.core.VCErrorParser;org.eclipse.cdt.core.GASErrorParser" id="org.eclipse.cdt.build.core.settings.holder.617770861" name="GNU C" superClass="org.eclipse.cdt.build.core.settings.holder">
 								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.1777254934" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
 									<listOptionValue builtIn="false" value="C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/lib/xcc/include"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/xtensa-elf/arch/include"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/xtensa-elf/include"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/xtensa-elf/include"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/xtensa-elf/include/xcc/c++"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/xtensa-elf/include/xcc/c++/xtensa-elf"/>
-									<listOptionValue builtIn="false" value="C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/xtensa-elf/include/xcc/c++/backward"/>
 								</option>
 								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.1990777897" languageId="org.eclipse.cdt.core.gcc" languageName="GNU C" sourceContentType="org.eclipse.cdt.core.cSource,org.eclipse.cdt.core.cHeader" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
 							</tool>
