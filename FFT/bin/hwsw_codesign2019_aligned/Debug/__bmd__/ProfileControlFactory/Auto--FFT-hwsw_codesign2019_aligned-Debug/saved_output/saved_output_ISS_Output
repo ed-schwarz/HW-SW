@@ -1,0 +1,72 @@
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-run --xtensa-core=hwsw_codesign2019_aligned --xtensa-system=C:\usr\xtensa\XtDevTools\install\builds\RF-2016.4-win32\hwsw_codesign2019_aligned\config --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk --console --summary --client=C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\.metadata\.plugins\com.tensilica.xide.cdt\Auto_--_FFT_-_hwsw_codesign2019_aligned_-_Debug.clientcmds C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT\bin\hwsw_codesign2019_aligned\Debug\FFT
+
+Input Data
+0: 1000, 0
+1: 707, 0
+2: 0, 0
+3: -707, 0
+4: -1000, 0
+5: -707, 0
+6: 0, 0
+7: 707, 0
+
+Input Data Complex
+0: 1000, 0
+1: 707, 0
+2: 0, 0
+3: -707, 0
+4: -1000, 0
+5: -707, 0
+6: 0, 0
+7: 707, 0
+
+FFT pure C
+0: -1, 0
+1: 499, -1
+2: 0, 0
+3: 1, -1
+4: 1, 0
+5: 1, 1
+6: 0, 0
+7: 499, 1
+
+FFT TIE Node
+0: -1, 0
+1: 499, -1
+2: 0, 0
+3: 1, -1
+4: 1, 0
+5: 1, 1
+6: 0, 0
+7: 499, 1
+
+Xtensa Core: "hwsw_codesign2019_aligned"  ISS Version: 11.0.4
+
+Time for Simulation = 0.16 seconds
+
+Current PC = 0x6000ca2a
+
+Events                           Number  Number
+                                         per 100
+                                         instrs 
+
+Committed instructions           62984 ( 100.00 )
+Taken branches                   11537 (  18.32 )
+Exceptions                          75 (   0.12 )
+   WindowOverflow                   38 (   0.06 )
+   WindowUnderflow                  37 (   0.06 )
+Loads                            14170 (  22.50 )
+Stores                            9155 (  14.54 )
+
+Cycles: total = 96264
+                                                Summed |          Summed
+                                        CPI      CPI   |% Cycle  % Cycle
+Committed instructions         62984 ( 1.0000   1.0000 |  65.43    65.43 )
+Taken branches                 24018 ( 0.3813   1.3813 |  24.95    90.38 )
+Pipeline interlocks             4951 ( 0.0786   1.4599 |   5.14    95.52 )
+Exceptions                       375 ( 0.0060   1.4659 |   0.39    95.91 )
+Sync replays                    3404 ( 0.0540   1.5199 |   3.54    99.45 )
+Special instructions             147 ( 0.0023   1.5223 |   0.15    99.60 )
+Loop overhead                    380 ( 0.0060   1.5283 |   0.39    99.99 )
+Reset                              5 ( 0.0001   1.5284 |   0.01   100.00 )
+

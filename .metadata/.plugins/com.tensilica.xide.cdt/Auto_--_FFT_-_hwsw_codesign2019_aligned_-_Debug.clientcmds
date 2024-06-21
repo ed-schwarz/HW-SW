@@ -1,0 +1,2 @@
+# client commands for the simulator launch
+profile --force-suffix --all C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT\bin\hwsw_codesign2019_aligned\Debug\gmon.xx

@@ -51,20 +51,30 @@ uint32_t fft_exec(const intptr_t f, const intptr_t w, const uint32_t n, const ui
 	WUR_lg2_n(lg2_n);
 	WUR_shift(shift);
 	WUR_step(1);
-	FFT_INIT();
-	while (RUR_done() == 0) {
+	while (done == 0) {
+		step = RUR_step();
 		for (i = 0; i < 4; i++) {
+			even_i = RUR_even_ix();
 			FFT_LOAD_EVEN();
+			odd_ix = RUR_odd_ix();
+			debug_reg = RUR_debug_reg();
 			FFT_LOAD_ODD();
+			debug_reg = RUR_debug_reg();
 			FFT_LOAD_W();
+			debug_reg = RUR_debug_reg();
 
 		}
 		FFT_8_FFT();
+		even_i = RUR_even_ix();
 		for (i = 0; i < 4; i++) {
 			FFT_STORE_EVEN();
 			FFT_STORE_ODD();
 		}
+		even_i = RUR_even_ix();
 		FFT_UPDATE();
+		done = RUR_done();
+		l = RUR_l();
+		even_i = RUR_even_ix();
 	}
 }
 
