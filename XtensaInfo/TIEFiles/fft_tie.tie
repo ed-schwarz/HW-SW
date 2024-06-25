@@ -3,8 +3,8 @@ state w_i		16 add_read_write
 
 
 format fft_flix 64 {fft_slot0, fft_slot1}
-slot_opcodes fft_slot0 {FFT_LOAD_EVEN}
-slot_opcodes fft_slot1 {FFT_LOAD_ODD}
+slot_opcodes fft_slot0 {FFT_LOAD_EVEN, FFT_STORE_EVEN}
+slot_opcodes fft_slot1 {FFT_LOAD_ODD, FFT_STORE_ODD}
 //slot_opcodes fft_slot2 {FFT_LOAD_W}
 //slot_opcodes fft_slot3 {FFT_STORE_EVEN}
 //slot_opcodes fft_slot4 {FFT_STORE_ODD}
@@ -40,6 +40,7 @@ state w_inc			16 add_read_write
 state m_ix			16 add_read_write
 state l				16 add_read_write
 state n				16 add_read_write
+state n_2			16 add_read_write
 state lg2_n			16 add_read_write
 state step			16 add_read_write
 state ptr_data 		32 add_read_write
@@ -246,7 +247,7 @@ assign n = lvl4;
 
 
 
-operation FFT_INIT {} {out done, out even_ix, out odd_ix, out w_ix, out m_ix, out l, out step, out w_inc, in n}
+operation FFT_INIT {} {out done, out even_ix, out odd_ix, out w_ix, out m_ix, out l, out step, out w_inc, in n, out n_2}
 {
 	assign done = 1'h0;
 	assign even_ix = 16'h0;
@@ -255,7 +256,9 @@ operation FFT_INIT {} {out done, out even_ix, out odd_ix, out w_ix, out m_ix, ou
 	assign m_ix = 16'h0;
 	assign l = 16'h0;
 	assign step = 16'h1;
-	assign w_inc = RIGHT_SHIFT(n);
+	wire [15:0] n_2_temp = RIGHT_SHIFT(n);
+	assign w_inc = n_2_temp;
+	assign n_2 = n_2_temp;
 }
 
 operation FFT_LOAD_EVEN {}{in even_ix, in ptr_data, in done, in shift, inout bv, out VAddr, in MemDataIn32, out LoadByteDisable, out debug_reg}
@@ -292,7 +295,7 @@ operation FFT_LOAD_ODD {}{in odd_ix, in ptr_data, in done, inout av, out VAddr, 
 
 
 
-operation FFT_LOAD_W {}{inout w_ix, inout even_ix, out odd_ix, in ptr_w, in done, in shift, inout wv, in step, out VAddr, in MemDataIn32, out LoadByteDisable, out debug_reg, in w_inc}
+operation FFT_LOAD_W {}{inout w_ix, inout even_ix, out odd_ix, in ptr_w, in done, in n_2, in shift, inout wv, in step, out VAddr, in MemDataIn32, out LoadByteDisable, out debug_reg, in w_inc}
 {
 	wire [31:0] w_ix_ext = {16'h0, w_ix};
 	wire [31:0] w_ix_ext_shift = LEFT_SHIFT_32(w_ix_ext);
@@ -309,9 +312,9 @@ operation FFT_LOAD_W {}{inout w_ix, inout even_ix, out odd_ix, in ptr_w, in done
 
 	
 	wire [15:0] even_temp = even_ix + 16'h1;
-	wire [15:0] w_temp =  w_ix + 16'h1;
+
 	wire [15:0] w_ix_temp =  w_ix + w_inc;
-	wire jump = (w_temp < step) ? 1'h0 : 1'h1;
+	wire jump = (w_ix_temp < n_2) ? 1'h0 : 1'h1;
 	
 	wire [15:0] even_ix_wire = jump ? even_temp + step : even_temp;
 	assign even_ix = even_ix_wire;

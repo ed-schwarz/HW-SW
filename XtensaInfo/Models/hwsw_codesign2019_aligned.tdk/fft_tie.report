@@ -1,22 +1,32 @@
 ### TIE Report File
 
+
+### FLIX instruction information
+# These are the slots in each format:
+format <fft_flix> slots:
+    fft_slot0 = fft_flix[5:4] (index = 0)
+    fft_slot1 = fft_flix[7:6] (index = 1)
+
 # These are the instructions in each slot
 slot <Inst> instructions: nop=NOP
     FFT_2_FFT FFT_2_f_LD FFT_8_FFT FFT_BIT_REVERSE FFT_COM_MUL FFT_INIT 
-    FFT_LOAD_EVEN FFT_LOAD_ODD FFT_LOAD_W FFT_SIMPLE_MUL FFT_STORE_EVEN 
-    FFT_STORE_ODD FFT_UPDATE RUR.a_i RUR.a_r RUR.av_0 RUR.av_1 RUR.av_2 
-    RUR.av_3 RUR.b_i RUR.b_r RUR.bv_0 RUR.bv_1 RUR.bv_2 RUR.bv_3 
+    FFT_LOAD_W FFT_SIMPLE_MUL FFT_UPDATE RUR.a_i RUR.a_r RUR.av_0 RUR.av_1 
+    RUR.av_2 RUR.av_3 RUR.b_i RUR.b_r RUR.bv_0 RUR.bv_1 RUR.bv_2 RUR.bv_3 
     RUR.debug_reg RUR.done RUR.even_const RUR.even_ix RUR.l RUR.lg2_n 
-    RUR.m_ix RUR.n RUR.od_ix RUR.odd_ix RUR.ptr_data RUR.ptr_w RUR.q_i 
-    RUR.q_r RUR.qv_i_0 RUR.qv_i_1 RUR.qv_r_0 RUR.qv_r_1 RUR.shift RUR.step 
-    RUR.u_i RUR.u_r RUR.v_i RUR.v_r RUR.w_i RUR.w_inc RUR.w_ix RUR.w_r 
-    RUR.wv_0 RUR.wv_1 RUR.wv_2 RUR.wv_3 WUR.a_i WUR.a_r WUR.av_0 WUR.av_1 
-    WUR.av_2 WUR.av_3 WUR.b_i WUR.b_r WUR.bv_0 WUR.bv_1 WUR.bv_2 WUR.bv_3 
-    WUR.debug_reg WUR.done WUR.even_const WUR.even_ix WUR.l WUR.lg2_n 
-    WUR.m_ix WUR.n WUR.od_ix WUR.odd_ix WUR.ptr_data WUR.ptr_w WUR.q_i 
-    WUR.q_r WUR.qv_i_0 WUR.qv_i_1 WUR.qv_r_0 WUR.qv_r_1 WUR.shift WUR.step 
-    WUR.u_i WUR.u_r WUR.v_i WUR.v_r WUR.w_i WUR.w_inc WUR.w_ix WUR.w_r 
-    WUR.wv_0 WUR.wv_1 WUR.wv_2 WUR.wv_3 
+    RUR.m_ix RUR.n RUR.n_2 RUR.od_ix RUR.odd_ix RUR.ptr_data RUR.ptr_w 
+    RUR.q_i RUR.q_r RUR.qv_i_0 RUR.qv_i_1 RUR.qv_r_0 RUR.qv_r_1 RUR.shift 
+    RUR.step RUR.u_i RUR.u_r RUR.v_i RUR.v_r RUR.w_i RUR.w_inc RUR.w_ix 
+    RUR.w_r RUR.wv_0 RUR.wv_1 RUR.wv_2 RUR.wv_3 WUR.a_i WUR.a_r WUR.av_0 
+    WUR.av_1 WUR.av_2 WUR.av_3 WUR.b_i WUR.b_r WUR.bv_0 WUR.bv_1 WUR.bv_2 
+    WUR.bv_3 WUR.debug_reg WUR.done WUR.even_const WUR.even_ix WUR.l 
+    WUR.lg2_n WUR.m_ix WUR.n WUR.n_2 WUR.od_ix WUR.odd_ix WUR.ptr_data 
+    WUR.ptr_w WUR.q_i WUR.q_r WUR.qv_i_0 WUR.qv_i_1 WUR.qv_r_0 WUR.qv_r_1 
+    WUR.shift WUR.step WUR.u_i WUR.u_r WUR.v_i WUR.v_r WUR.w_i WUR.w_inc 
+    WUR.w_ix WUR.w_r WUR.wv_0 WUR.wv_1 WUR.wv_2 WUR.wv_3 
+slot <fft_slot0> instructions: nop=NOP
+    FFT_LOAD_EVEN FFT_STORE_EVEN NOP 
+slot <fft_slot1> instructions: nop=NOP
+    FFT_LOAD_ODD FFT_STORE_ODD NOP 
 
 
 ### Register File port information
@@ -45,9 +55,9 @@ regfile AR:
     Port rd0 Operand ars Slot 0 Stage 1: CALLX12 CALLX8 CALLX4 ENTRY MOVSP RETW RETW.N L32E S32E ADD.N ADDI.N BEQZ.N BNEZ.N L32I.N MOV.N RET.N S32I.N ADDI ADDMI ADD SUB ADDX2 ADDX4 ADDX8 SUBX2 SUBX4 SUBX8 AND OR XOR BEQI BNEI BGEI BLTI BBCI BBSI BGEUI BLTUI BEQ BNE BGE BLT BGEU BLTU BANY BNONE BALL BNALL BBC BBS BEQZ BNEZ BGEZ BLTZ CALLX0 JX L16UI L16SI L32I L8UI LOOP LOOPNEZ LOOPGTZ MOVEQZ MOVNEZ MOVLTZ MOVGEZ RET S16I S32I S32NB S8I SSR SSL SSA8L SSA8B SLL SRC SLLI MUL16U MUL16S MULL LDDR32.P SDDR32.P MOVF MOVT IPF IHI III LICT LICW SICT SICW IDTLB PDTLB RDTLB0 RDTLB1 WDTLB IITLB PITLB RITLB0 RITLB1 WITLB CLAMPS MIN MAX MINU MAXU NSA NSAU SEXT RER WER
     Port rd0 Operand opnd_FFT_COM_MUL_b_i Slot 0 Stage 1: FFT_COM_MUL
     Port rd0 Operand opnd_FFT_SIMPLE_MUL_a Slot 0 Stage 1: FFT_SIMPLE_MUL
-    Port rd1 Operand art Slot 0 Stage 1: WSR.WINDOWBASE XSR.WINDOWBASE WSR.WINDOWSTART XSR.WINDOWSTART ADD.N ADD SUB ADDX2 ADDX4 ADDX8 SUBX2 SUBX4 SUBX8 AND OR XOR BEQ BNE BGE BLT BGEU BLTU BANY BNONE BALL BNALL BBC BBS EXTUI MOVEQZ MOVNEZ MOVLTZ MOVGEZ NEG ABS SRC SRL SRA SRAI SRLI WSR.LEND XSR.LEND WSR.LBEG XSR.LBEG WSR.SAR XSR.SAR WSR.MEMCTL XSR.MEMCTL WSR.LITBASE XSR.LITBASE WSR.PS XSR.PS MUL16U MUL16S MULL WSR.BR XSR.BR MIN MAX MINU MAXU WER WUR.u_r WUR.u_i WUR.v_r WUR.v_i WUR.q_r WUR.q_i WUR.av_0 WUR.av_1 WUR.av_2 WUR.av_3 WUR.bv_0 WUR.bv_1 WUR.bv_2 WUR.bv_3 WUR.done WUR.even_ix WUR.odd_ix WUR.w_ix WUR.w_inc WUR.m_ix WUR.l WUR.step WUR.debug_reg
-    Port rd1 Operand art Slot 0 Stage 2: S32E S32I.N S16I S32I S32NB S8I WSR.CONFIGID0 WSR.INTENABLE XSR.INTENABLE WSR.ICOUNTLEVEL XSR.ICOUNTLEVEL SICT SICW WUR.even_const
-    Port rd1 Operand art Slot 0 Stage 3: WSR.LCOUNT XSR.LCOUNT WSR.EPC1 XSR.EPC1 WSR.EXCSAVE1 XSR.EXCSAVE1 WSR.EPC2 XSR.EPC2 WSR.EXCSAVE2 XSR.EXCSAVE2 WSR.EPS2 XSR.EPS2 WSR.EXCVADDR XSR.EXCVADDR WSR.DEPC XSR.DEPC WSR.EXCCAUSE XSR.EXCCAUSE WSR.INTSET WSR.INTCLEAR WSR.DEBUGCAUSE XSR.DEBUGCAUSE WSR.ICOUNT XSR.ICOUNT WSR.DDR XSR.DDR WDTLB WITLB WSR.CPENABLE XSR.CPENABLE WUR.w_r WUR.w_i WUR.a_r WUR.a_i WUR.b_r WUR.b_i WUR.wv_0 WUR.wv_1 WUR.wv_2 WUR.wv_3 WUR.shift WUR.od_ix WUR.n WUR.lg2_n WUR.ptr_data WUR.ptr_w WUR.qv_r_0 WUR.qv_r_1 WUR.qv_i_0 WUR.qv_i_1
+    Port rd1 Operand art Slot 0 Stage 1: WSR.WINDOWBASE XSR.WINDOWBASE WSR.WINDOWSTART XSR.WINDOWSTART ADD.N ADD SUB ADDX2 ADDX4 ADDX8 SUBX2 SUBX4 SUBX8 AND OR XOR BEQ BNE BGE BLT BGEU BLTU BANY BNONE BALL BNALL BBC BBS EXTUI MOVEQZ MOVNEZ MOVLTZ MOVGEZ NEG ABS SRC SRL SRA SRAI SRLI WSR.LEND XSR.LEND WSR.LBEG XSR.LBEG WSR.SAR XSR.SAR WSR.MEMCTL XSR.MEMCTL WSR.LITBASE XSR.LITBASE WSR.PS XSR.PS MUL16U MUL16S MULL WSR.BR XSR.BR MIN MAX MINU MAXU WER WUR.u_r WUR.u_i WUR.v_r WUR.v_i WUR.q_r WUR.q_i WUR.av_0 WUR.av_1 WUR.av_2 WUR.av_3 WUR.bv_0 WUR.bv_1 WUR.bv_2 WUR.bv_3 WUR.done WUR.even_ix WUR.odd_ix WUR.even_const WUR.w_ix WUR.w_inc WUR.m_ix WUR.l WUR.n_2 WUR.step WUR.debug_reg
+    Port rd1 Operand art Slot 0 Stage 2: S32E S32I.N S16I S32I S32NB S8I WSR.CONFIGID0 WSR.INTENABLE XSR.INTENABLE WSR.ICOUNTLEVEL XSR.ICOUNTLEVEL SICT SICW WUR.wv_0 WUR.wv_1 WUR.wv_2 WUR.wv_3
+    Port rd1 Operand art Slot 0 Stage 3: WSR.LCOUNT XSR.LCOUNT WSR.EPC1 XSR.EPC1 WSR.EXCSAVE1 XSR.EXCSAVE1 WSR.EPC2 XSR.EPC2 WSR.EXCSAVE2 XSR.EXCSAVE2 WSR.EPS2 XSR.EPS2 WSR.EXCVADDR XSR.EXCVADDR WSR.DEPC XSR.DEPC WSR.EXCCAUSE XSR.EXCCAUSE WSR.INTSET WSR.INTCLEAR WSR.DEBUGCAUSE XSR.DEBUGCAUSE WSR.ICOUNT XSR.ICOUNT WSR.DDR XSR.DDR WDTLB WITLB WSR.CPENABLE XSR.CPENABLE WUR.w_r WUR.w_i WUR.a_r WUR.a_i WUR.b_r WUR.b_i WUR.shift WUR.od_ix WUR.n WUR.lg2_n WUR.ptr_data WUR.ptr_w WUR.qv_r_0 WUR.qv_r_1 WUR.qv_i_0 WUR.qv_i_1
     Port rd1 Operand opnd_FFT_BIT_REVERSE_n Slot 0 Stage 1: FFT_BIT_REVERSE
     Port rd1 Operand opnd_FFT_COM_MUL_b_r Slot 0 Stage 1: FFT_COM_MUL
     Port rd1 Operand opnd_FFT_SIMPLE_MUL_b Slot 0 Stage 1: FFT_SIMPLE_MUL
@@ -61,7 +71,7 @@ regfile AR:
     Port wr0 Operand ar12 Slot 0 Stage 1: CALL12 CALLX12
     Port wr0 Operand ar4 Slot 0 Stage 1: CALL4 CALLX4
     Port wr0 Operand ar8 Slot 0 Stage 1: CALL8 CALLX8
-    Port wr0 Operand arr Slot 0 Stage 1: ADD.N ADDI.N ADD SUB ADDX2 ADDX4 ADDX8 SUBX2 SUBX4 SUBX8 AND OR XOR EXTUI MOVEQZ MOVNEZ MOVLTZ MOVGEZ NEG ABS SLL SRC SRL SRA SLLI SRAI SRLI MUL16U MUL16S MULL MOVF MOVT CLAMPS MIN MAX MINU MAXU SEXT RUR.w_r RUR.w_i RUR.a_r RUR.a_i RUR.b_r RUR.b_i RUR.u_r RUR.u_i RUR.v_r RUR.v_i RUR.q_r RUR.q_i RUR.wv_0 RUR.wv_1 RUR.wv_2 RUR.wv_3 RUR.av_0 RUR.av_1 RUR.av_2 RUR.av_3 RUR.bv_0 RUR.bv_1 RUR.bv_2 RUR.bv_3 RUR.done RUR.shift RUR.even_ix RUR.odd_ix RUR.even_const RUR.od_ix RUR.w_ix RUR.w_inc RUR.m_ix RUR.l RUR.n RUR.lg2_n RUR.step RUR.ptr_data RUR.ptr_w RUR.debug_reg RUR.qv_r_0 RUR.qv_r_1 RUR.qv_i_0 RUR.qv_i_1
+    Port wr0 Operand arr Slot 0 Stage 1: ADD.N ADDI.N ADD SUB ADDX2 ADDX4 ADDX8 SUBX2 SUBX4 SUBX8 AND OR XOR EXTUI MOVEQZ MOVNEZ MOVLTZ MOVGEZ NEG ABS SLL SRC SRL SRA SLLI SRAI SRLI MUL16U MUL16S MULL MOVF MOVT CLAMPS MIN MAX MINU MAXU SEXT RUR.w_r RUR.w_i RUR.a_r RUR.a_i RUR.b_r RUR.b_i RUR.u_r RUR.u_i RUR.v_r RUR.v_i RUR.q_r RUR.q_i RUR.wv_0 RUR.wv_1 RUR.wv_2 RUR.wv_3 RUR.av_0 RUR.av_1 RUR.av_2 RUR.av_3 RUR.bv_0 RUR.bv_1 RUR.bv_2 RUR.bv_3 RUR.done RUR.shift RUR.even_ix RUR.odd_ix RUR.even_const RUR.od_ix RUR.w_ix RUR.w_inc RUR.m_ix RUR.l RUR.n RUR.n_2 RUR.lg2_n RUR.step RUR.ptr_data RUR.ptr_w RUR.debug_reg RUR.qv_r_0 RUR.qv_r_1 RUR.qv_i_0 RUR.qv_i_1
     Port wr0 Operand ars Slot 0 Stage 1: MOVI.N LDDR32.P SDDR32.P
     Port wr0 Operand ars_entry Slot 0 Stage 1: ENTRY
     Port wr0 Operand art Slot 0 Stage 1: MOVSP RSR.WINDOWBASE XSR.WINDOWBASE RSR.WINDOWSTART XSR.WINDOWSTART MOV.N ADDI ADDMI MOVI RSIL RSR.LEND XSR.LEND RSR.LBEG XSR.LBEG RSR.SAR XSR.SAR RSR.MEMCTL XSR.MEMCTL RSR.LITBASE XSR.LITBASE RSR.BR XSR.BR NSA NSAU RER
@@ -189,55 +199,62 @@ states:
     State q_i (use) Slot 0 Stage 1: RUR.q_i
     State q_i (def) Slot 0 Stage 1: WUR.q_i
     State wv (use) Slot 0 Stage 1: RUR.wv_0
-    State wv (use) Slot 0 Stage 3: WUR.wv_0
-    State wv (def) Slot 0 Stage 3: WUR.wv_0
+    State wv (use) Slot 0 Stage 2: WUR.wv_0
+    State wv (def) Slot 0 Stage 2: WUR.wv_0
     State av (use) Slot 0 Stage 1: RUR.av_0
+    State av (use) Slot 1 Stage 1: FFT_LOAD_ODD
     State av (def) Slot 0 Stage 1: WUR.av_0
-    State av (def) Slot 0 Stage 3: FFT_LOAD_ODD
+    State av (def) Slot 1 Stage 1: FFT_STORE_ODD
+    State av (def) Slot 1 Stage 2: FFT_LOAD_ODD
     State bv (use) Slot 0 Stage 1: RUR.bv_0
     State bv (def) Slot 0 Stage 1: WUR.bv_0
-    State bv (def) Slot 0 Stage 3: FFT_LOAD_EVEN
+    State bv (def) Slot 0 Stage 2: FFT_LOAD_EVEN
     State done (use) Slot 0 Stage 1: RUR.done
+    State done (use) Slot 1 Stage 1: FFT_LOAD_ODD
     State done (use) Slot 0 Stage 2: FFT_STORE_EVEN
+    State done (use) Slot 1 Stage 2: FFT_STORE_ODD
     State done (def) Slot 0 Stage 1: WUR.done
-    State done (def) Slot 0 Stage 3: FFT_UPDATE
     State shift (use) Slot 0 Stage 1: RUR.shift
     State shift (def) Slot 0 Stage 3: WUR.shift
     State even_ix (use) Slot 0 Stage 1: RUR.even_ix
+    State even_ix (use) Slot 1 Stage 1: FFT_STORE_ODD
     State even_ix (def) Slot 0 Stage 1: WUR.even_ix
-    State even_ix (def) Slot 0 Stage 3: FFT_LOAD_W
-    State even_ix (def) Slot 0 Stage 2: FFT_UPDATE
+    State even_ix (def) Slot 1 Stage 1: FFT_STORE_ODD
     State odd_ix (use) Slot 0 Stage 1: RUR.odd_ix
+    State odd_ix (use) Slot 1 Stage 1: FFT_LOAD_ODD
     State odd_ix (def) Slot 0 Stage 1: WUR.odd_ix
+    State odd_ix (def) Slot 1 Stage 1: FFT_STORE_ODD
     State even_const (use) Slot 0 Stage 1: RUR.even_const
-    State even_const (def) Slot 0 Stage 2: WUR.even_const
+    State even_const (def) Slot 0 Stage 1: WUR.even_const
     State od_ix (use) Slot 0 Stage 1: RUR.od_ix
     State od_ix (def) Slot 0 Stage 3: WUR.od_ix
     State w_ix (use) Slot 0 Stage 1: RUR.w_ix
     State w_ix (def) Slot 0 Stage 1: WUR.w_ix
-    State w_ix (def) Slot 0 Stage 3: FFT_LOAD_W
     State w_inc (use) Slot 0 Stage 1: RUR.w_inc
     State w_inc (def) Slot 0 Stage 1: WUR.w_inc
     State m_ix (use) Slot 0 Stage 1: RUR.m_ix
+    State m_ix (use) Slot 1 Stage 1: FFT_STORE_ODD
     State m_ix (def) Slot 0 Stage 1: WUR.m_ix
-    State m_ix (def) Slot 0 Stage 3: FFT_STORE_ODD
+    State m_ix (def) Slot 1 Stage 1: FFT_STORE_ODD
     State l (use) Slot 0 Stage 1: RUR.l
     State l (def) Slot 0 Stage 1: WUR.l
-    State l (def) Slot 0 Stage 3: FFT_UPDATE
     State n (use) Slot 0 Stage 1: RUR.n
     State n (def) Slot 0 Stage 3: WUR.n
+    State n_2 (use) Slot 0 Stage 1: RUR.n_2
+    State n_2 (def) Slot 0 Stage 1: WUR.n_2
     State lg2_n (use) Slot 0 Stage 1: RUR.lg2_n
     State lg2_n (def) Slot 0 Stage 3: WUR.lg2_n
     State step (use) Slot 0 Stage 1: RUR.step
-    State step (use) Slot 0 Stage 2: FFT_LOAD_W
+    State step (use) Slot 1 Stage 1: FFT_STORE_ODD
     State step (def) Slot 0 Stage 1: WUR.step
-    State step (def) Slot 0 Stage 2: FFT_UPDATE
     State ptr_data (use) Slot 0 Stage 1: RUR.ptr_data
+    State ptr_data (use) Slot 1 Stage 1: FFT_LOAD_ODD
     State ptr_data (def) Slot 0 Stage 3: WUR.ptr_data
     State ptr_w (use) Slot 0 Stage 1: RUR.ptr_w
     State ptr_w (def) Slot 0 Stage 3: WUR.ptr_w
     State debug_reg (use) Slot 0 Stage 1: RUR.debug_reg
     State debug_reg (def) Slot 0 Stage 1: WUR.debug_reg
+    State debug_reg (def) Slot 1 Stage 1: FFT_LOAD_ODD
     State qv_r (use) Slot 0 Stage 1: RUR.qv_r_0
     State qv_r (use) Slot 0 Stage 3: WUR.qv_r_0
     State qv_r (def) Slot 0 Stage 3: WUR.qv_r_0
@@ -307,7 +324,7 @@ regfile AR:
     WUR.av_3<art> WUR.b_i<art> WUR.b_r<art> WUR.bv_0<art> WUR.bv_1<art> 
     WUR.bv_2<art> WUR.bv_3<art> WUR.debug_reg<art> WUR.done<art> 
     WUR.even_const<art> WUR.even_ix<art> WUR.l<art> WUR.lg2_n<art> 
-    WUR.m_ix<art> WUR.n<art> WUR.od_ix<art> WUR.odd_ix<art> 
+    WUR.m_ix<art> WUR.n<art> WUR.n_2<art> WUR.od_ix<art> WUR.odd_ix<art> 
     WUR.ptr_data<art> WUR.ptr_w<art> WUR.q_i<art> WUR.q_r<art> 
     WUR.qv_i_0<art> WUR.qv_i_1<art> WUR.qv_r_0<art> WUR.qv_r_1<art> 
     WUR.shift<art> WUR.step<art> WUR.u_i<art> WUR.u_r<art> WUR.v_i<art> 
@@ -384,20 +401,21 @@ regfile AR:
     RUR.av_0<arr> RUR.av_1<arr> RUR.av_2<arr> RUR.av_3<arr> RUR.b_i<arr> 
     RUR.b_r<arr> RUR.bv_0<arr> RUR.bv_1<arr> RUR.bv_2<arr> RUR.bv_3<arr> 
     RUR.debug_reg<arr> RUR.done<arr> RUR.even_const<arr> RUR.even_ix<arr> 
-    RUR.l<arr> RUR.lg2_n<arr> RUR.m_ix<arr> RUR.n<arr> RUR.od_ix<arr> 
-    RUR.odd_ix<arr> RUR.ptr_data<arr> RUR.ptr_w<arr> RUR.q_i<arr> 
-    RUR.q_r<arr> RUR.qv_i_0<arr> RUR.qv_i_1<arr> RUR.qv_r_0<arr> 
-    RUR.qv_r_1<arr> RUR.shift<arr> RUR.step<arr> RUR.u_i<arr> RUR.u_r<arr> 
-    RUR.v_i<arr> RUR.v_r<arr> RUR.w_i<arr> RUR.w_inc<arr> RUR.w_ix<arr> 
-    RUR.w_r<arr> RUR.wv_0<arr> RUR.wv_1<arr> RUR.wv_2<arr> RUR.wv_3<arr> 
-    SDDR32.P<ars> SEXT<arr> SLL<arr> SLLI<arr> SRA<arr> SRAI<arr> SRC<arr> 
-    SRL<arr> SRLI<arr> SUB<arr> SUBX2<arr> SUBX4<arr> SUBX8<arr> XOR<arr> 
-    XSR.BR<art> XSR.CPENABLE<art> XSR.DDR<art> XSR.DEBUGCAUSE<art> 
-    XSR.DEPC<art> XSR.EPC1<art> XSR.EPC2<art> XSR.EPS2<art> 
-    XSR.EXCCAUSE<art> XSR.EXCSAVE1<art> XSR.EXCSAVE2<art> XSR.EXCVADDR<art> 
-    XSR.ICOUNT<art> XSR.ICOUNTLEVEL<art> XSR.INTENABLE<art> XSR.LBEG<art> 
-    XSR.LCOUNT<art> XSR.LEND<art> XSR.LITBASE<art> XSR.MEMCTL<art> 
-    XSR.PS<art> XSR.SAR<art> XSR.WINDOWBASE<art> XSR.WINDOWSTART<art> 
+    RUR.l<arr> RUR.lg2_n<arr> RUR.m_ix<arr> RUR.n<arr> RUR.n_2<arr> 
+    RUR.od_ix<arr> RUR.odd_ix<arr> RUR.ptr_data<arr> RUR.ptr_w<arr> 
+    RUR.q_i<arr> RUR.q_r<arr> RUR.qv_i_0<arr> RUR.qv_i_1<arr> 
+    RUR.qv_r_0<arr> RUR.qv_r_1<arr> RUR.shift<arr> RUR.step<arr> 
+    RUR.u_i<arr> RUR.u_r<arr> RUR.v_i<arr> RUR.v_r<arr> RUR.w_i<arr> 
+    RUR.w_inc<arr> RUR.w_ix<arr> RUR.w_r<arr> RUR.wv_0<arr> RUR.wv_1<arr> 
+    RUR.wv_2<arr> RUR.wv_3<arr> SDDR32.P<ars> SEXT<arr> SLL<arr> SLLI<arr> 
+    SRA<arr> SRAI<arr> SRC<arr> SRL<arr> SRLI<arr> SUB<arr> SUBX2<arr> 
+    SUBX4<arr> SUBX8<arr> XOR<arr> XSR.BR<art> XSR.CPENABLE<art> 
+    XSR.DDR<art> XSR.DEBUGCAUSE<art> XSR.DEPC<art> XSR.EPC1<art> 
+    XSR.EPC2<art> XSR.EPS2<art> XSR.EXCCAUSE<art> XSR.EXCSAVE1<art> 
+    XSR.EXCSAVE2<art> XSR.EXCVADDR<art> XSR.ICOUNT<art> 
+    XSR.ICOUNTLEVEL<art> XSR.INTENABLE<art> XSR.LBEG<art> XSR.LCOUNT<art> 
+    XSR.LEND<art> XSR.LITBASE<art> XSR.MEMCTL<art> XSR.PS<art> XSR.SAR<art> 
+    XSR.WINDOWBASE<art> XSR.WINDOWSTART<art> 
   regfile AR: port wr0: slot #0 Inst16a
     ADD.N<arr> ADDI.N<arr> L32I.N<art> 
   regfile AR: port wr0: slot #0 Inst16b
@@ -442,19 +460,22 @@ regfile BR:
 
 ### Load/Store unit information
 Load/Store unit used in slot 0: 0
-Load/Store unit used in slot 1:
+Load/Store unit used in slot 1: 1
 Load/Store unit used in slot 2:
 #The following opcodes in format x24, slot Inst, index 0 use Load/Store unit 0 
-    FFT_LOAD_EVEN FFT_LOAD_ODD FFT_LOAD_W FFT_STORE_EVEN FFT_STORE_ODD 
-    IDTLB IHI III IITLB IPF L16SI L16UI L32E L32I L32R L8UI LDDR32.P LICT 
-    LICW PDTLB PITLB RDTLB0 RDTLB1 RITLB0 RITLB1 S16I S32E S32I S32NB S8I 
-    SDDR32.P SICT SICW WDTLB WITLB 
+    FFT_LOAD_W IDTLB IHI III IITLB IPF L16SI L16UI L32E L32I L32R L8UI 
+    LDDR32.P LICT LICW PDTLB PITLB RDTLB0 RDTLB1 RITLB0 RITLB1 S16I S32E 
+    S32I S32NB S8I SDDR32.P SICT SICW WDTLB WITLB 
 #The following opcodes in format x16a, slot Inst16a, index 0 use Load/Store unit 0 
     L32I.N S32I.N 
 #The following opcodes in format xt_format1, slot xt_flix64_slot0, index 0 use Load/Store unit 0 
     L16SI L16UI L32I L32R L8UI S16I S32I S8I 
 #The following opcodes in format xt_format2, slot xt_flix64_slot0, index 0 use Load/Store unit 0 
     L16SI L16UI L32I L32R L8UI S16I S32I S8I 
+#The following opcodes in format fft_flix, slot fft_slot0, index 0 use Load/Store unit 0 
+    FFT_LOAD_EVEN FFT_STORE_EVEN 
+#The following opcodes in format fft_flix, slot fft_slot1, index 1 use Load/Store unit 1 
+    FFT_LOAD_ODD FFT_STORE_ODD 
 
 
 ### Schedule information for states
@@ -495,53 +516,56 @@ State: q_i
   use stages: 1
   def stages: 1
 State: wv
-  use stages: 1 3
-  def stages: 3
+  use stages: 1 2
+  def stages: 2
 State: av
   use stages: 1
-  def stages: 1 3
+  def stages: 1 2
 State: bv
   use stages: 1
-  def stages: 1 3
+  def stages: 1 2
 State: done
   use stages: 1 2
-  def stages: 1 3
+  def stages: 1
 State: shift
   use stages: 1
   def stages: 3
 State: even_ix
   use stages: 1
-  def stages: 1 2 3
+  def stages: 1
 State: odd_ix
   use stages: 1
   def stages: 1
 State: even_const
   use stages: 1
-  def stages: 2
+  def stages: 1
 State: od_ix
   use stages: 1
   def stages: 3
 State: w_ix
   use stages: 1
-  def stages: 1 3
+  def stages: 1
 State: w_inc
   use stages: 1
   def stages: 1
 State: m_ix
   use stages: 1
-  def stages: 1 3
+  def stages: 1
 State: l
   use stages: 1
-  def stages: 1 3
+  def stages: 1
 State: n
   use stages: 1
   def stages: 3
+State: n_2
+  use stages: 1
+  def stages: 1
 State: lg2_n
   use stages: 1
   def stages: 3
 State: step
-  use stages: 1 2
-  def stages: 1 2
+  use stages: 1
+  def stages: 1
 State: ptr_data
   use stages: 1
   def stages: 3
@@ -572,10 +596,10 @@ Instruction WUR.v_r defs user_register v_r in stage 1.
 Instruction WUR.v_i defs user_register v_i in stage 1.
 Instruction WUR.q_r defs user_register q_r in stage 1.
 Instruction WUR.q_i defs user_register q_i in stage 1.
-Instruction WUR.wv_0 defs user_register wv_0 in stage 3.
-Instruction WUR.wv_1 defs user_register wv_1 in stage 3.
-Instruction WUR.wv_2 defs user_register wv_2 in stage 3.
-Instruction WUR.wv_3 defs user_register wv_3 in stage 3.
+Instruction WUR.wv_0 defs user_register wv_0 in stage 2.
+Instruction WUR.wv_1 defs user_register wv_1 in stage 2.
+Instruction WUR.wv_2 defs user_register wv_2 in stage 2.
+Instruction WUR.wv_3 defs user_register wv_3 in stage 2.
 Instruction WUR.av_0 defs user_register av_0 in stage 1.
 Instruction WUR.av_1 defs user_register av_1 in stage 1.
 Instruction WUR.av_2 defs user_register av_2 in stage 1.
@@ -588,13 +612,14 @@ Instruction WUR.done defs user_register done in stage 1.
 Instruction WUR.shift defs user_register shift in stage 3.
 Instruction WUR.even_ix defs user_register even_ix in stage 1.
 Instruction WUR.odd_ix defs user_register odd_ix in stage 1.
-Instruction WUR.even_const defs user_register even_const in stage 2.
+Instruction WUR.even_const defs user_register even_const in stage 1.
 Instruction WUR.od_ix defs user_register od_ix in stage 3.
 Instruction WUR.w_ix defs user_register w_ix in stage 1.
 Instruction WUR.w_inc defs user_register w_inc in stage 1.
 Instruction WUR.m_ix defs user_register m_ix in stage 1.
 Instruction WUR.l defs user_register l in stage 1.
 Instruction WUR.n defs user_register n in stage 3.
+Instruction WUR.n_2 defs user_register n_2 in stage 1.
 Instruction WUR.lg2_n defs user_register lg2_n in stage 3.
 Instruction WUR.step defs user_register step in stage 1.
 Instruction WUR.ptr_data defs user_register ptr_data in stage 3.
@@ -609,10 +634,10 @@ Instruction WUR.qv_i_1 defs user_register qv_i_1 in stage 3.
 ### Report the generated flops in each semantic 
 
 Semantic: wv_wur_sem
-    1 * 3 	WUR_wv_3: 0 -> 3
-    1 * 3 	WUR_wv_2: 0 -> 3
-    1 * 3 	WUR_wv_1: 0 -> 3
-    1 * 3 	WUR_wv_0: 0 -> 3
+    1 * 2 	WUR_wv_3: 0 -> 2
+    1 * 2 	WUR_wv_2: 0 -> 2
+    1 * 2 	WUR_wv_1: 0 -> 2
+    1 * 2 	WUR_wv_0: 0 -> 2
 
 Semantic: wv_rur_sem
     1 * 1 	RUR_wv_3: 0 -> 1
@@ -661,41 +686,18 @@ Semantic: qv_i_rur_sem
     1 * 1 	RUR_qv_i_0: 0 -> 1
 
 Semantic: FFT_LOAD_EVEN
-    1 * 2 	shift: 1 -> 3
-    16 * 1 	data_temp_i: 2 -> 3
-    16 * 1 	data_temp_r: 2 -> 3
-    128 * 2 	bv: 1 -> 3
-    32 * 1 	data_temp: 2 -> 3
+    1 * 1 	shift: 1 -> 2
+    128 * 1 	bv: 1 -> 2
 
 Semantic: FFT_LOAD_ODD
-    32 * 1 	data_temp: 2 -> 3
-    128 * 2 	av: 1 -> 3
+    128 * 1 	av: 1 -> 2
 
 Semantic: FFT_LOAD_W
-    1 * 2 	shift: 1 -> 3
-    16 * 1 	data_temp_i: 2 -> 3
-    16 * 1 	data_temp_r: 2 -> 3
-    128 * 2 	wv: 1 -> 3
-    32 * 1 	data_temp: 2 -> 3
-    16 * 1 	w_temp: 1 -> 2
-    1 * 1 	jump: 2 -> 3
-    16 * 2 	even_temp: 1 -> 3
-    16 * 1 	step: 2 -> 3
-    16 * 2 	w_ix_temp: 1 -> 3
+    1 * 1 	shift: 1 -> 2
+    128 * 1 	wv: 1 -> 2
 
 Semantic: FFT_STORE_EVEN
-    128 * 2 	bv: 1 -> 3
+    128 * 1 	bv: 1 -> 2
 
 Semantic: FFT_STORE_ODD
-    128 * 2 	av: 1 -> 3
-    16 * 2 	m_temp: 1 -> 3
-    1 * 1 	jump: 2 -> 3
-    16 * 2 	even_temp: 1 -> 3
-    16 * 1 	step: 2 -> 3
-
-Semantic: FFT_UPDATE
-    1 * 1 	done_temp: 1 -> 2
-    16 * 1 	even_ix: 1 -> 2
-    16 * 1 	step: 1 -> 2
-    16 * 2 	l_temp: 1 -> 3
-    16 * 2 	lg2_n: 1 -> 3
+    128 * 1 	av: 1 -> 2

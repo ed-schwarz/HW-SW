@@ -3,13 +3,13 @@ read design ../src/verify_ref.v -verilog -Golden -root Xm_hwsw_codesign2019_alig
 read design ../src/verify_sem.v -verilog -revised -root Xm_hwsw_codesign2019_alignedTIE
 
 //opcode RUR_qv_r_0, slot Inst, format x24, length l24:
-//InstBuf : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx11100011xxxx001010000000
+//InstBuf : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx11100011xxxx001010010000
 set log file l24_x24_Inst_RUR_qv_r_0.do.log -replace
 add pin constraints 0 Instr_R[0] -Both
 add pin constraints 0 Instr_R[1] -Both
 add pin constraints 0 Instr_R[2] -Both
 add pin constraints 0 Instr_R[3] -Both
-add pin constraints 0 Instr_R[4] -Both
+add pin constraints 1 Instr_R[4] -Both
 add pin constraints 0 Instr_R[5] -Both
 add pin constraints 0 Instr_R[6] -Both
 add pin constraints 1 Instr_R[7] -Both

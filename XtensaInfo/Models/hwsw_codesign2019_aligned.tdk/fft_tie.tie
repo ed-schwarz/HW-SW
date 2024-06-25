@@ -4,6 +4,14 @@ state w_r		16 add_read_write
 state w_i		16 add_read_write
 
 
+format fft_flix 64 {fft_slot0, fft_slot1}
+slot_opcodes fft_slot0 {FFT_LOAD_EVEN, FFT_STORE_EVEN}
+slot_opcodes fft_slot1 {FFT_LOAD_ODD, FFT_STORE_ODD}
+//slot_opcodes fft_slot2 {FFT_LOAD_W}
+//slot_opcodes fft_slot3 {FFT_STORE_EVEN}
+//slot_opcodes fft_slot4 {FFT_STORE_ODD}
+
+
 
 state a_r		16 add_read_write
 state a_i		16 add_read_write
@@ -34,6 +42,7 @@ state w_inc			16 add_read_write
 state m_ix			16 add_read_write
 state l				16 add_read_write
 state n				16 add_read_write
+state n_2			16 add_read_write
 state lg2_n			16 add_read_write
 state step			16 add_read_write
 state ptr_data 		32 add_read_write
@@ -163,9 +172,10 @@ operation FFT_2_FFT {}{in a_r, in a_i, in w_r, in w_i, in b_r, in b_i, out u_r, 
 	
 }
 
-operation FFT_8_FFT {}{inout av, in wv, inout bv, out even_ix, in even_const}
+operation FFT_8_FFT {}{inout av, in wv, inout bv, out even_ix, in even_const, in step, out odd_ix}
 {
 	assign even_ix = even_const;
+	assign odd_ix = even_const + step;
 	
 	wire [15:0] a_r0 = av[15:0];
 	wire [15:0] a_i0 = av[31:16];
@@ -239,19 +249,21 @@ assign n = lvl4;
 
 
 
-operation FFT_INIT {} {out done, out even_ix, out odd_ix, out w_ix, out m_ix, out l, out step, out w_inc, in n}
+operation FFT_INIT {} {out done, out even_ix, out odd_ix, out w_ix, out m_ix, out l, out step, out w_inc, in n, out n_2}
 {
 	assign done = 1'h0;
 	assign even_ix = 16'h0;
-	assign odd_ix = 16'h0;
+	assign odd_ix = 16'h1;
 	assign w_ix = 16'h0;
 	assign m_ix = 16'h0;
 	assign l = 16'h0;
 	assign step = 16'h1;
-	assign w_inc = RIGHT_SHIFT(n);
+	wire [15:0] n_2_temp = RIGHT_SHIFT(n);
+	assign w_inc = n_2_temp;
+	assign n_2 = n_2_temp;
 }
 
-operation FFT_LOAD_EVEN {}{in even_ix, out odd_ix, in ptr_data, in done, in step, in shift, inout bv, out VAddr, in MemDataIn32, out LoadByteDisable, out debug_reg}
+operation FFT_LOAD_EVEN {}{in even_ix, in ptr_data, in done, in shift, inout bv, out VAddr, in MemDataIn32, out LoadByteDisable, out debug_reg}
 {
 	wire [31:0] even_ix_ext = {16'h0, even_ix};
 	wire [31:0] even_ix_shift = LEFT_SHIFT_32(even_ix_ext);
@@ -259,7 +271,7 @@ operation FFT_LOAD_EVEN {}{in even_ix, out odd_ix, in ptr_data, in done, in step
 	assign debug_reg = VAddr_temp;
 	assign VAddr = ptr_data + LEFT_SHIFT_32(even_ix_shift);
 	assign LoadByteDisable = {16{done}};
-	assign odd_ix = even_ix + step;
+	
 	
 	wire [31:0] data_temp = MemDataIn32;
 	wire [15:0] data_temp_r = RIGHT_SHIFT_SIGNED(data_temp[15:0]);
@@ -268,11 +280,7 @@ operation FFT_LOAD_EVEN {}{in even_ix, out odd_ix, in ptr_data, in done, in step
 	
 }
 
-schedule fft_load_even_schedule {FFT_LOAD_EVEN} {
-	use even_ix 1;
-	use MemDataIn32 2;
-	def bv 3;
-}
+
 
 operation FFT_LOAD_ODD {}{in odd_ix, in ptr_data, in done, inout av, out VAddr, in MemDataIn32, out LoadByteDisable, out debug_reg}
 {
@@ -287,13 +295,9 @@ operation FFT_LOAD_ODD {}{in odd_ix, in ptr_data, in done, inout av, out VAddr, 
 	
 }
 
-schedule fft_load_odd_schedule {FFT_LOAD_ODD} {
-	use odd_ix 1;
-	use MemDataIn32 2;
-	def av 3;
-}
 
-operation FFT_LOAD_W {}{inout w_ix, inout even_ix, in ptr_w, in done, in shift, inout wv, in step, out VAddr, in MemDataIn32, out LoadByteDisable, out debug_reg, in w_inc}
+
+operation FFT_LOAD_W {}{inout w_ix, inout even_ix, out odd_ix, in ptr_w, in done, in n_2, in shift, inout wv, in step, out VAddr, in MemDataIn32, out LoadByteDisable, out debug_reg, in w_inc}
 {
 	wire [31:0] w_ix_ext = {16'h0, w_ix};
 	wire [31:0] w_ix_ext_shift = LEFT_SHIFT_32(w_ix_ext);
@@ -310,44 +314,34 @@ operation FFT_LOAD_W {}{inout w_ix, inout even_ix, in ptr_w, in done, in shift, 
 
 	
 	wire [15:0] even_temp = even_ix + 16'h1;
-	wire [15:0] w_temp =  w_ix + 16'h1;
+
 	wire [15:0] w_ix_temp =  w_ix + w_inc;
-	wire jump = (w_temp < step) ? 1'h0 : 1'h1;
+	wire jump = (w_ix_temp < n_2) ? 1'h0 : 1'h1;
 	
-	assign even_ix = jump ? even_temp + step : even_temp;
+	wire [15:0] even_ix_wire = jump ? even_temp + step : even_temp;
+	assign even_ix = even_ix_wire;
+	assign odd_ix = even_ix_wire + step;
 	assign w_ix = jump ? 16'h0 : w_ix_temp;
 }
 
-schedule fft_load_w_schedule {FFT_LOAD_W} {
-	use w_ix 1;
-	use even_ix 1;
-	use MemDataIn32 2;
-	def wv 3;
-	use step 2;
-	def even_ix 3;
-	def w_ix 3;
-}
 
-operation FFT_STORE_EVEN {} {in even_ix, out odd_ix, in ptr_data, in done, in step, inout bv, out VAddr, out MemDataOut32, out StoreByteDisable}
+
+operation FFT_STORE_EVEN {} {in even_ix, in ptr_data, in done, inout bv, out VAddr, out MemDataOut32, out StoreByteDisable}
 {
 	wire [31:0] even_ix_ext = {16'h0, even_ix};
 	wire [31:0] even_ix_shift = LEFT_SHIFT_32(even_ix_ext);
 	assign VAddr = ptr_data + LEFT_SHIFT_32(even_ix_shift);
 	assign StoreByteDisable = {16{done}};
-	assign odd_ix = even_ix + step;
+
 	
 	assign MemDataOut32 = bv[31:0];
 
 	assign bv = {32'h0, bv[127:32]};
 }
 
-schedule fft_store_even_schedule {FFT_STORE_EVEN} {
-	use even_ix 1;
-	def MemDataOut32 2;
-	def bv 3;
-}
 
-operation FFT_STORE_ODD {} {in odd_ix, in ptr_data, in done, in step, inout av, inout m_ix, inout even_ix, out VAddr, out MemDataOut32, out StoreByteDisable}
+
+operation FFT_STORE_ODD {} {inout odd_ix, in ptr_data, in done, in step, inout av, inout m_ix, inout even_ix, out VAddr, out MemDataOut32, out StoreByteDisable}
 {
 	wire [31:0] odd_ix_ext = {16'h0, odd_ix};
 	wire [31:0] even_ix_shift = LEFT_SHIFT_32(odd_ix_ext);
@@ -362,38 +356,28 @@ operation FFT_STORE_ODD {} {in odd_ix, in ptr_data, in done, in step, inout av, 
 	wire [15:0] m_temp =  m_ix + 16'h1;
 	wire jump = (m_temp < step) ? 1'h0 : 1'h1;
 	
-	assign even_ix = jump ? even_temp + step : even_temp;
+	wire [15:0] even_ix_wire = jump ? even_temp + step : even_temp;
+	assign even_ix = even_ix_wire;
+	assign odd_ix = even_ix_wire + step;
 	assign m_ix = jump ? 16'h0 : m_temp;
 }
 
-schedule fft_store_odd_schedule {FFT_STORE_ODD} {
-	use odd_ix 1;
-	def MemDataOut32 2;
-	def av 3;
-	use step 2;
-	def even_ix 3;
-	def m_ix 3;
-}
 
-operation FFT_UPDATE {} {inout even_ix, inout l, out done, inout step, out even_const, in n, in lg2_n, inout w_inc}
+
+operation FFT_UPDATE {} {inout even_ix, inout l, out done, inout step, out odd_ix, out even_const, in n, in lg2_n, inout w_inc}
 {
 	wire done_temp = !(even_ix < n);
 	assign even_const = done_temp ? 16'h0 : even_ix;
-	assign even_ix = done_temp ? 16'h0 : even_ix;
-	assign step = done_temp ? LEFT_SHIFT(step) : step;
+	wire [15:0] even_ix_temp = done_temp ? 16'h0 : even_ix;
+	assign even_ix = even_ix_temp;
+	wire [15:0] step_temp = done_temp ? LEFT_SHIFT(step) : step;
+	assign odd_ix = even_ix_temp + step_temp;
+	assign step = step_temp;
 	assign w_inc = done_temp ? RIGHT_SHIFT(w_inc) : w_inc;
 	wire [15:0] l_temp = done_temp ? l + 16'h1 : l;
 	assign l = l_temp;
 	assign done = (l_temp < lg2_n) ? 1'h0 : 1'h1; 
 }
 
-schedule fft_update_schedule {FFT_UPDATE} {
-	use even_ix 1;
 
-	def even_const 2;
-	def even_ix 2;
-	def step 2;
-	def l 3;
-	def done 3;
-}
 endpackage "fft_tie"

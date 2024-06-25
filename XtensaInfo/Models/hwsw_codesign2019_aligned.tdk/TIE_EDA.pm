@@ -151,6 +151,8 @@ my @all_semantic_names = qw(
 	TIE_semantic_slot0_WUR_l
 	TIE_semantic_slot0_RUR_n
 	TIE_semantic_slot0_WUR_n
+	TIE_semantic_slot0_RUR_n_2
+	TIE_semantic_slot0_WUR_n_2
 	TIE_semantic_slot0_RUR_lg2_n
 	TIE_semantic_slot0_WUR_lg2_n
 	TIE_semantic_slot0_RUR_step
@@ -173,10 +175,10 @@ my @all_semantic_names = qw(
 	TIE_semantic_slot0_FFT_BIT_REVERSE
 	TIE_semantic_slot0_FFT_INIT
 	TIE_semantic_slot0_FFT_LOAD_EVEN
-	TIE_semantic_slot0_FFT_LOAD_ODD
+	TIE_semantic_slot1_FFT_LOAD_ODD
 	TIE_semantic_slot0_FFT_LOAD_W
 	TIE_semantic_slot0_FFT_STORE_EVEN
-	TIE_semantic_slot0_FFT_STORE_ODD
+	TIE_semantic_slot1_FFT_STORE_ODD
 	TIE_semantic_slot0_FFT_UPDATE
 );
 

@@ -126,5 +126,8 @@ use vars qw(%l24_x24_Inst_WUR_qv_i_1_ports);
 %l24_x24_Inst_WUR_qv_i_1_ports = (
 	'art', ['AR', 'rd1', 32, 1]
 );
+use vars qw(%xt_l64a_fft_flix_fft_slot1_NOP_ports);
+%xt_l64a_fft_flix_fft_slot1_NOP_ports = (
+);
 
 1;
