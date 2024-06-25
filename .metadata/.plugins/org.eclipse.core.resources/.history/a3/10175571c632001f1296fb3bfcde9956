@@ -1,0 +1,398 @@
+state w_r		16 add_read_write
+state w_i		16 add_read_write
+
+
+
+state a_r		16 add_read_write
+state a_i		16 add_read_write
+state b_r		16 add_read_write
+state b_i		16 add_read_write
+state u_r		16 add_read_write
+state u_i		16 add_read_write
+state v_r		16 add_read_write
+state v_i		16 add_read_write
+state q_r		16 add_read_write
+state q_i		16 add_read_write
+
+
+state wv		128 add_read_write
+
+state av		128 add_read_write
+
+state bv		128 add_read_write
+
+state done			1 add_read_write
+state shift			1 add_read_write
+state even_ix		16 add_read_write
+state odd_ix		16 add_read_write
+state even_const	16 add_read_write
+state od_ix			16 add_read_write
+state w_ix			16 add_read_write
+state w_inc			16 add_read_write
+state m_ix			16 add_read_write
+state l				16 add_read_write
+state n				16 add_read_write
+state lg2_n			16 add_read_write
+state step			16 add_read_write
+state ptr_data 		32 add_read_write
+state ptr_w 		32 add_read_write
+state debug_reg		32 add_read_write
+
+
+state qv_r		64 add_read_write
+state qv_i		64 add_read_write
+
+
+function [31:0]COMPLEX_MUL ([15:0] a_r, [15:0] b_r, [15:0] a_i, [15:0] b_i)
+{
+	wire [31:0] product1r = TIEmul(a_r[15:0],b_r[15:0],1'b1); // signed multiplication
+	wire [31:0] product2r = TIEmul(a_r[15:0],b_i[15:0],1'b1); // signed multiplication
+	wire [31:0] product1i = TIEmul(a_i[15:0],b_i[15:0],1'b1); // signed multiplication
+	wire [31:0] product2i = TIEmul(a_i[15:0],b_r[15:0],1'b1); // signed multiplication
+	wire [15:0] mult1 = product1r[30:15] - product1i[30:15];
+	wire [15:0] mult2 = product2r[30:15] + product2i[30:15];
+	assign COMPLEX_MUL = {mult2, mult1};
+}
+
+
+function [63:0]FFT_NODE ([15:0] a_r, [15:0] a_i, [15:0] w_r, [15:0] w_i, [15:0] b_r, [15:0] b_i)
+{
+
+	wire [31:0] com_mul = COMPLEX_MUL(a_r[15:0], w_r[15:0], a_i[15:0], w_i[15:0]);
+	wire [15:0] t_r = com_mul[15:0];
+	wire [15:0] t_i = com_mul[31:16];
+	
+	wire [15:0] u_r = b_r - t_r;
+	wire [15:0] u_i = b_i - t_i;
+	wire [15:0] v_r = b_r + t_r;
+	wire [15:0] v_i = b_i + t_i;
+	assign FFT_NODE = {v_i, v_r, u_i, u_r};
+	
+}
+
+function [15:0]LEFT_SHIFT ([15:0] a)
+{
+	wire [15:0] shift_temp = {a[14:0], 1'b0};
+	assign LEFT_SHIFT =	shift_temp;
+}
+
+function [15:0]LEFT_SHIFT_SIGNED ([15:0] a)
+{
+	wire [15:0] shift_temp = a[15] ? {a[15], a[13:0], 1'b0} : {a[15], a[13:0], 1'b1};
+	assign LEFT_SHIFT_SIGNED =	shift_temp;
+}
+
+function [15:0]RIGHT_SHIFT ([15:0] a)
+{
+	wire [15:0] shift_temp = {1'b0, a[15:1]};
+	assign RIGHT_SHIFT = shift_temp;
+}
+
+function [15:0]RIGHT_SHIFT_SIGNED ([15:0] a)
+{
+	wire [15:0] shift_temp = a[15] ? {a[15], 1'b1, a[14:1]} : {a[15], 1'b0, a[14:1]};
+	assign RIGHT_SHIFT_SIGNED = shift_temp;
+}
+
+function [31:0]LEFT_SHIFT_32 ([31:0] a)
+{
+	wire [31:0] shift_temp = {a[30:0], 1'b0};
+	assign LEFT_SHIFT_32 =	shift_temp;
+}
+
+function [31:0]RIGHT_SHIFT_32 ([31:0] a)
+{
+	wire [31:0] shift_temp = {1'h0, a[31:1]};
+	assign RIGHT_SHIFT_32 = shift_temp;
+}
+
+operation FFT_SIMPLE_MUL {out AR c, in AR a, in AR b}{}
+{
+	wire [31:0] product = TIEmul(a[31:0],b[31:0],1'b1); // signed multiplication
+	assign c = product;         // accumulation
+}
+
+/*
+ * Complex mult
+ */
+
+operation FFT_COM_MUL {inout AR a_r, in AR b_r, inout AR a_i, in AR b_i}{}
+{
+	//wire [31:0] product1r = TIEmul(a_r[15:0],b_r[15:0],1'b1); // signed multiplication
+	//wire [31:0] product2r = TIEmul(a_r[15:0],b_i[15:0],1'b1); // signed multiplication
+	//wire [31:0] product1i = TIEmul(a_i[15:0],b_i[15:0],1'b1); // signed multiplication
+	//wire [31:0] product2i = TIEmul(a_i[15:0],b_r[15:0],1'b1); // signed multiplication
+	wire [31:0] com_mul = COMPLEX_MUL(a_r[15:0], b_r[15:0], a_i[15:0], b_i[15:0]);
+	wire [15:0] t_r = com_mul[15:0];
+	wire [15:0] t_i = com_mul[31:16];
+	
+	assign a_r = t_r;
+	assign a_i = t_i;
+}
+
+
+
+
+
+operation FFT_2_f_LD {}
+			{in b_r, in b_i, out q_r, out q_i}
+{
+	
+	assign q_r = b_r;
+	assign q_i = b_i;
+}
+
+
+
+
+operation FFT_2_FFT {}{in a_r, in a_i, in w_r, in w_i, in b_r, in b_i, out u_r, out u_i, out v_r, out v_i}
+{
+
+	wire [63:0] fft_node = FFT_NODE(a_r[15:0], a_i[15:0], w_r[15:0], w_i[15:0], b_r[15:0], b_i[15:0]);
+	wire [15:0] u_r_t = fft_node[15:0];
+	wire [15:0] u_i_t = fft_node[31:16];
+	wire [15:0] v_r_t = fft_node[47:32];
+	wire [15:0] v_i_t = fft_node[63:48];
+	
+	assign u_r = u_r_t;
+	assign u_i = u_i_t;
+	assign v_r = v_r_t;
+	assign v_i = v_i_t;
+	
+}
+
+operation FFT_8_FFT {}{inout av, in wv, inout bv, out even_ix, in even_const}
+{
+	assign even_ix = even_const;
+	
+	wire [15:0] a_r0 = av[15:0];
+	wire [15:0] a_i0 = av[31:16];
+	wire [15:0] a_r1 = av[47:32];
+	wire [15:0] a_i1 = av[63:48];
+	wire [15:0] a_r2 = av[79:64];
+	wire [15:0] a_i2 = av[95:80];
+	wire [15:0] a_r3 = av[111:96];
+	wire [15:0] a_i3 = av[127:112];
+
+	
+	wire [15:0] b_r0 = bv[15:0];
+	wire [15:0] b_i0 = bv[31:16];
+	wire [15:0] b_r1 = bv[47:32];
+	wire [15:0] b_i1 = bv[63:48];
+	wire [15:0] b_r2 = bv[79:64];
+	wire [15:0] b_i2 = bv[95:80];
+	wire [15:0] b_r3 = bv[111:96];
+	wire [15:0] b_i3 = bv[127:112];
+	
+	wire [15:0] w_r0 = wv[15:0];
+	wire [15:0] w_i0 = wv[31:16];
+	wire [15:0] w_r1 = wv[47:32];
+	wire [15:0] w_i1 = wv[63:48];
+	wire [15:0] w_r2 = wv[79:64];
+	wire [15:0] w_i2 = wv[95:80];
+	wire [15:0] w_r3 = wv[111:96];
+	wire [15:0] w_i3 = wv[127:112];
+	
+	
+	wire [63:0] fft_node0 = FFT_NODE(a_r0[15:0], a_i0[15:0], w_r0[15:0], w_i0[15:0], b_r0[15:0], b_i0[15:0]);
+	wire [15:0] u_r_t0 = fft_node0[15:0];
+	wire [15:0] u_i_t0 = fft_node0[31:16];
+	wire [15:0] v_r_t0 = fft_node0[47:32];
+	wire [15:0] v_i_t0 = fft_node0[63:48];
+	
+	wire [63:0] fft_node1 = FFT_NODE(a_r1[15:0], a_i1[15:0], w_r1[15:0], w_i1[15:0], b_r1[15:0], b_i1[15:0]);
+	wire [15:0] u_r_t1 = fft_node1[15:0];
+	wire [15:0] u_i_t1 = fft_node1[31:16];
+	wire [15:0] v_r_t1 = fft_node1[47:32];
+	wire [15:0] v_i_t1 = fft_node1[63:48];
+	
+	wire [63:0] fft_node2 = FFT_NODE(a_r2[15:0], a_i2[15:0], w_r2[15:0], w_i2[15:0], b_r2[15:0], b_i2[15:0]);
+	wire [15:0] u_r_t2 = fft_node2[15:0];
+	wire [15:0] u_i_t2 = fft_node2[31:16];
+	wire [15:0] v_r_t2 = fft_node2[47:32];
+	wire [15:0] v_i_t2 = fft_node2[63:48];
+	
+	wire [63:0] fft_node3 = FFT_NODE(a_r3[15:0], a_i3[15:0], w_r3[15:0], w_i3[15:0], b_r3[15:0], b_i3[15:0]);
+	wire [15:0] u_r_t3 = fft_node3[15:0];
+	wire [15:0] u_i_t3 = fft_node3[31:16];
+	wire [15:0] v_r_t3 = fft_node3[47:32];
+	wire [15:0] v_i_t3 = fft_node3[63:48];
+	
+	
+	assign bv = {v_i_t3, v_r_t3, v_i_t2, v_r_t2, v_i_t1, v_r_t1, v_i_t0, v_r_t0};
+	assign av = {u_i_t3, u_r_t3, u_i_t2, u_r_t2, u_i_t1, u_r_t1, u_i_t0, u_r_t0};
+	
+}
+
+operation FFT_BIT_REVERSE {inout AR n}{}
+{
+wire [31:0] lvl0 = (n & 32'hffff0000) >> 16 | (n & 32'h0000ffff) << 16;
+wire [31:0] lvl1 = (lvl0 & 32'hff00ff00) >> 8 | (lvl0& 32'h00ff00ff) << 8;
+wire [31:0] lvl2 = (lvl1 & 32'hf0f0f0f0) >> 4 | (lvl1& 32'h0f0f0f0f) << 4;
+wire [31:0] lvl3 = (lvl2 & 32'hcccccccc) >> 2 | (lvl2& 32'h33333333) << 2;
+wire [31:0] lvl4 = (lvl3 & 32'haaaaaaaa) >> 1 | (lvl3& 32'h55555555) << 1;
+assign n = lvl4; 
+}
+
+
+
+
+operation FFT_INIT {} {out done, out even_ix, out odd_ix, out w_ix, out m_ix, out l, out step, out w_inc, in n}
+{
+	assign done = 1'h0;
+	assign even_ix = 16'h0;
+	assign odd_ix = 16'h0;
+	assign w_ix = 16'h0;
+	assign m_ix = 16'h0;
+	assign l = 16'h0;
+	assign step = 16'h1;
+	assign w_inc = RIGHT_SHIFT(n);
+}
+
+operation FFT_LOAD_EVEN {}{in even_ix, in ptr_data, in done, in shift, inout bv, out VAddr, in MemDataIn32, out LoadByteDisable, out debug_reg}
+{
+	wire [31:0] even_ix_ext = {16'h0, even_ix};
+	wire [31:0] even_ix_shift = LEFT_SHIFT_32(even_ix_ext);
+	wire [31:0] VAddr_temp = ptr_data + LEFT_SHIFT_32(even_ix_shift);
+	assign debug_reg = VAddr_temp;
+	assign VAddr = ptr_data + LEFT_SHIFT_32(even_ix_shift);
+	assign LoadByteDisable = {16{done}};
+	
+	
+	wire [31:0] data_temp = MemDataIn32;
+	wire [15:0] data_temp_r = RIGHT_SHIFT_SIGNED(data_temp[15:0]);
+	wire [15:0] data_temp_i = RIGHT_SHIFT_SIGNED(data_temp[31:16]);
+	assign bv = shift ? {data_temp_i[15:0], data_temp_r[15:0], bv[127:32]} : {data_temp[31:0], bv[127:32]};
+	
+}
+
+schedule fft_load_even_schedule {FFT_LOAD_EVEN} {
+	use even_ix 1;
+	use MemDataIn32 2;
+	def bv 3;
+}
+
+operation FFT_LOAD_ODD {}{in odd_ix, in ptr_data, in done, inout av, out VAddr, in MemDataIn32, out LoadByteDisable, out debug_reg}
+{
+	wire [31:0] odd_ix_ext = {16'h0, odd_ix};
+	wire [31:0] odd_ix_ext_shift = LEFT_SHIFT_32(odd_ix_ext);
+	wire [31:0] VAddr_temp = ptr_data + LEFT_SHIFT_32(odd_ix_ext_shift);
+	assign debug_reg = VAddr_temp;
+	assign VAddr = ptr_data + LEFT_SHIFT_32(odd_ix_ext_shift);
+	assign LoadByteDisable = {16{done}};
+	wire [31:0] data_temp = MemDataIn32;
+	assign av = {data_temp[31:0], av[127:32]};
+	
+}
+
+schedule fft_load_odd_schedule {FFT_LOAD_ODD} {
+	use odd_ix 1;
+	use MemDataIn32 2;
+	def av 3;
+}
+
+operation FFT_LOAD_W {}{inout w_ix, inout even_ix, out odd_ix, in ptr_w, in done, in shift, inout wv, in step, out VAddr, in MemDataIn32, out LoadByteDisable, out debug_reg, in w_inc}
+{
+	wire [31:0] w_ix_ext = {16'h0, w_ix};
+	wire [31:0] w_ix_ext_shift = LEFT_SHIFT_32(w_ix_ext);
+	wire [31:0] VAddr_temp = ptr_w + LEFT_SHIFT_32(w_ix_ext_shift);
+	assign debug_reg = VAddr_temp;
+	assign VAddr = ptr_w + LEFT_SHIFT_32(w_ix_ext_shift);
+	assign LoadByteDisable = {16{done}};
+	
+	wire [31:0] data_temp = MemDataIn32;
+	wire [15:0] data_temp_r = RIGHT_SHIFT_SIGNED(data_temp[15:0]);
+	wire [15:0] data_temp_i = RIGHT_SHIFT_SIGNED(data_temp[31:16]);
+	assign wv = shift ? {data_temp_i[15:0], data_temp_r[15:0], wv[127:32]} : {data_temp[31:0], wv[127:32]};
+
+
+	
+	wire [15:0] even_temp = even_ix + 16'h1;
+	wire [15:0] w_temp =  w_ix + 16'h1;
+	wire [15:0] w_ix_temp =  w_ix + w_inc;
+	wire jump = (w_temp < step) ? 1'h0 : 1'h1;
+	
+	wire [15:0] even_ix_wire = jump ? even_temp + step : even_temp;
+	assign even_ix = even_ix_wire;
+	assign odd_ix = even_ix_wire + step;
+	assign w_ix = jump ? 16'h0 : w_ix_temp;
+}
+
+schedule fft_load_w_schedule {FFT_LOAD_W} {
+	use w_ix 1;
+	use even_ix 1;
+	use MemDataIn32 2;
+	def wv 3;
+
+	def even_ix 3;
+	def w_ix 3;
+}
+
+operation FFT_STORE_EVEN {} {in even_ix, out odd_ix, in ptr_data, in done, in step, inout bv, out VAddr, out MemDataOut32, out StoreByteDisable}
+{
+	wire [31:0] even_ix_ext = {16'h0, even_ix};
+	wire [31:0] even_ix_shift = LEFT_SHIFT_32(even_ix_ext);
+	assign VAddr = ptr_data + LEFT_SHIFT_32(even_ix_shift);
+	assign StoreByteDisable = {16{done}};
+	assign odd_ix = even_ix + step;
+	
+	assign MemDataOut32 = bv[31:0];
+
+	assign bv = {32'h0, bv[127:32]};
+}
+
+schedule fft_store_even_schedule {FFT_STORE_EVEN} {
+	use even_ix 1;
+	def MemDataOut32 2;
+	def bv 3;
+}
+
+operation FFT_STORE_ODD {} {in odd_ix, in ptr_data, in done, in step, inout av, inout m_ix, inout even_ix, out VAddr, out MemDataOut32, out StoreByteDisable}
+{
+	wire [31:0] odd_ix_ext = {16'h0, odd_ix};
+	wire [31:0] even_ix_shift = LEFT_SHIFT_32(odd_ix_ext);
+	assign VAddr = ptr_data + LEFT_SHIFT_32(even_ix_shift);
+	assign StoreByteDisable = {16{done}};
+	
+	assign MemDataOut32 = av[31:0];
+
+	assign av = {32'h0, av[127:32]};
+		
+	wire [15:0] even_temp = even_ix + 16'h1;
+	wire [15:0] m_temp =  m_ix + 16'h1;
+	wire jump = (m_temp < step) ? 1'h0 : 1'h1;
+	
+	assign even_ix = jump ? even_temp + step : even_temp;
+	assign m_ix = jump ? 16'h0 : m_temp;
+}
+
+schedule fft_store_odd_schedule {FFT_STORE_ODD} {
+	use odd_ix 1;
+	def MemDataOut32 2;
+	def av 3;
+	use step 2;
+	def even_ix 3;
+	def m_ix 3;
+}
+
+operation FFT_UPDATE {} {inout even_ix, inout l, out done, inout step, out even_const, in n, in lg2_n, inout w_inc}
+{
+	wire done_temp = !(even_ix < n);
+	assign even_const = done_temp ? 16'h0 : even_ix;
+	assign even_ix = done_temp ? 16'h0 : even_ix;
+	assign step = done_temp ? LEFT_SHIFT(step) : step;
+	assign w_inc = done_temp ? RIGHT_SHIFT(w_inc) : w_inc;
+	wire [15:0] l_temp = done_temp ? l + 16'h1 : l;
+	assign l = l_temp;
+	assign done = (l_temp < lg2_n) ? 1'h0 : 1'h1; 
+}
+
+schedule fft_update_schedule {FFT_UPDATE} {
+	use even_ix 1;
+
+	def even_const 2;
+	def even_ix 2;
+	def step 2;
+	def l 3;
+	def done 3;
+}
