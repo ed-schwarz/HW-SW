@@ -40,7 +40,7 @@ state shift			1 add_read_write
 state even_ix		16 add_read_write
 state odd_ix		16 add_read_write
 state even_const	16 add_read_write
-state od_ix			16 add_read_write
+
 state w_ix			16 add_read_write
 state w_inc			16 add_read_write
 state m_ix			16 add_read_write
@@ -52,6 +52,7 @@ state step			16 add_read_write
 state ptr_data 		32 add_read_write
 state ptr_w 		32 add_read_write
 state debug_reg		32 add_read_write
+state time_decimation 1 add_read_write
 
 
 state qv_r		64 add_read_write
@@ -253,17 +254,17 @@ assign n = lvl4;
 
 
 
-operation FFT_INIT {} {out done, out even_ix, out odd_ix, out w_ix, out m_ix, out l, out step, out w_inc, in n, out n_2}
+operation FFT_INIT {} {out done, out even_ix, out odd_ix, out w_ix, out m_ix, out l, out step, out w_inc, in n, out n_2, in time_decimation}
 {
 	assign done = 1'h0;
 	assign even_ix = 16'h0;
-	assign odd_ix = 16'h1;
+	assign odd_ix = time_decimation ? 16'h1 : n_2_temp;
 	assign w_ix = 16'h0;
 	assign m_ix = 16'h0;
 	assign l = 16'h0;
-	assign step = 16'h1;
+	assign step = time_decimation ? 16'h1 : n_2_temp;
 	wire [15:0] n_2_temp = RIGHT_SHIFT(n);
-	assign w_inc = n_2_temp;
+	assign w_inc = time_decimation ? n_2_temp : 16'h1;
 	assign n_2 = n_2_temp;
 }
 
@@ -368,19 +369,21 @@ operation FFT_STORE_ODD {} {inout odd_ix, in ptr_data, in done, in step, inout a
 
 
 
-operation FFT_UPDATE {} {inout even_ix, inout l, out done, inout step, out odd_ix, out even_const, in n, in lg2_n, inout w_inc}
+operation FFT_UPDATE {} {inout even_ix, inout l, out done, inout step, out odd_ix, out even_const, in n, in lg2_n, inout w_inc, in time_decimation}
 {
 	wire done_temp = !(even_ix < n);
 	assign even_const = done_temp ? 16'h0 : even_ix;
 	wire [15:0] even_ix_temp = done_temp ? 16'h0 : even_ix;
 	assign even_ix = even_ix_temp;
-	wire [15:0] step_temp = done_temp ? LEFT_SHIFT(step) : step;
+	wire [15:0] step_shift = time_decimation ? LEFT_SHIFT(step) : RIGHT_SHIFT(step);
+	wire [15:0] step_temp = done_temp ? step_shift : step;
 	assign odd_ix = even_ix_temp + step_temp;
 	assign step = step_temp;
-	assign w_inc = done_temp ? RIGHT_SHIFT(w_inc) : w_inc;
+	wire [15:0] w_inc_shift = time_decimation ? RIGHT_SHIFT(w_inc) : LEFT_SHIFT(w_inc);
+	assign w_inc = done_temp ? w_inc_shift : w_inc;
 	wire [15:0] l_temp = done_temp ? l + 16'h1 : l;
 	assign l = l_temp;
-	assign done = (l_temp < lg2_n) ? 1'h0 : 1'h1; 
+	assign done = (l_temp < lg2_n) ? 1'h0 : 1'h1;
 }
 
 

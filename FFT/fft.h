@@ -41,6 +41,6 @@ uint32_t Between_Shuffle(cplx* __restrict const x, const uint32_t N,
 int fft_FFT8(cplx*__restrict f, int m, int inverse,
 		const cplx* __restrict coeffs);
 int fft_adv(cplx*__restrict f, int m, int inverse,
-		const cplx* __restrict coeffs);
+		const cplx* __restrict coeffs, int time_decimation);
 
 #endif	//FFT_H

@@ -139,8 +139,6 @@ my @all_semantic_names = qw(
 	TIE_semantic_slot0_WUR_odd_ix
 	TIE_semantic_slot0_RUR_even_const
 	TIE_semantic_slot0_WUR_even_const
-	TIE_semantic_slot0_RUR_od_ix
-	TIE_semantic_slot0_WUR_od_ix
 	TIE_semantic_slot0_RUR_w_ix
 	TIE_semantic_slot0_WUR_w_ix
 	TIE_semantic_slot0_RUR_w_inc
@@ -163,6 +161,8 @@ my @all_semantic_names = qw(
 	TIE_semantic_slot0_WUR_ptr_w
 	TIE_semantic_slot0_RUR_debug_reg
 	TIE_semantic_slot0_WUR_debug_reg
+	TIE_semantic_slot0_RUR_time_decimation
+	TIE_semantic_slot0_WUR_time_decimation
 	TIE_semantic_slot0_qv_r_wur_sem
 	TIE_semantic_slot0_qv_r_rur_sem
 	TIE_semantic_slot0_qv_i_wur_sem
