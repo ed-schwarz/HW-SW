@@ -31,8 +31,18 @@ uint32_t Prepare_Data(cplx* __restrict const x, const uint32_t N,
 	return 0;
 }
 
-uint32_t fft_exec(const intptr_t f, const intptr_t w, const uint32_t n,
-		const uint32_t lg2_n, int shift, int time_decimation) {
+uint32_t Between_Shuffle(cplx* __restrict const x, const uint32_t N,
+		const uint32_t lg2_N, const uint32_t length) {
+
+	int i;
+	if (N != 2) {
+		for (i = 0; i < length / N; i++) {
+			Prepare_Data(x, N, lg2_N, i * N);
+		}
+	}
+}
+
+uint32_t fft_exec(const intptr_t f, const intptr_t w, const uint32_t n, const uint32_t lg2_n, int shift) {
 	int i, done, l, even_i, step, debug_reg, odd_ix;
 	done = 0;
 	WUR_ptr_data(f);
@@ -40,51 +50,26 @@ uint32_t fft_exec(const intptr_t f, const intptr_t w, const uint32_t n,
 	WUR_n(n);
 	WUR_lg2_n(lg2_n);
 	WUR_shift(shift);
-	if (time_decimation) {
-		WUR_time_decimation(1);
-	} else {
-		WUR_time_decimation(0);
-	}
-
+	WUR_step(1);
 	FFT_INIT();
 	while (RUR_done() == 0) {
+		for (i = 0; i < 4; i++) {
+			FFT_LOAD_EVEN();
+			FFT_LOAD_ODD();
+			FFT_LOAD_W();
 
-		FFT_LOAD_EVEN();
-		FFT_LOAD_ODD();
-		FFT_LOAD_W();
-
-		FFT_LOAD_EVEN();
-		FFT_LOAD_ODD();
-		FFT_LOAD_W();
-
-		FFT_LOAD_EVEN();
-		FFT_LOAD_ODD();
-		FFT_LOAD_W();
-
-		FFT_LOAD_EVEN();
-		FFT_LOAD_ODD();
-		FFT_LOAD_W();
-
+		}
 		FFT_8_FFT();
-
-		FFT_STORE_EVEN();
-		FFT_STORE_ODD();
-
-		FFT_STORE_EVEN();
-		FFT_STORE_ODD();
-
-		FFT_STORE_EVEN();
-		FFT_STORE_ODD();
-
-		FFT_STORE_EVEN();
-		FFT_STORE_ODD();
-
+		for (i = 0; i < 4; i++) {
+			FFT_STORE_EVEN();
+			FFT_STORE_ODD();
+		}
 		FFT_UPDATE();
 	}
 }
 
-int fft_adv(cplx*__restrict f, int m, int inverse,
-		const cplx* __restrict coeffs, int time_decimation) {
+int fft_adv(cplx*__restrict f, int m,
+		const cplx* __restrict coeffs) {
 	int mr, nn, i, j, l, k, r, istep, n, scale, shift;
 	//number of input data
 	n = 1 << m;
@@ -105,10 +90,47 @@ int fft_adv(cplx*__restrict f, int m, int inverse,
 
 	/* decimation in time - re-order data */
 
-	if (time_decimation) {
-		Prepare_Data(f, n, m, 0);
-	}
-	if (inverse) {
+	Prepare_Data(f, n, m, 0);
+
+
+
+		/* fixed scaling, for proper normalization -
+		 there will be log2(n) passes, so this
+		 results in an overall factor of 1/n,
+		 distributed to maximize arithmetic accuracy. */
+		shift = 1;
+	fft_exec((intptr_t)f, (intptr_t)coeffs, n, lg2_n, shift);
+
+	return scale;
+}
+
+
+
+
+int fft_adv_inverse(cplx*__restrict f, int m,
+		const cplx* __restrict coeffs) {
+	int mr, nn, i, j, l, k, r, istep, n, scale, shift;
+	//number of input data
+	n = 1 << m;
+	cplx q; //even input
+	cplx t; //odd input
+	cplx u; //even output
+	cplx v; //odd output
+	cplx w[n / 2]; //twiddle factor
+	uint32_t lg2_n = m;
+
+	if (n > N_WAVE)
+		return -1;
+
+	mr = 0;
+	nn = n - 1;
+	scale = 0;
+	r = 0;
+
+	/* decimation in time - re-order data */
+
+	Prepare_Data(f, n, m, 0);
+
 		/* variable scaling, depending upon data */
 		shift = 0;
 		for (i = 0; i < n; ++i) {
@@ -124,19 +146,10 @@ int fft_adv(cplx*__restrict f, int m, int inverse,
 				shift = 1;
 				break;
 			}
-		}
 		if (shift)
 			++scale;
-	} else {
-		/* fixed scaling, for proper normalization -
-		 there will be log2(n) passes, so this
-		 results in an overall factor of 1/n,
-		 distributed to maximize arithmetic accuracy. */
-		shift = 1;
 	}
-	fft_exec((intptr_t) f, (intptr_t) coeffs, n, lg2_n, shift, time_decimation);
-	if (!time_decimation) {
-			Prepare_Data(f, n, m, 0);
-		}
+	fft_exec((intptr_t)f, (intptr_t)coeffs, n, lg2_n, shift);
+
 	return scale;
 }
