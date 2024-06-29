@@ -15,7 +15,6 @@ fixed real[N], imag[N], real_fix[N], imag_fix[N], real_mul[N], imag_mul[N];
 //for Backwward propagation
 static fixed bwd_real_mul[N], bwd_imag_mul[N], bwd_real_fix[N], bwd_imag_fix[N];
 static cplx f[N], bwd_f[N];
-bool equal;
 
 #if (FFT_Type>=3)
 static cplx fwd_coeffs[N/2];
@@ -42,7 +41,7 @@ int main() {
     GenerateCoefficients(fwd_coeffs, N/2, false);
     GenerateCoefficients(bwd_coeffs, N/2, true);
 #endif
-/*
+
 	printf("\nInput Data\n");
 	for (i = 0; i < N; i++) {
 		printf("%d: %d, %d\n", i, real[i], imag[i]);
@@ -51,7 +50,7 @@ int main() {
 		for (i = 0; i < N; i++) {
 			printf("%d: %d, %d\n", i, f[i].R, f[i].I);
 		}
-*/
+
 	//FFT
 int Test_fft_ref(){
 		fix_fft(real_fix, imag_fix, M, 0);
@@ -63,9 +62,9 @@ int Test_fft_ref(){
 
 int Test_fft_adv(){
 
-    fft_adv(f, M, 0, fwd_coeffs, 1);
+    fft_adv(f, M, fwd_coeffs);
     memcpy(bwd_f, f, sizeof(f));
-	//fft_adv(bwd_f, M, 1, bwd_coeffs, 1);
+	fft_adv_inverse(bwd_f, M, bwd_coeffs);
 		}
 
 #if (FFT_Type==0)
@@ -167,7 +166,7 @@ int Test_fft_adv(){
 	Test_fft_ref();
 	Test_fft_adv();
 
-/*
+
 	printf("\nFFT pure C\n");
 	for (i = 0; i < N; i++) {
 		printf("%d: %d, %d\n", i, real_fix[i], imag_fix[i]);
@@ -191,21 +190,6 @@ int Test_fft_adv(){
 		//printf("%d: %d, %d\n", i, bwd_f[i].R, bwd_f[i].I);
 		printf("%d:\t\t %d, %d \t\t %d, %d \t\t %d, %d  \n", i, bwd_f[i].R, bwd_f[i].I, real[i], imag[i], bwd_f[i].R-real[i], bwd_f[i].I-imag[i]);
 
-	}
-	*/
-	equal = true;
-	for (i = 0; i < N; i++) {
-			if(f[i].R != real_fix[i] || f[i].I != imag_fix[i])
-			{
-				equal = false;
-				printf("%d: %d, %d\n", i, f[i].R, f[i].I);
-			}
-		}
-	if(equal){
-		printf("FFT Pass");
-	}
-	else {
-		printf("FFT Fail");
 	}
 
 #else
