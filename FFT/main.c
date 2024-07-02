@@ -36,11 +36,6 @@ int main() {
 		f[i].R = real[i];
 		f[i].I = imag[i];
 	}
-
-
-#if (FFT_Type>=3)
-    GenerateCoefficients(fwd_coeffs, N/2, false);
-    GenerateCoefficients(bwd_coeffs, N/2, true);
 #endif
 
 	printf("\nInput Data\n");
@@ -95,8 +90,9 @@ int Test_fft_adv(){
 	}
 
 #elif (FFT_Type==1)
-
-
+	//precalculation of Coefficients 
+    	GenerateCoefficients(fwd_coeffs, N/2, false);
+    	GenerateCoefficients(bwd_coeffs, N/2, true);
 	Test_fft_ref();
 	Test_fft_adv();
 
