@@ -5,12 +5,11 @@
 #include <math.h>
 #include <xtensa/tie/fft_tie.h>
 
-
 /* FIX_MPY() - fixed-point multiplication macro.
-   This macro is a statement, not an expression (uses asm).
-   BEWARE: make sure _DX is not clobbered by evaluating (A) or DEST.
-   args are all of type fixed.
-   Scaling ensures that 32767*32767 = 32767. */
+ This macro is a statement, not an expression (uses asm).
+ BEWARE: make sure _DX is not clobbered by evaluating (A) or DEST.
+ args are all of type fixed.
+ Scaling ensures that 32767*32767 = 32767. */
 #define FIX_MPY(DEST,A,B)       DEST = ((long)(A) * (long)(B))>>15
 
 #define N_WAVE          1024    /* dimension of Sinewave[] */
@@ -23,31 +22,15 @@ extern fixed Sinewave[N_WAVE];
 fixed fix_mpy(fixed a, fixed b);
 int fix_fft(fixed *fr, fixed *fi, int m, int inverse);
 
-
-typedef struct cplx
-{
-    fixed R;
-    fixed I;
+typedef struct cplx {
+	fixed R;
+	fixed I;
 } cplx;
 
-void
-SWOpt_GenerateCoefficients(cplx* __restrict out_coeff, const uint32_t N, bool inverse);
+int fft_adv_dif(cplx*__restrict f, int m, int inverse,
+		const cplx* __restrict coeffs);
 
-uint32_t
-SWOpt_ButterflyIterativeFft(cplx* __restrict x,
-                            uint32_t N,
-                            uint32_t lg2_N,
-                            bool inverse,
-                            const cplx* __restrict coeffs);
-
-void
-HWOpt_GenerateCoefficients(cplx* __restrict out_coeff, const uint32_t N, bool inverse);
-
-uint32_t
-HWOpt_ButterflyIterativeFft(cplx* __restrict const x,
-                            const uint32_t N,
-                            const uint32_t lg2_N,
-                            const bool inverse,
-                            const cplx* __restrict coeffs);
+int fft_adv_dit(cplx*__restrict f, int m, int inverse,
+		const cplx* __restrict coeffs);
 
 #endif	//FFT_H
