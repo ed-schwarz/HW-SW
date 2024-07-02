@@ -27,10 +27,16 @@ typedef struct cplx {
 	fixed I;
 } cplx;
 
-int fft_adv_dif(cplx*__restrict f, int m, int inverse,
+int fft_adv_dif(cplx*__restrict f, int m,
 		const cplx* __restrict coeffs);
 
-int fft_adv_dit(cplx*__restrict f, int m, int inverse,
+int fft_adv_dif(cplx*__restrict f, int m,
+		const cplx* __restrict coeffs);
+
+int fft_adv_dit(cplx*__restrict f, int m,
+		const cplx* __restrict coeffs);
+
+int fft_adv_dit_inv(cplx*__restrict f, int m,
 		const cplx* __restrict coeffs);
 
 #endif	//FFT_H
