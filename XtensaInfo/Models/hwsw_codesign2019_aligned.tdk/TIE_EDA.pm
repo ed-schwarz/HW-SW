@@ -171,7 +171,8 @@ my @all_semantic_names = qw(
 	TIE_semantic_slot0_FFT_COM_MUL
 	TIE_semantic_slot0_FFT_2_f_LD
 	TIE_semantic_slot0_FFT_2_FFT
-	TIE_semantic_slot0_FFT_8_FFT
+	TIE_semantic_slot0_FFT_8_FFT_DIT
+	TIE_semantic_slot0_FFT_8_FFT_DIF
 	TIE_semantic_slot0_FFT_BIT_REVERSE
 	TIE_semantic_slot0_FFT_INIT
 	TIE_semantic_slot0_FFT_LOAD_EVEN
