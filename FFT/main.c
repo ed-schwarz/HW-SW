@@ -4,7 +4,7 @@
 #include        <stdio.h>
 #include        <math.h>
 
-#define FFT_Type	2
+#define FFT_Type	4
 
 #define M       3
 
@@ -24,6 +24,9 @@ static cplx bwd_coeffs[N/2];
 
 int main() {
 	int i;
+	//precalculation of Coefficients
+    GenerateCoefficients(fwd_coeffs, N/2, false);
+    GenerateCoefficients(bwd_coeffs, N/2, true);
 
 	for (i = 0; i < N; i++) {
 		real[i] = 1000 * cos(i * 2 * 3.1415926535 / N);
@@ -57,13 +60,36 @@ int Test_fft_ref(){
 
 	}
 
-int Test_fft_adv(){
+int Test_fft_adv_dit(){
 
-    fft_adv_dit(f, M, 0, fwd_coeffs);
+    fft_adv_dit(f, M, fwd_coeffs);
     memcpy(bwd_f, f, sizeof(f));
-	//fft_adv(bwd_f, M, 1, bwd_coeffs, 1);
-		}
+    fft_adv_dit_inv(bwd_f, M, bwd_coeffs);
+}
 
+int Test_only_fft_adv_dit(){
+	fix_fft(real_fix, imag_fix, M, 0);
+    fft_adv_dit(f, M, fwd_coeffs);
+}
+
+int Test_only_fft_adv_dit_inv(){
+	fix_fft(real_fix, imag_fix, M, 1);
+    fft_adv_dit_inv(f, M, bwd_coeffs);
+}
+
+int Test_fft_adv_dif(){
+    fft_adv_dif(f, M, fwd_coeffs);
+    memcpy(bwd_f, f, sizeof(f));
+    fft_adv_dif_inv(bwd_f, M, bwd_coeffs);
+}
+int Test_only_fft_adv_dif(){
+	fft_adv_dif(f, M, fwd_coeffs);
+	fix_fft(real_fix, imag_fix, M, 0);
+}
+int Test_only_fft_adv_dif_inv(){
+	fft_adv_dif_inv(f, M, fwd_coeffs);
+	fix_fft(real_fix, imag_fix, M, 1);
+}
 #if (FFT_Type==0)
 
 	fix_fft(real, imag, M, 0);
@@ -90,11 +116,8 @@ int Test_fft_adv(){
 	}
 
 #elif (FFT_Type==2)
-	//precalculation of Coefficients 
-    	GenerateCoefficients(fwd_coeffs, N/2, false);
-    	GenerateCoefficients(bwd_coeffs, N/2, true);
 	Test_fft_ref();
-	Test_fft_adv();
+	Test_fft_adv_dit();
 
 	/*
 	printf("\nFFT pure C\n");
@@ -133,6 +156,14 @@ int Test_fft_adv(){
 				printf("Wrong TIE value\n");
 				printf("%d: %d, %d\n", i, f[i].R, f[i].I);
 			}
+			if(bwd_f[i].R != bwd_real_fix[i] || bwd_f[i].I != bwd_imag_fix[i])
+			{
+				equal = false;
+				printf("\nCorrect C value\n");
+				printf("%d: %d, %d\n", i, real_fix[i], imag_fix[i]);
+				printf("Wrong TIE value\n");
+				printf("%d: %d, %d\n", i, bwd_f[i].R, bwd_f[i].I);
+			}
 		}
 	if(equal){
 		printf("FFT Pass");
@@ -141,18 +172,111 @@ int Test_fft_adv(){
 		printf("FFT Fail");
 	}
 
-#else
 
-	//IFFT
-	fix_fft(real, imag, M, 1);
+#elif(FFT_Type == 3)
+	Test_only_fft_adv_dit();
 
-	printf("\nIFFT\n");
+	equal = true;
+		for (i = 0; i < N; i++) {
+				if(f[i].R != real_fix[i] || f[i].I != imag_fix[i])
+				{
+					equal = false;
+					printf("\nCorrect C value\n");
+					printf("%d: %d, %d\n", i, real_fix[i], imag_fix[i]);
+					printf("Wrong TIE value\n");
+					printf("%d: %d, %d\n", i, f[i].R, f[i].I);
+				}
+				if(equal){
+					printf("FFT Pass");
+				}
+				else {
+					printf("FFT Fail");
+				}
+#elif(FFT_Type == 4)
+	Test_only_fft_adv_dit_inv();
+	equal = true;
+			for (i = 0; i < N; i++) {
+					if(bwd_f[i].R != real_fix[i] || bwd_f[i].I != imag_fix[i])
+					{
+						equal = false;
+						printf("\nCorrect C value\n");
+						printf("%d: %d, %d\n", i, real_fix[i], imag_fix[i]);
+						printf("Wrong TIE value\n");
+						printf("%d: %d, %d\n", i, bwd_f[i].R, bwd_f[i].I);
+					}
+					if(equal){
+						printf("FFT Pass");
+					}
+					else {
+						printf("FFT Fail");
+					}
+#elif(FFT_Type == 5)
+	Test_fft_adv_dif();
+	Test_fft_ref();
+
+	equal = true;
 	for (i = 0; i < N; i++) {
-		printf("%d: %d, %d\n", i, real[i], imag[i]);
+			if(f[i].R != real_fix[i] || f[i].I != imag_fix[i])
+			{
+				equal = false;
+				printf("\nCorrect C value\n");
+				printf("%d: %d, %d\n", i, real_fix[i], imag_fix[i]);
+				printf("Wrong TIE value\n");
+				printf("%d: %d, %d\n", i, f[i].R, f[i].I);
+			}
+			if(bwd_f[i].R != bwd_real_fix[i] || bwd_f[i].I != bwd_imag_fix[i])
+			{
+				equal = false;
+				printf("\nCorrect C value\n");
+				printf("%d: %d, %d\n", i, real_fix[i], imag_fix[i]);
+				printf("Wrong TIE value\n");
+				printf("%d: %d, %d\n", i, bwd_f[i].R, bwd_f[i].I);
+			}
+		}
+	if(equal){
+		printf("FFT Pass");
+	}
+	else {
+		printf("FFT Fail");
 	}
 
+#elif(FFT_Type == 6)
+	Test_only_fft_adv_dif();
+	equal = true;
+		for (i = 0; i < N; i++) {
+				if(f[i].R != real_fix[i] || f[i].I != imag_fix[i])
+				{
+					equal = false;
+					printf("\nCorrect C value\n");
+					printf("%d: %d, %d\n", i, real_fix[i], imag_fix[i]);
+					printf("Wrong TIE value\n");
+					printf("%d: %d, %d\n", i, f[i].R, f[i].I);
+				}
+				if(equal){
+					printf("FFT Pass");
+				}
+				else {
+					printf("FFT Fail");
+				}
+#elif (FFT_Type == 7)
+	Test_only_fft_adv_dif_inv();
+	equal = true;
+		for (i = 0; i < N; i++) {
+				if(bwd_f[i].R != real_fix[i] || bwd_f[i].I != imag_fix[i])
+				{
+					equal = false;
+					printf("\nCorrect C value\n");
+					printf("%d: %d, %d\n", i, real_fix[i], imag_fix[i]);
+					printf("Wrong TIE value\n");
+					printf("%d: %d, %d\n", i, bwd_f[i].R, bwd_f[i].I);
+				}
+				if(equal){
+					printf("FFT Pass");
+				}
+				else {
+					printf("FFT Fail");
+				}
 #endif
 
-	return 0;
-}
+	return 0;}}
 
