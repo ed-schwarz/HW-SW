@@ -11069,3 +11069,395 @@ Command-line arguments:  -os win32 -ws win32 -arch x86 256m -application org.ecl
 
 !ENTRY com.tensilica.xide.core 1 0 2024-06-25 17:16:54.214
 !MESSAGE xt-run launch <C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-run --xtensa-core=hwsw_codesign2019_aligned --xtensa-system=C:\usr\xtensa\XtDevTools\install\builds\RF-2016.4-win32\hwsw_codesign2019_aligned\config --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk --console C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT\bin\hwsw_codesign2019_aligned\Debug\FFT >
+!SESSION 2024-07-02 11:45:13.823 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.7.0_21
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  256m -application org.eclipse.ui.ide.workbench
+Command-line arguments:  -os win32 -ws win32 -arch x86 256m -application org.eclipse.ui.ide.workbench
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-07-02 11:45:18.588
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.resources 4 368 2024-07-02 11:45:24.604
+!MESSAGE Resource '/XtensaInfo/Systems' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 368 2024-07-02 11:45:24.619
+!MESSAGE Resource '/XtensaInfo/Hardware' does not exist.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2024-07-02 11:45:34.432
+!MESSAGE No repository found at http://xpg.cadence.com/xplorer/update/xx_707/.
+
+!ENTRY org.eclipse.cdt.ui 4 0 2024-07-02 11:45:50.073
+!MESSAGE Error in CDT UI during reconcile
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 184
+	at org.eclipse.cdt.internal.core.pdom.db.Database.getChunk(Database.java:274)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:551)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:586)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:586)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:535)
+	at org.eclipse.cdt.internal.core.pdom.dom.PDOMLinkage.getBindingsViaCache(PDOMLinkage.java:404)
+	at org.eclipse.cdt.internal.core.pdom.PDOM.findBindings(PDOM.java:1131)
+	at org.eclipse.cdt.internal.core.pdom.PDOM.findBindings(PDOM.java:1122)
+	at org.eclipse.cdt.internal.core.index.CIndex.findBindings(CIndex.java:578)
+	at org.eclipse.cdt.internal.core.index.CIndex.findBindings(CIndex.java:440)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CScope.getBinding(CScope.java:278)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CVisitor.lookup(CVisitor.java:1039)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CVisitor.resolveBinding(CVisitor.java:826)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CVisitor.createBinding(CVisitor.java:456)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CASTName.resolveBinding(CASTName.java:66)
+	at org.eclipse.cdt.internal.ui.editor.SemanticToken.getBinding(SemanticToken.java:47)
+	at org.eclipse.cdt.internal.ui.editor.SemanticHighlightings$ExternalSDKHighlighting.consumes(SemanticHighlightings.java:1876)
+	at org.eclipse.cdt.internal.ui.editor.SemanticHighlightingReconciler$PositionCollector.visitNode(SemanticHighlightingReconciler.java:195)
+	at org.eclipse.cdt.internal.ui.editor.SemanticHighlightingReconciler$PositionCollector.visit(SemanticHighlightingReconciler.java:184)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CASTName.accept(CASTName.java:125)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CASTTypedefNameSpecifier.accept(CASTTypedefNameSpecifier.java:75)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CASTSimpleDeclaration.accept(CASTSimpleDeclaration.java:99)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CASTDeclarationStatement.accept(CASTDeclarationStatement.java:74)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CASTCompoundStatement.accept(CASTCompoundStatement.java:77)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CASTForStatement.accept(CASTForStatement.java:137)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CASTCompoundStatement.accept(CASTCompoundStatement.java:77)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CASTCompoundStatement.accept(CASTCompoundStatement.java:77)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CASTFunctionDefinition.accept(CASTFunctionDefinition.java:128)
+	at org.eclipse.cdt.internal.core.dom.parser.ASTTranslationUnit.accept(ASTTranslationUnit.java:283)
+	at org.eclipse.cdt.internal.ui.editor.SemanticHighlightingReconciler.reconcilePositions(SemanticHighlightingReconciler.java:402)
+	at org.eclipse.cdt.internal.ui.editor.SemanticHighlightingReconciler.reconciled(SemanticHighlightingReconciler.java:357)
+	at org.eclipse.cdt.internal.ui.editor.CEditor.reconciled(CEditor.java:3192)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:108)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.initialReconcile(CReconcilingStrategy.java:132)
+	at org.eclipse.cdt.internal.ui.text.CompositeReconcilingStrategy.initialReconcile(CompositeReconcilingStrategy.java:112)
+	at org.eclipse.cdt.internal.ui.text.CCompositeReconcilingStrategy.initialReconcile(CCompositeReconcilingStrategy.java:108)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.initialProcess(MonoReconciler.java:105)
+	at org.eclipse.cdt.internal.ui.text.CReconciler.initialProcess(CReconciler.java:382)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:173)
+
+!ENTRY org.eclipse.cdt.ui 4 4 2024-07-02 11:45:50.276
+!MESSAGE Error
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 184
+	at org.eclipse.cdt.internal.core.pdom.db.Database.getChunk(Database.java:274)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:551)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:586)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:586)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:535)
+	at org.eclipse.cdt.internal.core.pdom.dom.PDOMLinkage.getBindingsViaCache(PDOMLinkage.java:404)
+	at org.eclipse.cdt.internal.core.pdom.PDOM.findBindings(PDOM.java:1131)
+	at org.eclipse.cdt.internal.core.pdom.PDOM.findBindings(PDOM.java:1122)
+	at org.eclipse.cdt.internal.core.index.CIndex.findBindings(CIndex.java:578)
+	at org.eclipse.cdt.internal.core.index.CIndex.findBindings(CIndex.java:440)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CScope.getBinding(CScope.java:278)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CVisitor.lookup(CVisitor.java:1039)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CVisitor.resolveBinding(CVisitor.java:826)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CVisitor.createBinding(CVisitor.java:456)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CASTName.resolveBinding(CASTName.java:66)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CQualifierType.resolveType(CQualifierType.java:101)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CQualifierType.<init>(CQualifierType.java:41)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CVisitor.createType(CVisitor.java:1316)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CVisitor.createType(CVisitor.java:1213)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CVisitor.createBinding(CVisitor.java:742)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CVisitor.createBinding(CVisitor.java:696)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CVisitor.createBinding(CVisitor.java:463)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CASTName.resolveBinding(CASTName.java:66)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CVisitor$CollectDeclarationsAction.visit(CVisitor.java:274)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CASTDeclarator.accept(CASTDeclarator.java:134)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CASTSimpleDeclaration.accept(CASTSimpleDeclaration.java:102)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CASTDeclarationStatement.accept(CASTDeclarationStatement.java:74)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CASTCompoundStatement.accept(CASTCompoundStatement.java:77)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CASTForStatement.accept(CASTForStatement.java:137)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CASTCompoundStatement.accept(CASTCompoundStatement.java:77)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CASTCompoundStatement.accept(CASTCompoundStatement.java:77)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CASTFunctionDefinition.accept(CASTFunctionDefinition.java:128)
+	at org.eclipse.cdt.internal.core.dom.parser.ASTTranslationUnit.accept(ASTTranslationUnit.java:283)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CVisitor.getDeclarations(CVisitor.java:1452)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CASTTranslationUnit.getDeclarationsInAST(CASTTranslationUnit.java:71)
+	at org.eclipse.cdt.internal.ui.search.OccurrencesFinder.performSearch(OccurrencesFinder.java:82)
+	at org.eclipse.cdt.internal.ui.search.OccurrencesFinder.getOccurrences(OccurrencesFinder.java:127)
+	at org.eclipse.cdt.internal.ui.editor.CEditor.updateOccurrenceAnnotations(CEditor.java:3510)
+	at org.eclipse.cdt.internal.ui.editor.CEditor$7.selectionChanged(CEditor.java:3536)
+	at org.eclipse.cdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$4.runOnAST(SelectionListenerWithASTManager.java:178)
+	at org.eclipse.cdt.internal.core.model.ASTCache.runOnAST(ASTCache.java:223)
+	at org.eclipse.cdt.internal.ui.editor.ASTProvider.runOnAST(ASTProvider.java:347)
+	at org.eclipse.cdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:168)
+	at org.eclipse.cdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$3.run(SelectionListenerWithASTManager.java:142)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.tensilica.xide.core 1 0 2024-07-02 11:46:03.198
+!MESSAGE Run: /C:/usr/xtensa/Xplorer-7.0.7/eclipse/plugins/other.xide.external.utils_7.0.7.2000/os/i686-MSWin32/runjob.exe  C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/bin/tc --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned -d C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -libdebug -Y -noerrformat  -name fft_tie C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\TIEFiles\fft_tie.tie
+
+!ENTRY com.tensilica.xide.core 1 0 2024-07-02 11:46:18.776
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2024-07-02 11:46:24.510
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -t -C C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT
+
+!ENTRY com.tensilica.xide.core 1 0 2024-07-02 11:46:24.713
+!MESSAGE Return Code: 0
+
+!ENTRY org.eclipse.debug.ui 4 0 2024-07-02 11:46:33.307
+!MESSAGE Tab group extension: com.tensilica.xide.cdt.launch.AttachTabGroup for type com.tensilica.xide.cdt.launch.AttachLaunch for the * mode has been replaced by extension: com.tensilica.xide.cdt.launch.AttachTabGroup
+
+!ENTRY com.tensilica.xide.core 1 0 2024-07-02 11:46:33.323
+!MESSAGE xt-run working directory <C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT>
+
+!ENTRY com.tensilica.xide.core 1 0 2024-07-02 11:46:33.323
+!MESSAGE xt-run launch <C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-run --xtensa-core=hwsw_codesign2019_aligned --xtensa-system=C:\usr\xtensa\XtDevTools\install\builds\RF-2016.4-win32\hwsw_codesign2019_aligned\config --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk --console C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT\bin\hwsw_codesign2019_aligned\Debug\FFT >
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-07-02 11:46:48.526
+!MESSAGE Error while parsing /C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error while parsing /C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c.
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.addSymbols(PDOMWriter.java:186)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.writeToIndex(AbstractIndexerTask.java:942)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseFile(AbstractIndexerTask.java:902)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseLinkage(AbstractIndexerTask.java:766)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.runTask(AbstractIndexerTask.java:375)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMIndexerTask.run(PDOMIndexerTask.java:130)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:137)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: Error resolving 'bool' in /C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c.
+java.lang.ArrayIndexOutOfBoundsException: 184
+	at org.eclipse.cdt.internal.core.pdom.db.Database.getChunk(Database.java:274)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:551)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:586)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:586)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:535)
+	at org.eclipse.cdt.internal.core.pdom.dom.PDOMLinkage.getBindingsViaCache(PDOMLinkage.java:404)
+	at org.eclipse.cdt.internal.core.pdom.PDOM.findBindings(PDOM.java:1131)
+	at org.eclipse.cdt.internal.core.pdom.PDOM.findBindings(PDOM.java:1122)
+	at org.eclipse.cdt.internal.core.index.CIndex.findBindings(CIndex.java:578)
+	at org.eclipse.cdt.internal.core.index.CIndex.findBindings(CIndex.java:440)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CScope.getBinding(CScope.java:278)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CVisitor.lookup(CVisitor.java:1039)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CVisitor.resolveBinding(CVisitor.java:826)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CVisitor.createBinding(CVisitor.java:456)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CASTName.resolveBinding(CASTName.java:66)
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.resolveNames(PDOMWriter.java:254)
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.addSymbols(PDOMWriter.java:161)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.writeToIndex(AbstractIndexerTask.java:942)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseFile(AbstractIndexerTask.java:902)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseLinkage(AbstractIndexerTask.java:766)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.runTask(AbstractIndexerTask.java:375)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMIndexerTask.run(PDOMIndexerTask.java:130)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:137)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: Error while parsing /C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c.
+java.lang.ArrayIndexOutOfBoundsException: 184
+	at org.eclipse.cdt.internal.core.pdom.db.Database.getChunk(Database.java:274)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:551)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:586)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:586)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:535)
+	at org.eclipse.cdt.internal.core.pdom.dom.FindBinding.findBinding(FindBinding.java:161)
+	at org.eclipse.cdt.internal.core.pdom.dom.c.PDOMCLinkage.doAdaptBinding(PDOMCLinkage.java:281)
+	at org.eclipse.cdt.internal.core.pdom.dom.c.PDOMCLinkage.adaptBinding(PDOMCLinkage.java:255)
+	at org.eclipse.cdt.internal.core.pdom.dom.c.PDOMCLinkage.addBinding(PDOMCLinkage.java:92)
+	at org.eclipse.cdt.internal.core.pdom.dom.c.PDOMCLinkage.addBinding(PDOMCLinkage.java:172)
+	at org.eclipse.cdt.internal.core.pdom.dom.PDOMFile.createPDOMName(PDOMFile.java:440)
+	at org.eclipse.cdt.internal.core.pdom.dom.PDOMFile.addNames(PDOMFile.java:407)
+	at org.eclipse.cdt.internal.core.pdom.WritablePDOM.addFileContent(WritablePDOM.java:125)
+	at org.eclipse.cdt.internal.core.index.WritableCIndex.setFileContent(WritableCIndex.java:86)
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.storeFileInIndex(PDOMWriter.java:498)
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.storeSymbolsInIndex(PDOMWriter.java:209)
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.addSymbols(PDOMWriter.java:164)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.writeToIndex(AbstractIndexerTask.java:942)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseFile(AbstractIndexerTask.java:902)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseLinkage(AbstractIndexerTask.java:766)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.runTask(AbstractIndexerTask.java:375)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMIndexerTask.run(PDOMIndexerTask.java:130)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:137)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.cdt.core 4 0 2024-07-02 11:46:48.526
+!MESSAGE Error while parsing /C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c.
+!SUBENTRY 2 org.eclipse.cdt.core 4 0 2024-07-02 11:46:48.526
+!MESSAGE Error resolving 'bool' in /C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c.
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 184
+	at org.eclipse.cdt.internal.core.pdom.db.Database.getChunk(Database.java:274)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:551)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:586)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:586)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:535)
+	at org.eclipse.cdt.internal.core.pdom.dom.PDOMLinkage.getBindingsViaCache(PDOMLinkage.java:404)
+	at org.eclipse.cdt.internal.core.pdom.PDOM.findBindings(PDOM.java:1131)
+	at org.eclipse.cdt.internal.core.pdom.PDOM.findBindings(PDOM.java:1122)
+	at org.eclipse.cdt.internal.core.index.CIndex.findBindings(CIndex.java:578)
+	at org.eclipse.cdt.internal.core.index.CIndex.findBindings(CIndex.java:440)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CScope.getBinding(CScope.java:278)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CVisitor.lookup(CVisitor.java:1039)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CVisitor.resolveBinding(CVisitor.java:826)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CVisitor.createBinding(CVisitor.java:456)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CASTName.resolveBinding(CASTName.java:66)
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.resolveNames(PDOMWriter.java:254)
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.addSymbols(PDOMWriter.java:161)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.writeToIndex(AbstractIndexerTask.java:942)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseFile(AbstractIndexerTask.java:902)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseLinkage(AbstractIndexerTask.java:766)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.runTask(AbstractIndexerTask.java:375)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMIndexerTask.run(PDOMIndexerTask.java:130)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:137)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 2 org.eclipse.cdt.core 4 0 2024-07-02 11:46:48.526
+!MESSAGE Error while parsing /C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c.
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 184
+	at org.eclipse.cdt.internal.core.pdom.db.Database.getChunk(Database.java:274)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:551)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:586)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:586)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:535)
+	at org.eclipse.cdt.internal.core.pdom.dom.FindBinding.findBinding(FindBinding.java:161)
+	at org.eclipse.cdt.internal.core.pdom.dom.c.PDOMCLinkage.doAdaptBinding(PDOMCLinkage.java:281)
+	at org.eclipse.cdt.internal.core.pdom.dom.c.PDOMCLinkage.adaptBinding(PDOMCLinkage.java:255)
+	at org.eclipse.cdt.internal.core.pdom.dom.c.PDOMCLinkage.addBinding(PDOMCLinkage.java:92)
+	at org.eclipse.cdt.internal.core.pdom.dom.c.PDOMCLinkage.addBinding(PDOMCLinkage.java:172)
+	at org.eclipse.cdt.internal.core.pdom.dom.PDOMFile.createPDOMName(PDOMFile.java:440)
+	at org.eclipse.cdt.internal.core.pdom.dom.PDOMFile.addNames(PDOMFile.java:407)
+	at org.eclipse.cdt.internal.core.pdom.WritablePDOM.addFileContent(WritablePDOM.java:125)
+	at org.eclipse.cdt.internal.core.index.WritableCIndex.setFileContent(WritableCIndex.java:86)
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.storeFileInIndex(PDOMWriter.java:498)
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.storeSymbolsInIndex(PDOMWriter.java:209)
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.addSymbols(PDOMWriter.java:164)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.writeToIndex(AbstractIndexerTask.java:942)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseFile(AbstractIndexerTask.java:902)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseLinkage(AbstractIndexerTask.java:766)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.runTask(AbstractIndexerTask.java:375)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMIndexerTask.run(PDOMIndexerTask.java:130)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:137)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.tensilica.xide.core 1 0 2024-07-02 11:46:51.401
+!MESSAGE Run: C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -t -C C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-07-02 11:46:51.510
+!MESSAGE Error while parsing /C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error while parsing /C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c.
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.addSymbols(PDOMWriter.java:186)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.writeToIndex(AbstractIndexerTask.java:942)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseFile(AbstractIndexerTask.java:902)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseLinkage(AbstractIndexerTask.java:766)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.runTask(AbstractIndexerTask.java:375)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMIndexerTask.run(PDOMIndexerTask.java:130)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:137)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: Error resolving 'bool' in /C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c.
+java.lang.ArrayIndexOutOfBoundsException: 184
+	at org.eclipse.cdt.internal.core.pdom.db.Database.getChunk(Database.java:274)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:551)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:586)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:586)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:535)
+	at org.eclipse.cdt.internal.core.pdom.dom.PDOMLinkage.getBindingsViaCache(PDOMLinkage.java:404)
+	at org.eclipse.cdt.internal.core.pdom.PDOM.findBindings(PDOM.java:1131)
+	at org.eclipse.cdt.internal.core.pdom.PDOM.findBindings(PDOM.java:1122)
+	at org.eclipse.cdt.internal.core.index.CIndex.findBindings(CIndex.java:578)
+	at org.eclipse.cdt.internal.core.index.CIndex.findBindings(CIndex.java:440)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CScope.getBinding(CScope.java:278)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CVisitor.lookup(CVisitor.java:1039)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CVisitor.resolveBinding(CVisitor.java:826)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CVisitor.createBinding(CVisitor.java:456)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CASTName.resolveBinding(CASTName.java:66)
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.resolveNames(PDOMWriter.java:254)
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.addSymbols(PDOMWriter.java:161)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.writeToIndex(AbstractIndexerTask.java:942)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseFile(AbstractIndexerTask.java:902)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseLinkage(AbstractIndexerTask.java:766)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.runTask(AbstractIndexerTask.java:375)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMIndexerTask.run(PDOMIndexerTask.java:130)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:137)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: Error while parsing /C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c.
+java.lang.ArrayIndexOutOfBoundsException: 184
+	at org.eclipse.cdt.internal.core.pdom.db.Database.getChunk(Database.java:274)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:551)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:586)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:586)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:535)
+	at org.eclipse.cdt.internal.core.pdom.dom.FindBinding.findBinding(FindBinding.java:161)
+	at org.eclipse.cdt.internal.core.pdom.dom.c.PDOMCLinkage.doAdaptBinding(PDOMCLinkage.java:281)
+	at org.eclipse.cdt.internal.core.pdom.dom.c.PDOMCLinkage.adaptBinding(PDOMCLinkage.java:255)
+	at org.eclipse.cdt.internal.core.pdom.dom.c.PDOMCLinkage.addBinding(PDOMCLinkage.java:92)
+	at org.eclipse.cdt.internal.core.pdom.dom.c.PDOMCLinkage.addBinding(PDOMCLinkage.java:172)
+	at org.eclipse.cdt.internal.core.pdom.dom.PDOMFile.createPDOMName(PDOMFile.java:440)
+	at org.eclipse.cdt.internal.core.pdom.dom.PDOMFile.addNames(PDOMFile.java:407)
+	at org.eclipse.cdt.internal.core.pdom.WritablePDOM.addFileContent(WritablePDOM.java:125)
+	at org.eclipse.cdt.internal.core.index.WritableCIndex.setFileContent(WritableCIndex.java:86)
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.storeFileInIndex(PDOMWriter.java:498)
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.storeSymbolsInIndex(PDOMWriter.java:209)
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.addSymbols(PDOMWriter.java:164)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.writeToIndex(AbstractIndexerTask.java:942)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseFile(AbstractIndexerTask.java:902)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseLinkage(AbstractIndexerTask.java:766)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.runTask(AbstractIndexerTask.java:375)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMIndexerTask.run(PDOMIndexerTask.java:130)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:137)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.cdt.core 4 0 2024-07-02 11:46:51.510
+!MESSAGE Error while parsing /C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c.
+!SUBENTRY 2 org.eclipse.cdt.core 4 0 2024-07-02 11:46:51.510
+!MESSAGE Error resolving 'bool' in /C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c.
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 184
+	at org.eclipse.cdt.internal.core.pdom.db.Database.getChunk(Database.java:274)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:551)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:586)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:586)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:535)
+	at org.eclipse.cdt.internal.core.pdom.dom.PDOMLinkage.getBindingsViaCache(PDOMLinkage.java:404)
+	at org.eclipse.cdt.internal.core.pdom.PDOM.findBindings(PDOM.java:1131)
+	at org.eclipse.cdt.internal.core.pdom.PDOM.findBindings(PDOM.java:1122)
+	at org.eclipse.cdt.internal.core.index.CIndex.findBindings(CIndex.java:578)
+	at org.eclipse.cdt.internal.core.index.CIndex.findBindings(CIndex.java:440)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CScope.getBinding(CScope.java:278)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CVisitor.lookup(CVisitor.java:1039)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CVisitor.resolveBinding(CVisitor.java:826)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CVisitor.createBinding(CVisitor.java:456)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CASTName.resolveBinding(CASTName.java:66)
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.resolveNames(PDOMWriter.java:254)
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.addSymbols(PDOMWriter.java:161)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.writeToIndex(AbstractIndexerTask.java:942)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseFile(AbstractIndexerTask.java:902)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseLinkage(AbstractIndexerTask.java:766)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.runTask(AbstractIndexerTask.java:375)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMIndexerTask.run(PDOMIndexerTask.java:130)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:137)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 2 org.eclipse.cdt.core 4 0 2024-07-02 11:46:51.510
+!MESSAGE Error while parsing /C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c.
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 184
+	at org.eclipse.cdt.internal.core.pdom.db.Database.getChunk(Database.java:274)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:551)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:586)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:586)
+	at org.eclipse.cdt.internal.core.pdom.db.BTree.accept(BTree.java:535)
+	at org.eclipse.cdt.internal.core.pdom.dom.FindBinding.findBinding(FindBinding.java:161)
+	at org.eclipse.cdt.internal.core.pdom.dom.c.PDOMCLinkage.doAdaptBinding(PDOMCLinkage.java:281)
+	at org.eclipse.cdt.internal.core.pdom.dom.c.PDOMCLinkage.adaptBinding(PDOMCLinkage.java:255)
+	at org.eclipse.cdt.internal.core.pdom.dom.c.PDOMCLinkage.addBinding(PDOMCLinkage.java:92)
+	at org.eclipse.cdt.internal.core.pdom.dom.c.PDOMCLinkage.addBinding(PDOMCLinkage.java:172)
+	at org.eclipse.cdt.internal.core.pdom.dom.PDOMFile.createPDOMName(PDOMFile.java:440)
+	at org.eclipse.cdt.internal.core.pdom.dom.PDOMFile.addNames(PDOMFile.java:407)
+	at org.eclipse.cdt.internal.core.pdom.WritablePDOM.addFileContent(WritablePDOM.java:125)
+	at org.eclipse.cdt.internal.core.index.WritableCIndex.setFileContent(WritableCIndex.java:86)
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.storeFileInIndex(PDOMWriter.java:498)
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.storeSymbolsInIndex(PDOMWriter.java:209)
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.addSymbols(PDOMWriter.java:164)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.writeToIndex(AbstractIndexerTask.java:942)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseFile(AbstractIndexerTask.java:902)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseLinkage(AbstractIndexerTask.java:766)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.runTask(AbstractIndexerTask.java:375)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMIndexerTask.run(PDOMIndexerTask.java:130)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:137)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.tensilica.xide.core 1 0 2024-07-02 11:46:51.573
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2024-07-02 11:46:54.244
+!MESSAGE xt-run working directory <C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT>
+
+!ENTRY com.tensilica.xide.core 1 0 2024-07-02 11:46:54.244
+!MESSAGE xt-run launch <C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-run --xtensa-core=hwsw_codesign2019_aligned --xtensa-system=C:\usr\xtensa\XtDevTools\install\builds\RF-2016.4-win32\hwsw_codesign2019_aligned\config --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk --console C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT\bin\hwsw_codesign2019_aligned\Debug\FFT >

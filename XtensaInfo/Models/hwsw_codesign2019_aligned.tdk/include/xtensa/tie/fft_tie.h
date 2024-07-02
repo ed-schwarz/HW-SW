@@ -128,7 +128,8 @@ extern unsigned _TIE_fft_tie_FFT_SIMPLE_MUL(unsigned a, unsigned b);
 extern void _TIE_fft_tie_FFT_COM_MUL(unsigned a_r /*inout*/, unsigned b_r, unsigned a_i /*inout*/, unsigned b_i);
 extern void _TIE_fft_tie_FFT_2_f_LD(void);
 extern void _TIE_fft_tie_FFT_2_FFT(void);
-extern void _TIE_fft_tie_FFT_8_FFT(void);
+extern void _TIE_fft_tie_FFT_8_FFT_DIT(void);
+extern void _TIE_fft_tie_FFT_8_FFT_DIF(void);
 extern void _TIE_fft_tie_FFT_BIT_REVERSE(unsigned n /*inout*/);
 extern void _TIE_fft_tie_FFT_INIT(void);
 extern void _TIE_fft_tie_FFT_LOAD_EVEN(void);
@@ -136,7 +137,7 @@ extern void _TIE_fft_tie_FFT_LOAD_ODD(void);
 extern void _TIE_fft_tie_FFT_LOAD_W(void);
 extern void _TIE_fft_tie_FFT_STORE_EVEN(void);
 extern void _TIE_fft_tie_FFT_STORE_ODD(void);
-extern void _TIE_fft_tie_FFT_UPDATE(void);
+extern unsigned _TIE_fft_tie_FFT_UPDATE(void);
 #define RUR_w_r _TIE_fft_tie_RUR_w_r
 #define Rw_r _TIE_fft_tie_RUR_w_r
 #define RUR0 _TIE_fft_tie_RUR_w_r
@@ -411,7 +412,8 @@ extern void _TIE_fft_tie_FFT_UPDATE(void);
 #define FFT_COM_MUL _TIE_fft_tie_FFT_COM_MUL
 #define FFT_2_f_LD _TIE_fft_tie_FFT_2_f_LD
 #define FFT_2_FFT _TIE_fft_tie_FFT_2_FFT
-#define FFT_8_FFT _TIE_fft_tie_FFT_8_FFT
+#define FFT_8_FFT_DIT _TIE_fft_tie_FFT_8_FFT_DIT
+#define FFT_8_FFT_DIF _TIE_fft_tie_FFT_8_FFT_DIF
 #define FFT_BIT_REVERSE _TIE_fft_tie_FFT_BIT_REVERSE
 #define FFT_INIT _TIE_fft_tie_FFT_INIT
 #define FFT_LOAD_EVEN _TIE_fft_tie_FFT_LOAD_EVEN
