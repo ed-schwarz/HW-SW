@@ -21,7 +21,7 @@ static cplx fwd_coeffs[N/2];
 static cplx bwd_coeffs[N/2];
 
 
-int Test_fft_ref(){
+int Test_fft_ref(){//Test for reference FFT and IFFT
 
 		fix_fft(real_fix, imag_fix, M, 0);
 	    memcpy(bwd_real_fix, real_fix, sizeof(real_fix));
@@ -66,7 +66,7 @@ int main() {
 	//precalculation of Coefficients
     GenerateCoefficients(fwd_coeffs, N/2, false);
     GenerateCoefficients(bwd_coeffs, N/2, true);
-
+    //Generating the input data
 	for (i = 0; i < N; i++) {
 		real[i] = 1000 * cos(i * 2 * 3.1415926535 / N);
 		imag[i] = 0;
@@ -89,8 +89,6 @@ int main() {
 			printf("%d: %d, %d\n", i, f[i].R, f[i].I);
 		}
 
-	//FFT
-
 #if (FFT_Type==0)//Test reference C code
 
 	fix_fft(real, imag, M, 0);
@@ -100,7 +98,7 @@ int main() {
 		printf("%d: %d, %d\n", i, real[i], imag[i]);
 	}
 
-#elif (FFT_Type==1)
+#elif (FFT_Type==1)//Test FFT2 and reference
 
 	fix_fft(real_fix, imag_fix, M, 0);
 
@@ -120,35 +118,8 @@ int main() {
 	Test_fft_ref();
 	Test_fft_adv_dit();
 
-	/*
-	printf("\nFFT pure C\n");
-	for (i = 0; i < N; i++) {
-		printf("%d: %d, %d\n", i, real_fix[i], imag_fix[i]);
-	}
-
-
-	printf("\nFFT TIE Node\n");
-	for (i = 0; i < N; i++) {
-		printf("%d: %d, %d\n", i, f[i].R, f[i].I);
-	}
-
-	printf("\nBWD FFT pure C\n");
-	printf("\n Index no.\t | BWD Real, Imag\t | Input Real, Imag\t| Diff Input/Output\n");
-	for (i = 0; i < N; i++) {
-		//printf("%d: %d, %d\n", i, bwd_real_fix[i], bwd_imag_fix[i]);
-		printf("%d:\t\t %d, %d \t\t %d, %d \t\t %d, %d  \n", i, bwd_real_fix[i], bwd_imag_fix[i], real[i], imag[i], bwd_real_fix[i]-real[i], bwd_imag_fix[i]-imag[i]);
-	}
-
-	printf("\nBwd FFT TIE Node\n");
-	printf("\n Index no.\t | BWD Real, Imag\t | Input Real, Imag\t| Diff Input/Output\n");
-	for (i = 0; i < N; i++) {
-		//printf("%d: %d, %d\n", i, bwd_f[i].R, bwd_f[i].I);
-		printf("%d:\t\t %d, %d \t\t %d, %d \t\t %d, %d  \n", i, bwd_f[i].R, bwd_f[i].I, real[i], imag[i], bwd_f[i].R-real[i], bwd_f[i].I-imag[i]);
-
-	}
-	*/
 	equal = true;
-	for (i = 0; i < N; i++) {
+	for (i = 0; i < N; i++) { //Compare the calculated values and generate print
 			if(f[i].R != real_fix[i] || f[i].I != imag_fix[i])
 			{
 				equal = false;
@@ -187,6 +158,7 @@ int main() {
 					printf("Wrong TIE value\n");
 					printf("%d: %d, %d\n", i, f[i].R, f[i].I);
 				}
+		}
 				if(equal){
 					printf("FFT Pass");
 				}
