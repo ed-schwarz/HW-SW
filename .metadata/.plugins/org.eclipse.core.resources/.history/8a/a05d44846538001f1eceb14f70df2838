@@ -4,7 +4,7 @@
 #include        <stdio.h>
 #include        <math.h>
 
-#define FFT_Type	2
+#define FFT_Type	3
 
 #define M       3
 
@@ -17,7 +17,7 @@ static fixed bwd_real_mul[N], bwd_imag_mul[N], bwd_real_fix[N], bwd_imag_fix[N];
 static cplx f[N], bwd_f[N];
 bool equal;
 
-#if (FFT_Type>=2)
+#if (FFT_Type>=3)
 static cplx fwd_coeffs[N/2];
 static cplx bwd_coeffs[N/2];
 #endif
@@ -36,7 +36,7 @@ int main() {
 		f[i].R = real[i];
 		f[i].I = imag[i];
 	}
-
+#endif
 
 	printf("\nInput Data\n");
 	for (i = 0; i < N; i++) {
@@ -89,7 +89,7 @@ int Test_fft_adv(){
 		printf("%d: %d, %d\n", i, real_mul[i], imag_mul[i]);
 	}
 
-#elif (FFT_Type==2)
+#elif (FFT_Type==1)
 	//precalculation of Coefficients 
     	GenerateCoefficients(fwd_coeffs, N/2, false);
     	GenerateCoefficients(bwd_coeffs, N/2, true);
