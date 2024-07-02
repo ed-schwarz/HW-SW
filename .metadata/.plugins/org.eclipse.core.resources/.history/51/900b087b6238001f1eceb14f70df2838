@@ -3,7 +3,6 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include <math.h>
-#include <xtensa/tie/fft_tie.h>
 
 
 /* FIX_MPY() - fixed-point multiplication macro.

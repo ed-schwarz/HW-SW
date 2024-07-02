@@ -5787,3 +5787,388 @@ Total time taken: 2.235 secs
 Nothing to build.
 Total time taken: 0.0 secs
 **** Build Finished [Di, 2 Jul 2024 11:46:54] ****
+**** Incremental Build [Di, 2 Jul 2024 12:58:37] ****
+ Project: FFT
+ Configuration: hwsw_codesign2019_aligned
+ Build Target: Debug
+********************************
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/main.o" 
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c: In function 'Test_fft_ref':
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c:59: warning: incompatible implicit declaration of built-in function 'memcpy'
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c: In function 'Test_fft_adv':
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c:68: warning: incompatible implicit declaration of built-in function 'memcpy'
+Time taken: 2281 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft_mult.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_mult.o" 
+Time taken: 2438 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft_coeffs.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_coeffs.o" 
+Time taken: 656 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft_adv.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_adv.o" 
+Time taken: 656 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft_FFT8.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_FFT8.o" 
+Time taken: 657 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft_FFT2.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_FFT2.o" 
+Time taken: 781 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft.o" 
+Time taken: 781 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/GenerateCoefficients.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/GenerateCoefficients.o" 
+Time taken: 656 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xc++ -Wl,@C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/objfiles.list -o C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT.minsize -mlsp=sim -Wl,-r -nostdlib --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk 
+Time taken: 343 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xc++ -Wl,@C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/objfiles.list -o C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT -mlsp=sim --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk 
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_FFT2.o: In function `fft_FFT2':
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:14: undefined reference to `WUR_a_r'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:15: undefined reference to `WUR_a_i'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:16: undefined reference to `WUR_b_r'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:17: undefined reference to `WUR_b_i'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:18: undefined reference to `WUR_u_r'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:19: undefined reference to `WUR_u_i'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:20: undefined reference to `WUR_v_r'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:21: undefined reference to `WUR_v_i'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:22: undefined reference to `WUR_w_r'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:23: undefined reference to `WUR_w_i'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:102: undefined reference to `WUR_w_r'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:103: undefined reference to `WUR_w_i'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:121: undefined reference to `WUR_a_r'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:122: undefined reference to `WUR_a_i'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:123: undefined reference to `WUR_b_r'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:124: undefined reference to `WUR_b_i'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:126: undefined reference to `FFT_2_f_LD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:128: undefined reference to `FFT_2_FFT'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:130: undefined reference to `RUR_u_r'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:131: undefined reference to `RUR_u_i'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:132: undefined reference to `RUR_v_r'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:133: undefined reference to `RUR_v_i'
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_adv.o: In function `Prepare_Data':
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:21: undefined reference to `FFT_BIT_REVERSE'
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_adv.o: In function `fft_exec_dit':
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:38: undefined reference to `WUR_ptr_data'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:39: undefined reference to `WUR_ptr_w'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:40: undefined reference to `WUR_n'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:41: undefined reference to `WUR_lg2_n'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:42: undefined reference to `WUR_shift'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:44: undefined reference to `WUR_time_decimation'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:46: undefined reference to `FFT_INIT'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:47: undefined reference to `FFT_UPDATE'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:49: undefined reference to `FFT_LOAD_EVEN'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:50: undefined reference to `FFT_LOAD_ODD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:51: undefined reference to `FFT_LOAD_W'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:53: undefined reference to `FFT_LOAD_EVEN'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:54: undefined reference to `FFT_LOAD_ODD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:55: undefined reference to `FFT_LOAD_W'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:57: undefined reference to `FFT_LOAD_EVEN'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:58: undefined reference to `FFT_LOAD_ODD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:59: undefined reference to `FFT_LOAD_W'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:61: undefined reference to `FFT_LOAD_EVEN'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:62: undefined reference to `FFT_LOAD_ODD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:63: undefined reference to `FFT_LOAD_W'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:65: undefined reference to `FFT_8_FFT_DIT'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:67: undefined reference to `FFT_STORE_EVEN'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:68: undefined reference to `FFT_STORE_ODD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:70: undefined reference to `FFT_STORE_EVEN'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:71: undefined reference to `FFT_STORE_ODD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:73: undefined reference to `FFT_STORE_EVEN'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:74: undefined reference to `FFT_STORE_ODD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:76: undefined reference to `FFT_STORE_EVEN'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:77: undefined reference to `FFT_STORE_ODD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:47: undefined reference to `FFT_UPDATE'
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_adv.o: In function `fft_exec_dif':
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:87: undefined reference to `WUR_ptr_data'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:88: undefined reference to `WUR_ptr_w'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:89: undefined reference to `WUR_n'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:90: undefined reference to `WUR_lg2_n'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:91: undefined reference to `WUR_shift'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:93: undefined reference to `WUR_time_decimation'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:95: undefined reference to `FFT_INIT'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:96: undefined reference to `FFT_UPDATE'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:98: undefined reference to `FFT_LOAD_EVEN'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:99: undefined reference to `FFT_LOAD_ODD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:100: undefined reference to `FFT_LOAD_W'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:102: undefined reference to `FFT_LOAD_EVEN'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:103: undefined reference to `FFT_LOAD_ODD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:104: undefined reference to `FFT_LOAD_W'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:106: undefined reference to `FFT_LOAD_EVEN'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:107: undefined reference to `FFT_LOAD_ODD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:108: undefined reference to `FFT_LOAD_W'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:110: undefined reference to `FFT_LOAD_EVEN'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:111: undefined reference to `FFT_LOAD_ODD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:112: undefined reference to `FFT_LOAD_W'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:114: undefined reference to `FFT_8_FFT_DIF'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:116: undefined reference to `FFT_STORE_EVEN'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:117: undefined reference to `FFT_STORE_ODD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:119: undefined reference to `FFT_STORE_EVEN'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:120: undefined reference to `FFT_STORE_ODD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:122: undefined reference to `FFT_STORE_EVEN'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:123: undefined reference to `FFT_STORE_ODD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:125: undefined reference to `FFT_STORE_EVEN'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:126: undefined reference to `FFT_STORE_ODD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:96: undefined reference to `FFT_UPDATE'
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_coeffs.o: In function `fix_coeffs':
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_coeffs.c:154: undefined reference to `FFT_COM_MUL'
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_mult.o: In function `fft_mul':
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_mult.c:101: undefined reference to `FFT_COM_MUL'
+Time taken: 734 ms 
+
+Build error encountered... cannot continue further.
+Total time taken: 8.407 secs
+**** Build Finished [Di, 2 Jul 2024 12:58:46] ****
+**** Incremental Build [Di, 2 Jul 2024 12:59:35] ****
+ Project: FFT
+ Configuration: hwsw_codesign2019_aligned
+ Build Target: Debug
+********************************
+Compiling TIE source(s) attached to configuration "hwsw_codesign2019_aligned" ...
+
+C:/usr/xtensa/XtDevTools/install/tools/RF-2016.4-win32/XtensaTools/bin/tc --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned -d C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk  -libdebug -Y -noerrformat  -name fft_tie C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\XtensaInfo\TIEFiles\fft_tie.tie
+File: fft_tie.tie, Line: 277, Warning: (TIE_NO_USE), Input shift is never used
+File: fft_tie.tie, Line: 277, Warning: (TIE_SEM_NO_DEP), Semantic "FFT_8_FFT_DIF", input "shift" of instruction "FFT_8_FFT_DIF" is not used to compute any of its outputs. Please review the semantic description carefully, because this warning is indicative of incorrect TIE code.
+
+0 error(s), 2 warning(s) 0 message(s)
+Time taken: 15969 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft_mult.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_mult.o" 
+Time taken: 766 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/main.o" 
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c: In function 'Test_fft_ref':
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c:59: warning: incompatible implicit declaration of built-in function 'memcpy'
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c: In function 'Test_fft_adv':
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c:68: warning: incompatible implicit declaration of built-in function 'memcpy'
+Time taken: 797 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft_coeffs.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_coeffs.o" 
+Time taken: 594 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft_adv.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_adv.o" 
+Time taken: 719 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft_FFT8.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_FFT8.o" 
+Time taken: 640 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft_FFT2.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_FFT2.o" 
+Time taken: 718 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft.o" 
+Time taken: 625 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/GenerateCoefficients.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/GenerateCoefficients.o" 
+Time taken: 578 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xc++ -Wl,@C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/objfiles.list -o C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT.minsize -mlsp=sim -Wl,-r -nostdlib --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk 
+Time taken: 235 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xc++ -Wl,@C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/objfiles.list -o C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT -mlsp=sim --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk 
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_FFT2.o: In function `fft_FFT2':
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:14: undefined reference to `WUR_a_r'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:15: undefined reference to `WUR_a_i'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:16: undefined reference to `WUR_b_r'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:17: undefined reference to `WUR_b_i'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:18: undefined reference to `WUR_u_r'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:19: undefined reference to `WUR_u_i'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:20: undefined reference to `WUR_v_r'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:21: undefined reference to `WUR_v_i'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:22: undefined reference to `WUR_w_r'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:23: undefined reference to `WUR_w_i'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:102: undefined reference to `WUR_w_r'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:103: undefined reference to `WUR_w_i'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:121: undefined reference to `WUR_a_r'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:122: undefined reference to `WUR_a_i'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:123: undefined reference to `WUR_b_r'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:124: undefined reference to `WUR_b_i'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:126: undefined reference to `FFT_2_f_LD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:128: undefined reference to `FFT_2_FFT'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:130: undefined reference to `RUR_u_r'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:131: undefined reference to `RUR_u_i'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:132: undefined reference to `RUR_v_r'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_FFT2.c:133: undefined reference to `RUR_v_i'
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_adv.o: In function `Prepare_Data':
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:21: undefined reference to `FFT_BIT_REVERSE'
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_adv.o: In function `fft_exec_dit':
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:38: undefined reference to `WUR_ptr_data'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:39: undefined reference to `WUR_ptr_w'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:40: undefined reference to `WUR_n'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:41: undefined reference to `WUR_lg2_n'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:42: undefined reference to `WUR_shift'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:44: undefined reference to `WUR_time_decimation'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:46: undefined reference to `FFT_INIT'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:47: undefined reference to `FFT_UPDATE'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:49: undefined reference to `FFT_LOAD_EVEN'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:50: undefined reference to `FFT_LOAD_ODD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:51: undefined reference to `FFT_LOAD_W'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:53: undefined reference to `FFT_LOAD_EVEN'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:54: undefined reference to `FFT_LOAD_ODD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:55: undefined reference to `FFT_LOAD_W'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:57: undefined reference to `FFT_LOAD_EVEN'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:58: undefined reference to `FFT_LOAD_ODD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:59: undefined reference to `FFT_LOAD_W'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:61: undefined reference to `FFT_LOAD_EVEN'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:62: undefined reference to `FFT_LOAD_ODD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:63: undefined reference to `FFT_LOAD_W'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:65: undefined reference to `FFT_8_FFT_DIT'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:67: undefined reference to `FFT_STORE_EVEN'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:68: undefined reference to `FFT_STORE_ODD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:70: undefined reference to `FFT_STORE_EVEN'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:71: undefined reference to `FFT_STORE_ODD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:73: undefined reference to `FFT_STORE_EVEN'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:74: undefined reference to `FFT_STORE_ODD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:76: undefined reference to `FFT_STORE_EVEN'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:77: undefined reference to `FFT_STORE_ODD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:47: undefined reference to `FFT_UPDATE'
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_adv.o: In function `fft_exec_dif':
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:87: undefined reference to `WUR_ptr_data'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:88: undefined reference to `WUR_ptr_w'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:89: undefined reference to `WUR_n'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:90: undefined reference to `WUR_lg2_n'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:91: undefined reference to `WUR_shift'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:93: undefined reference to `WUR_time_decimation'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:95: undefined reference to `FFT_INIT'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:96: undefined reference to `FFT_UPDATE'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:98: undefined reference to `FFT_LOAD_EVEN'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:99: undefined reference to `FFT_LOAD_ODD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:100: undefined reference to `FFT_LOAD_W'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:102: undefined reference to `FFT_LOAD_EVEN'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:103: undefined reference to `FFT_LOAD_ODD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:104: undefined reference to `FFT_LOAD_W'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:106: undefined reference to `FFT_LOAD_EVEN'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:107: undefined reference to `FFT_LOAD_ODD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:108: undefined reference to `FFT_LOAD_W'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:110: undefined reference to `FFT_LOAD_EVEN'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:111: undefined reference to `FFT_LOAD_ODD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:112: undefined reference to `FFT_LOAD_W'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:114: undefined reference to `FFT_8_FFT_DIF'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:116: undefined reference to `FFT_STORE_EVEN'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:117: undefined reference to `FFT_STORE_ODD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:119: undefined reference to `FFT_STORE_EVEN'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:120: undefined reference to `FFT_STORE_ODD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:122: undefined reference to `FFT_STORE_EVEN'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:123: undefined reference to `FFT_STORE_ODD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:125: undefined reference to `FFT_STORE_EVEN'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:126: undefined reference to `FFT_STORE_ODD'
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_adv.c:96: undefined reference to `FFT_UPDATE'
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_coeffs.o: In function `fix_coeffs':
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_coeffs.c:154: undefined reference to `FFT_COM_MUL'
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_mult.o: In function `fft_mul':
+C:\usr\xtensa\Xplorer-7.0.7-workspaces\FFT\FFT\HW-SW\FFT/fft_mult.c:101: undefined reference to `FFT_COM_MUL'
+Time taken: 453 ms 
+
+Build error encountered... cannot continue further.
+Total time taken: 22.109 secs
+**** Build Finished [Di, 2 Jul 2024 12:59:57] ****
+**** Incremental Build [Di, 2 Jul 2024 13:01:54] ****
+ Project: FFT
+ Configuration: hwsw_codesign2019_aligned
+ Build Target: Debug
+********************************
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft_mult.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_mult.o" 
+Time taken: 844 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/main.o" 
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c: In function 'Test_fft_ref':
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c:59: warning: incompatible implicit declaration of built-in function 'memcpy'
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c: In function 'Test_fft_adv':
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c:68: warning: incompatible implicit declaration of built-in function 'memcpy'
+Time taken: 859 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft_coeffs.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_coeffs.o" 
+Time taken: 640 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft_adv.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_adv.o" 
+Time taken: 719 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft_FFT8.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_FFT8.o" 
+Time taken: 703 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft_FFT2.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft_FFT2.o" 
+Time taken: 657 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/fft.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/fft.o" 
+Time taken: 656 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/GenerateCoefficients.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/GenerateCoefficients.o" 
+Time taken: 594 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xc++ -Wl,@C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/objfiles.list -o C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT.minsize -mlsp=sim -Wl,-r -nostdlib --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk 
+Time taken: 266 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xc++ -Wl,@C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/objfiles.list -o C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT -mlsp=sim --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk 
+Time taken: 500 ms 
+
+******* Code size summary *****
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-size -C C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT 
+TYPE   	   text	 rodata	   data	    bss	    dec    hex	filename
+code   	  49237	      0	      0	      0	  49237	   c055	C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT
+literal	    920	      0	      0	      0	    920	    398	C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT
+other  	   1634	   1948	   4608	    352	   8542	   215e	C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT
+Total  	  51791	   1948	   4608	    352	  58699	   e54b	C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT
+
+Time taken: 204 ms 
+
+******* ************** *****
+
+Build successful !!
+Total time taken: 5.734 secs
+**** Build Finished [Di, 2 Jul 2024 13:02:00] ****
+**** Incremental Build [Di, 2 Jul 2024 13:02:07] ****
+ Project: FFT
+ Configuration: hwsw_codesign2019_aligned
+ Build Target: Debug
+********************************
+
+Nothing to build.
+Total time taken: 0.016 secs
+**** Build Finished [Di, 2 Jul 2024 13:02:07] ****
+**** Incremental Build [Di, 2 Jul 2024 13:02:22] ****
+ Project: FFT
+ Configuration: hwsw_codesign2019_aligned
+ Build Target: Debug
+********************************
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk" -I "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT" -DPROC_hwsw_codesign2019_aligned -DCONFIG_hwsw_codesign2019_aligned --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c" -o "C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/main.o" 
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c: In function 'Test_fft_ref':
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c:59: warning: incompatible implicit declaration of built-in function 'memcpy'
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c: In function 'Test_fft_adv':
+C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/main.c:68: warning: incompatible implicit declaration of built-in function 'memcpy'
+Time taken: 532 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xc++ -Wl,@C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/objfiles.list -o C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT.minsize -mlsp=sim -Wl,-r -nostdlib --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk 
+Time taken: 266 ms 
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-xc++ -Wl,@C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/objfiles.list -o C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT -mlsp=sim --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2016.4-win32/hwsw_codesign2019_aligned/config --xtensa-core=hwsw_codesign2019_aligned --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk 
+Time taken: 438 ms 
+
+******* Code size summary *****
+
+C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-size -C C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT 
+TYPE   	   text	 rodata	   data	    bss	    dec    hex	filename
+code   	  49237	      0	      0	      0	  49237	   c055	C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT
+literal	    920	      0	      0	      0	    920	    398	C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT
+other  	   1634	   1948	   4608	    352	   8542	   215e	C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT
+Total  	  51791	   1948	   4608	    352	  58699	   e54b	C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/FFT/bin/hwsw_codesign2019_aligned/Debug/FFT
+
+Time taken: 172 ms 
+
+******* ************** *****
+
+Build successful !!
+Total time taken: 2.312 secs
+**** Build Finished [Di, 2 Jul 2024 13:02:25] ****
+**** Incremental Build [Di, 2 Jul 2024 13:02:25] ****
+ Project: FFT
+ Configuration: hwsw_codesign2019_aligned
+ Build Target: Debug
+********************************
+
+Nothing to build.
+Total time taken: 0.016 secs
+**** Build Finished [Di, 2 Jul 2024 13:02:26] ****

@@ -64,7 +64,7 @@ int Test_fft_ref(){
 
 int Test_fft_adv(){
 
-    fft_adv(f, M, 0, fwd_coeffs, 1);
+    fft_adv(f, M, 0, fwd_coeffs, 0);
     memcpy(bwd_f, f, sizeof(f));
 	//fft_adv(bwd_f, M, 1, bwd_coeffs, 1);
 		}
