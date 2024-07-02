@@ -42,7 +42,7 @@ int main() {
     GenerateCoefficients(fwd_coeffs, N/2, false);
     GenerateCoefficients(bwd_coeffs, N/2, true);
 #endif
-/*
+
 	printf("\nInput Data\n");
 	for (i = 0; i < N; i++) {
 		printf("%d: %d, %d\n", i, real[i], imag[i]);
@@ -51,9 +51,10 @@ int main() {
 		for (i = 0; i < N; i++) {
 			printf("%d: %d, %d\n", i, f[i].R, f[i].I);
 		}
-*/
+
 	//FFT
 int Test_fft_ref(){
+
 		fix_fft(real_fix, imag_fix, M, 0);
 	    memcpy(bwd_real_fix, real_fix, sizeof(real_fix));
 	    memcpy(bwd_imag_fix, imag_fix, sizeof(imag_fix));
@@ -167,11 +168,12 @@ int Test_fft_adv(){
 	Test_fft_ref();
 	Test_fft_adv();
 
-/*
+	/*
 	printf("\nFFT pure C\n");
 	for (i = 0; i < N; i++) {
 		printf("%d: %d, %d\n", i, real_fix[i], imag_fix[i]);
 	}
+
 
 	printf("\nFFT TIE Node\n");
 	for (i = 0; i < N; i++) {
@@ -198,6 +200,9 @@ int Test_fft_adv(){
 			if(f[i].R != real_fix[i] || f[i].I != imag_fix[i])
 			{
 				equal = false;
+				printf("\nCorrect C value\n");
+				printf("%d: %d, %d\n", i, real_fix[i], imag_fix[i]);
+				printf("Wrong TIE value\n");
 				printf("%d: %d, %d\n", i, f[i].R, f[i].I);
 			}
 		}

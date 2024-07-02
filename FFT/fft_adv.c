@@ -31,8 +31,8 @@ uint32_t Prepare_Data(cplx* __restrict const x, const uint32_t N,
 	return 0;
 }
 
-uint32_t fft_exec(const intptr_t f, const intptr_t w, const uint32_t n,
-		const uint32_t lg2_n, int shift, int time_decimation) {
+uint32_t fft_exec_dit(const intptr_t f, const intptr_t w, const uint32_t n,
+		const uint32_t lg2_n, int shift) {
 	int i, done, l, even_i, step, debug_reg, odd_ix;
 	done = 0;
 	WUR_ptr_data(f);
@@ -40,14 +40,11 @@ uint32_t fft_exec(const intptr_t f, const intptr_t w, const uint32_t n,
 	WUR_n(n);
 	WUR_lg2_n(lg2_n);
 	WUR_shift(shift);
-	if (time_decimation) {
-		WUR_time_decimation(1);
-	} else {
-		WUR_time_decimation(0);
-	}
+
+	WUR_time_decimation(1);
 
 	FFT_INIT();
-	while (RUR_done() == 0) {
+	while (FFT_UPDATE() == 0) {
 
 		FFT_LOAD_EVEN();
 		FFT_LOAD_ODD();
@@ -65,7 +62,7 @@ uint32_t fft_exec(const intptr_t f, const intptr_t w, const uint32_t n,
 		FFT_LOAD_ODD();
 		FFT_LOAD_W();
 
-		FFT_8_FFT();
+		FFT_8_FFT_DIT();
 
 		FFT_STORE_EVEN();
 		FFT_STORE_ODD();
@@ -79,7 +76,56 @@ uint32_t fft_exec(const intptr_t f, const intptr_t w, const uint32_t n,
 		FFT_STORE_EVEN();
 		FFT_STORE_ODD();
 
-		FFT_UPDATE();
+
+	}
+}
+
+uint32_t fft_exec_dif(const intptr_t f, const intptr_t w, const uint32_t n,
+		const uint32_t lg2_n, int shift) {
+	int i, done, l, even_i, step, debug_reg, odd_ix;
+	done = 0;
+	WUR_ptr_data(f);
+	WUR_ptr_w(w);
+	WUR_n(n);
+	WUR_lg2_n(lg2_n);
+	WUR_shift(1);
+
+	WUR_time_decimation(0);
+
+	FFT_INIT();
+	while (FFT_UPDATE() == 0) {
+
+		FFT_LOAD_EVEN();
+		FFT_LOAD_ODD();
+		FFT_LOAD_W();
+
+		FFT_LOAD_EVEN();
+		FFT_LOAD_ODD();
+		FFT_LOAD_W();
+
+		FFT_LOAD_EVEN();
+		FFT_LOAD_ODD();
+		FFT_LOAD_W();
+
+		FFT_LOAD_EVEN();
+		FFT_LOAD_ODD();
+		FFT_LOAD_W();
+
+		FFT_8_FFT_DIF();
+
+		FFT_STORE_EVEN();
+		FFT_STORE_ODD();
+
+		FFT_STORE_EVEN();
+		FFT_STORE_ODD();
+
+		FFT_STORE_EVEN();
+		FFT_STORE_ODD();
+
+		FFT_STORE_EVEN();
+		FFT_STORE_ODD();
+
+
 	}
 }
 
@@ -88,6 +134,7 @@ int fft_adv(cplx*__restrict f, int m, int inverse,
 	int mr, nn, i, j, l, k, r, istep, n, scale, shift;
 	//number of input data
 	n = 1 << m;
+
 	cplx q; //even input
 	cplx t; //odd input
 	cplx u; //even output
@@ -107,36 +154,63 @@ int fft_adv(cplx*__restrict f, int m, int inverse,
 
 	if (time_decimation) {
 		Prepare_Data(f, n, m, 0);
-	}
-	if (inverse) {
-		/* variable scaling, depending upon data */
-		shift = 0;
-		for (i = 0; i < n; ++i) {
-			j = f[i].R;
-			if (j < 0)
-				j = -j;
+		if (inverse) {
+			/* variable scaling, depending upon data */
+			shift = 0;
+			for (i = 0; i < n; ++i) {
+				j = f[i].R;
+				if (j < 0)
+					j = -j;
 
-			m = f[i].I;
-			if (m < 0)
-				m = -m;
+				m = f[i].I;
+				if (m < 0)
+					m = -m;
 
-			if (j > 16383 || m > 16383) {
-				shift = 1;
-				break;
+				if (j > 16383 || m > 16383) {
+					shift = 1;
+					break;
+				}
 			}
+			if (shift)
+				++scale;
+		} else {
+			/* fixed scaling, for proper normalization -
+			 there will be log2(n) passes, so this
+			 results in an overall factor of 1/n,
+			 distributed to maximize arithmetic accuracy. */
+			shift = 1;
 		}
-		if (shift)
-			++scale;
+		fft_exec_dit((intptr_t) f, (intptr_t) coeffs, n, lg2_n, shift);
 	} else {
-		/* fixed scaling, for proper normalization -
-		 there will be log2(n) passes, so this
-		 results in an overall factor of 1/n,
-		 distributed to maximize arithmetic accuracy. */
-		shift = 1;
-	}
-	fft_exec((intptr_t) f, (intptr_t) coeffs, n, lg2_n, shift, time_decimation);
-	if (!time_decimation) {
-			Prepare_Data(f, n, m, 0);
+		if (inverse) {
+			/* variable scaling, depending upon data */
+			shift = 0;
+			for (i = 0; i < n; ++i) {
+				j = f[i].R;
+				if (j < 0)
+					j = -j;
+
+				m = f[i].I;
+				if (m < 0)
+					m = -m;
+
+				if (j > 16383 || m > 16383) {
+					shift = 1;
+					break;
+				}
+			}
+			if (shift)
+				++scale;
+		} else {
+			/* fixed scaling, for proper normalization -
+			 there will be log2(n) passes, so this
+			 results in an overall factor of 1/n,
+			 distributed to maximize arithmetic accuracy. */
+			shift = 1;
 		}
+		fft_exec_dif((intptr_t) f, (intptr_t) coeffs, n, lg2_n, shift);
+		Prepare_Data(f, n, m, 0);
+	}
+
 	return scale;
 }
