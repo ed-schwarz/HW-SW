@@ -118,20 +118,20 @@ int fft_FFT2(fixed fr[], fixed fi[], int m, int inverse)
                         qi >>= 1;
                 }
 
+                //write even and odd real and imaginary values to register
                 WUR_a_r(tr);
                 WUR_a_i(ti);
                 WUR_b_r(qr);
                 WUR_b_i(qi);
 
-                FFT_2_f_LD();
-
+                //calculate the 2-Point FFT
                 FFT_2_FFT();
-
+                //read even and odd real and imaginary values from register
                 ur = RUR_u_r();
                 ui = RUR_u_i();
                 vr = RUR_v_r();
                 vi = RUR_v_i();
-
+                //write to output values
                 fr[j] = ur;
                 fi[j] = ui;
                 fr[i] = vr;
@@ -144,18 +144,3 @@ int fft_FFT2(fixed fr[], fixed fi[], int m, int inverse)
 
     return scale;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
