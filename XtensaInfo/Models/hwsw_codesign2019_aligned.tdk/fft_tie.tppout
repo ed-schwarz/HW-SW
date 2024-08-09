@@ -1,6 +1,6 @@
 //Output of TieTpp - please do not modify directly
 
-# tietpp file C:/usr/xtensa/Xplorer-7.0.7-workspaces/FFT/FFT/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk/__XT_TDBFILE_PRIVATE_fft_tie.tie
+# tietpp file C:/usr/xtensa/Xplorer-7.0.7-workspaces/workspace/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk/__XT_TDBFILE_PRIVATE_fft_tie.tie
 
 package "fft_tie" ""
 # tietpp file fft_tie.tie
@@ -11,9 +11,7 @@ state w_i		16 add_read_write
 format fft_flix 64 {fft_slot0, fft_slot1}
 slot_opcodes fft_slot0 {FFT_LOAD_EVEN, FFT_STORE_EVEN}
 slot_opcodes fft_slot1 {FFT_LOAD_ODD, FFT_STORE_ODD}
-//slot_opcodes fft_slot2 {FFT_LOAD_W}
-//slot_opcodes fft_slot3 {FFT_STORE_EVEN}
-//slot_opcodes fft_slot4 {FFT_STORE_ODD}
+
 
 
 
@@ -114,13 +112,26 @@ function [31:0]RIGHT_SHIFT_32 ([31:0] a)
 
 function [63:0]FFT_NODE_DIF ([15:0] a_r, [15:0] a_i, [15:0] w_r, [15:0] w_i, [15:0] b_r, [15:0] b_i)
 {
+	
+	wire [15:0] v_r = b_r + a_r;
+	wire [15:0] v_i = b_i + a_i;
+	
+	wire [15:0] t_r_pre = b_r - a_r;
+	wire [15:0] t_i_pre = b_i - a_i;
+	
+	wire [15:0] t_r = RIGHT_SHIFT_SIGNED(t_r_pre[15:0]);
+	wire [15:0] t_i = RIGHT_SHIFT_SIGNED(t_i_pre[15:0]);
+	
+	/*
 	wire [15:0] t_r = b_r - a_r;
 	wire [15:0] t_i = b_i - a_i;
+	
 	
 	wire a_r_overflow = 1'b1;//a_r[15] ? (a_r[15:0] < 16'hC001) : (a_r[15:0] > 16'd16383);
 	wire a_i_overflow = 1'b1;//a_i[15] ? (a_i[15:0] < 16'hC001) : (a_i[15:0] > 16'd16383);
 	wire b_r_overflow = 1'b1;//b_r[15] ? (b_r[15:0] < 16'hC001) : (b_r[15:0] > 16'd16383);
 	wire b_i_overflow = 1'b1;//b_i[15] ? (b_i[15:0] < 16'hC001) : (b_i[15:0] > 16'd16383);
+	
 	
 	wire [15:0] a_r_sum = a_r_overflow ? RIGHT_SHIFT_SIGNED(a_r[15:0]) : a_r;
 	wire [15:0] a_i_sum = a_i_overflow ? RIGHT_SHIFT_SIGNED(a_i[15:0]) : a_i;
@@ -129,12 +140,9 @@ function [63:0]FFT_NODE_DIF ([15:0] a_r, [15:0] a_i, [15:0] w_r, [15:0] w_i, [15
 	
 	wire [15:0] v_r = b_r_sum + a_r_sum;
 	wire [15:0] v_i = b_i_sum + a_i_sum;
-	//wire [15:0] v_r = b_r_overflow ? LEFT_SHIFT_SIGNED(v_r_temp[15:0]) : v_r_temp;
-	//wire [15:0] v_i = b_r_overflow ? LEFT_SHIFT_SIGNED(v_i_temp[15:0]) : v_i_temp;
-	//wire [15:0] q_r_shift = {q_r[16:1]};
-	//wire [15:0] q_i_shift = {q_i[16:1]};
-	//wire [15:0] v_r = q_r[16] ? q_r_shift : q_r;
-	//wire [15:0] v_i = q_i[16] ? q_i_shift : q_i;
+	*/
+	
+	
 	
 	wire [31:0] com_mul = COMPLEX_MUL(t_r[15:0], w_r[15:0], t_i[15:0], w_i[15:0]);
 	wire [15:0] u_r = com_mul[15:0];
@@ -173,10 +181,6 @@ operation FFT_SIMPLE_MUL {out AR c, in AR a, in AR b}{}
 
 operation FFT_COM_MUL {inout AR a_r, in AR b_r, inout AR a_i, in AR b_i}{}
 {
-	//wire [31:0] product1r = TIEmul(a_r[15:0],b_r[15:0],1'b1); // signed multiplication
-	//wire [31:0] product2r = TIEmul(a_r[15:0],b_i[15:0],1'b1); // signed multiplication
-	//wire [31:0] product1i = TIEmul(a_i[15:0],b_i[15:0],1'b1); // signed multiplication
-	//wire [31:0] product2i = TIEmul(a_i[15:0],b_r[15:0],1'b1); // signed multiplication
 	wire [31:0] com_mul = COMPLEX_MUL(a_r[15:0], b_r[15:0], a_i[15:0], b_i[15:0]);
 	wire [15:0] t_r = com_mul[15:0];
 	wire [15:0] t_i = com_mul[31:16];

@@ -155,7 +155,7 @@ int fft_adv_dit(cplx*__restrict f, int m,
 	there will be log2(n) passes, so this
 	results in an overall factor of 1/n,
 	distributed to maximize arithmetic accuracy. */
-	shift = 1;
+	shift = 0;
 
 	fft_exec_dit((intptr_t) f, (intptr_t) coeffs, n, lg2_n, shift);
 

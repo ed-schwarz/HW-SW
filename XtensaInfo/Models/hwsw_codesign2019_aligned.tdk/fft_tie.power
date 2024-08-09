@@ -15,7 +15,7 @@ power estimate during the early phases of the design and validate the
 estimated power using hardware synthesis tool as design attains maturity.
 ------------------------------ DISCLAIMER ------------------------------
 
- 1140005 TIE
+ 1133717 TIE
             4412 TIE_decoder (0.39%)
                0 TIE_AR_Regfile [additional power] (0.00%)
              419 TIE_w_r_State (0.04%)
@@ -31,8 +31,8 @@ estimated power using hardware synthesis tool as design attains maturity.
             1290 TIE_q_r_State (0.11%)
             1290 TIE_q_i_State (0.11%)
             6018 TIE_wv_State (0.53%)
-           10157 TIE_av_State (0.89%)
-           10157 TIE_bv_State (0.89%)
+           10157 TIE_av_State (0.90%)
+           10157 TIE_bv_State (0.90%)
              237 TIE_done_State (0.02%)
              237 TIE_shift_State (0.02%)
             1290 TIE_even_ix_State (0.11%)
@@ -121,20 +121,20 @@ estimated power using hardware synthesis tool as design attains maturity.
              753 TIE_slot0_semantic_qv_r_rur_sem (0.07%)
             1477 TIE_slot0_semantic_qv_i_wur_sem (0.13%)
              753 TIE_slot0_semantic_qv_i_rur_sem (0.07%)
-           66968 TIE_slot0_semantic_FFT_SIMPLE_MUL (5.87%)
-           84060 TIE_slot0_semantic_FFT_COM_MUL (7.37%)
+           66968 TIE_slot0_semantic_FFT_SIMPLE_MUL (5.91%)
+           84060 TIE_slot0_semantic_FFT_COM_MUL (7.41%)
               35 TIE_slot0_semantic_FFT_2_f_LD (0.00%)
-           87966 TIE_slot0_semantic_FFT_2_FFT (7.72%)
-          353105 TIE_slot0_semantic_FFT_8_FFT_DIT (30.97%)
-          359393 TIE_slot0_semantic_FFT_8_FFT_DIF (31.53%)
-            6420 TIE_slot0_semantic_FFT_BIT_REVERSE (0.56%)
+           87966 TIE_slot0_semantic_FFT_2_FFT (7.76%)
+          353105 TIE_slot0_semantic_FFT_8_FFT_DIT (31.15%)
+          353105 TIE_slot0_semantic_FFT_8_FFT_DIF (31.15%)
+            6420 TIE_slot0_semantic_FFT_BIT_REVERSE (0.57%)
             1214 TIE_slot0_semantic_FFT_INIT (0.11%)
             7493 TIE_slot0_semantic_FFT_LOAD_EVEN (0.66%)
-            4946 TIE_slot1_semantic_FFT_LOAD_ODD (0.43%)
-           14360 TIE_slot0_semantic_FFT_LOAD_W (1.26%)
+            4946 TIE_slot1_semantic_FFT_LOAD_ODD (0.44%)
+           14360 TIE_slot0_semantic_FFT_LOAD_W (1.27%)
             3190 TIE_slot0_semantic_FFT_STORE_EVEN (0.28%)
-           10079 TIE_slot1_semantic_FFT_STORE_ODD (0.88%)
-            8934 TIE_slot0_semantic_FFT_UPDATE (0.78%)
+           10079 TIE_slot1_semantic_FFT_STORE_ODD (0.89%)
+            8934 TIE_slot0_semantic_FFT_UPDATE (0.79%)
             1386 TIE_slot0_operand_opnd_FFT_SIMPLE_MUL_b (0.12%)
             1386 TIE_slot0_operand_opnd_FFT_SIMPLE_MUL_a (0.12%)
             1386 TIE_slot0_operand_opnd_FFT_SIMPLE_MUL_c (0.12%)
@@ -144,7 +144,7 @@ estimated power using hardware synthesis tool as design attains maturity.
             1386 TIE_slot0_operand_opnd_FFT_COM_MUL_a_r (0.12%)
             1386 TIE_slot0_operand_opnd_FFT_BIT_REVERSE_n (0.12%)
             1386 TIE_slot0_operand_opnd_FFT_UPDATE_done_out (0.12%)
-           39978 TIE toplogic for muxing and pipeline management (3.51%)
+           39978 TIE toplogic for muxing and pipeline management (3.53%)
 
 
   ACTIVATED BLOCK POWER BEGIN
@@ -246,7 +246,7 @@ estimated power using hardware synthesis tool as design attains maturity.
   FFT_2_f_LD                              nop    0.035    2.580    0.000
   FFT_2_FFT                               nop   87.966    5.160    0.000
   FFT_8_FFT_DIT                           nop  353.105   22.894    0.000
-  FFT_8_FFT_DIF                           nop  359.393   22.894    0.000
+  FFT_8_FFT_DIF                           nop  353.105   22.894    0.000
   FFT_BIT_REVERSE                         nop    6.420    0.000    0.000
   FFT_INIT                                nop    1.214   10.557    0.000
   FFT_UPDATE                              nop    8.934    8.214    0.000
@@ -353,7 +353,7 @@ estimated power using hardware synthesis tool as design attains maturity.
   fft_2_f_ld                              nop    0.160
   fft_2_fft                               nop   78.838
   fft_8_fft_dit                           nop  316.573
-  fft_8_fft_dif                           nop  322.190
+  fft_8_fft_dif                           nop  316.573
   fft_bit_reverse                         nop    5.735
   fft_init                                nop    1.612
   fft_load_even                          load    7.314
@@ -368,4 +368,4 @@ estimated power using hardware synthesis tool as design attains maturity.
 
 
 
-cpu_seconds 0.08
+cpu_seconds 0.09
