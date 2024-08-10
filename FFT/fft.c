@@ -161,6 +161,9 @@ int fix_fft_dif(fixed fr[], fixed fi[], int m, int inverse)
 
     fixed qr,qi;		//even input
     fixed tr,ti;		//odd input
+    fixed vr,vi;
+    fixed ar,ai;
+    fixed br,bi;
     fixed wr,wi;		//twiddle factor
 
     //number of input data
@@ -172,13 +175,9 @@ int fix_fft_dif(fixed fr[], fixed fi[], int m, int inverse)
     nn = n - 1;
     scale = 0;
 
-    /* decimation in time - re-order data */
-
-
-
-    l = n/2;
-    k = LOG2_N_WAVE-1;
-    while(l > 1 )
+    l = n>>1;
+    k = LOG2_N_WAVE-m;
+    while(l > 0)
     {
         if(inverse)
         {
@@ -225,15 +224,19 @@ int fix_fft_dif(fixed fr[], fixed fi[], int m, int inverse)
                 wr >>= 1;
                 wi >>= 1;
             }
+
             for(i=m; i<n; i+=istep)
             {
-
                 j = i + l;
-                tr = fix_mpy(wr,fr[j]) - fix_mpy(wi,fi[j]);
-                ti = fix_mpy(wr,fi[j]) + fix_mpy(wi,fr[j]);
+                ar = fr[j];
+                ai = fi[j];
+                br = fr[i];
+                bi = fi[i];
+                tr = fr[i] - fr[j];
+                ti = fi[i] - fi[j];
 
-                qr = fr[i];
-                qi = fi[i];
+                qr = fr[i] + fr[j];
+                qi = fi[i] + fi[j];
 
                 if(shift)
                 {
@@ -241,16 +244,20 @@ int fix_fft_dif(fixed fr[], fixed fi[], int m, int inverse)
                         qi >>= 1;
                 }
 
-                fr[j] = qr - tr;
-                fi[j] = qi - ti;
-                fr[i] = qr + tr;
-                fi[i] = qi + ti;
+                fr[i] = qr;
+                fi[i] = qi;
+                vr = fix_mpy(wr,tr) - fix_mpy(wi,ti);
+                vi = fix_mpy(wr,ti) + fix_mpy(wi,tr);
+                fr[j] = fix_mpy(wr,tr) - fix_mpy(wi,ti);
+                fi[j] = fix_mpy(wr,ti) + fix_mpy(wi,tr);
             }
         }
-        --k;
-        l = l >> 1;
+
+        ++k;
+        l >>= 1;
     }
 
+    /* decimation in frequency - re-order data */
     for(m=1; m<=nn; ++m) {
         l = n;
         do{

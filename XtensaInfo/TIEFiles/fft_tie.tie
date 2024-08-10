@@ -110,39 +110,17 @@ function [63:0]FFT_NODE_DIF ([15:0] a_r, [15:0] a_i, [15:0] w_r, [15:0] w_i, [15
 	wire [15:0] v_r = b_r + a_r;
 	wire [15:0] v_i = b_i + a_i;
 	
-	wire [15:0] t_r_pre = b_r - a_r;
-	wire [15:0] t_i_pre = b_i - a_i;
+	wire [15:0] v_r_shift = RIGHT_SHIFT_SIGNED(v_r);
+	wire [15:0] v_i_shift = RIGHT_SHIFT_SIGNED(v_i);
 	
-	wire [15:0] t_r = RIGHT_SHIFT_SIGNED(t_r_pre[15:0]);
-	wire [15:0] t_i = RIGHT_SHIFT_SIGNED(t_i_pre[15:0]);
-	
-	/*
 	wire [15:0] t_r = b_r - a_r;
 	wire [15:0] t_i = b_i - a_i;
-	
-	
-	wire a_r_overflow = 1'b1;//a_r[15] ? (a_r[15:0] < 16'hC001) : (a_r[15:0] > 16'd16383);
-	wire a_i_overflow = 1'b1;//a_i[15] ? (a_i[15:0] < 16'hC001) : (a_i[15:0] > 16'd16383);
-	wire b_r_overflow = 1'b1;//b_r[15] ? (b_r[15:0] < 16'hC001) : (b_r[15:0] > 16'd16383);
-	wire b_i_overflow = 1'b1;//b_i[15] ? (b_i[15:0] < 16'hC001) : (b_i[15:0] > 16'd16383);
-	
-	
-	wire [15:0] a_r_sum = a_r_overflow ? RIGHT_SHIFT_SIGNED(a_r[15:0]) : a_r;
-	wire [15:0] a_i_sum = a_i_overflow ? RIGHT_SHIFT_SIGNED(a_i[15:0]) : a_i;
-	wire [15:0] b_r_sum = b_r_overflow ? RIGHT_SHIFT_SIGNED(b_r[15:0]) : b_r;
-	wire [15:0] b_i_sum = b_i_overflow ? RIGHT_SHIFT_SIGNED(b_i[15:0]) : b_i;
-	
-	wire [15:0] v_r = b_r_sum + a_r_sum;
-	wire [15:0] v_i = b_i_sum + a_i_sum;
-	*/
-	
-	
-	
+
 	wire [31:0] com_mul = COMPLEX_MUL(t_r[15:0], w_r[15:0], t_i[15:0], w_i[15:0]);
 	wire [15:0] u_r = com_mul[15:0];
 	wire [15:0] u_i = com_mul[31:16];
 	
-	assign FFT_NODE_DIF = {v_i, v_r, u_i, u_r};
+	assign FFT_NODE_DIF = {v_i_shift, v_r_shift, u_i, u_r};
 	
 }
 
@@ -383,7 +361,7 @@ operation FFT_LOAD_EVEN {}{in even_ix, in ptr_data, in done, in shift, inout bv,
 	wire [15:0] data_temp_r = RIGHT_SHIFT_SIGNED(data_temp[15:0]);
 	wire [15:0] data_temp_i = RIGHT_SHIFT_SIGNED(data_temp[31:16]);
 	assign bv = (shift & time_decimation) ? {data_temp_i[15:0], data_temp_r[15:0], bv[127:32]} : {data_temp[31:0], bv[127:32]};
-	//assign bv = {data_temp[31:0], bv[127:32]};
+	
 	
 }
 

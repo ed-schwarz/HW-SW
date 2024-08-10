@@ -87,7 +87,7 @@ uint32_t fft_exec_dif(const intptr_t f, const intptr_t w, const uint32_t n,
 	WUR_ptr_w(w);
 	WUR_n(n);
 	WUR_lg2_n(lg2_n);
-	WUR_shift(1);
+	WUR_shift(shift);
 
 	WUR_time_decimation(0);
 
