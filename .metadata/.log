@@ -1962,3 +1962,19 @@ Command-line arguments:  -os win32 -ws win32 -arch x86 256m -application org.ecl
 
 !ENTRY com.tensilica.xide.core 1 0 2024-08-11 15:57:48.208
 !MESSAGE xt-run launch <C:\usr\xtensa\XtDevTools\install\tools\RF-2016.4-win32\XtensaTools\bin\xt-run --xtensa-core=hwsw_codesign2019_aligned --xtensa-system=C:\usr\xtensa\XtDevTools\install\builds\RF-2016.4-win32\hwsw_codesign2019_aligned\config --xtensa-params=C:/usr/xtensa/Xplorer-7.0.7-workspaces/workspace/HW-SW/XtensaInfo/Models/hwsw_codesign2019_aligned.tdk --console C:\usr\xtensa\Xplorer-7.0.7-workspaces\workspace\HW-SW\FFT\bin\hwsw_codesign2019_aligned\Debug\FFT >
+!SESSION 2024-08-11 16:03:27.427 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.7.0_21
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  256m -application org.eclipse.ui.ide.workbench
+Command-line arguments:  -os win32 -ws win32 -arch x86 256m -application org.eclipse.ui.ide.workbench
+
+!ENTRY org.eclipse.core.resources 4 368 2024-08-11 16:03:39.115
+!MESSAGE Resource '/XtensaInfo/Systems' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 368 2024-08-11 16:03:39.115
+!MESSAGE Resource '/XtensaInfo/Hardware' does not exist.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2024-08-11 16:03:48.646
+!MESSAGE No repository found at http://xpg.cadence.com/xplorer/update/xx_707/.
