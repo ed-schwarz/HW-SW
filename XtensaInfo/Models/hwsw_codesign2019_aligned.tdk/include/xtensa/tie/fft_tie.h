@@ -124,7 +124,6 @@ extern unsigned _TIE_fft_tie_RUR_qv_i_0(void);
 extern void _TIE_fft_tie_WUR_qv_i_0(unsigned v);
 extern unsigned _TIE_fft_tie_RUR_qv_i_1(void);
 extern void _TIE_fft_tie_WUR_qv_i_1(unsigned v);
-extern unsigned _TIE_fft_tie_FFT_SIMPLE_MUL(unsigned a, unsigned b);
 extern void _TIE_fft_tie_FFT_COM_MUL(unsigned a_r /*inout*/, unsigned b_r, unsigned a_i /*inout*/, unsigned b_i);
 extern void _TIE_fft_tie_FFT_2_f_LD(void);
 extern void _TIE_fft_tie_FFT_2_FFT(void);
@@ -408,7 +407,6 @@ extern unsigned _TIE_fft_tie_FFT_UPDATE(void);
 #define WUR_qv_i_1 _TIE_fft_tie_WUR_qv_i_1
 #define Wqv_i_1 _TIE_fft_tie_WUR_qv_i_1
 #define WUR44 _TIE_fft_tie_WUR_qv_i_1
-#define FFT_SIMPLE_MUL _TIE_fft_tie_FFT_SIMPLE_MUL
 #define FFT_COM_MUL _TIE_fft_tie_FFT_COM_MUL
 #define FFT_2_f_LD _TIE_fft_tie_FFT_2_f_LD
 #define FFT_2_FFT _TIE_fft_tie_FFT_2_FFT

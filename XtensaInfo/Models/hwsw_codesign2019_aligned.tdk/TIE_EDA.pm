@@ -167,7 +167,6 @@ my @all_semantic_names = qw(
 	TIE_semantic_slot0_qv_r_rur_sem
 	TIE_semantic_slot0_qv_i_wur_sem
 	TIE_semantic_slot0_qv_i_rur_sem
-	TIE_semantic_slot0_FFT_SIMPLE_MUL
 	TIE_semantic_slot0_FFT_COM_MUL
 	TIE_semantic_slot0_FFT_2_f_LD
 	TIE_semantic_slot0_FFT_2_FFT

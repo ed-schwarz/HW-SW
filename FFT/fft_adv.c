@@ -155,7 +155,7 @@ int fft_adv_dit(cplx*__restrict f, int m,
 	there will be log2(n) passes, so this
 	results in an overall factor of 1/n,
 	distributed to maximize arithmetic accuracy. */
-	shift = 0;
+	shift = 1;
 
 	fft_exec_dit((intptr_t) f, (intptr_t) coeffs, n, lg2_n, shift);
 
@@ -241,48 +241,4 @@ int fft_adv_dif(cplx*__restrict f, int m,
 	return scale;
 }
 
-int fft_adv_dif_inv(cplx*__restrict f, int m,
-		const cplx* __restrict coeffs) {
-	int mr, nn, i, j, l, k, r, istep, n, scale, shift;
-	//number of input data
-	n = 1 << m;
 
-	cplx q; //even input
-	cplx t; //odd input
-	cplx u; //even output
-	cplx v; //odd output
-	cplx w[n / 2]; //twiddle factor
-	uint32_t lg2_n = m;
-
-	if (n > N_WAVE)
-		return -1;
-
-	mr = 0;
-	nn = n - 1;
-	scale = 0;
-	r = 0;
-
-	/* decimation in time - re-order data */
-	/* variable scaling, depending upon data */
-	shift = 0;
-	for (i = 0; i < n; ++i) {
-		j = f[i].R;
-		if (j < 0)
-			j = -j;
-
-		m = f[i].I;
-		if (m < 0)
-			m = -m;
-
-		if (j > 16383 || m > 16383) {
-			shift = 1;
-			break;
-		}
-	}
-	if (shift)
-		++scale;
-	fft_exec_dif((intptr_t) f, (intptr_t) coeffs, n, lg2_n, shift);
-	Prepare_Data(f, n, m, 0);
-
-	return scale;
-}

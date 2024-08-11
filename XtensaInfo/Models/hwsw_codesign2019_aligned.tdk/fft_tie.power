@@ -15,8 +15,8 @@ power estimate during the early phases of the design and validate the
 estimated power using hardware synthesis tool as design attains maturity.
 ------------------------------ DISCLAIMER ------------------------------
 
- 1133717 TIE
-            4412 TIE_decoder (0.39%)
+ 1066299 TIE
+            4410 TIE_decoder (0.41%)
                0 TIE_AR_Regfile [additional power] (0.00%)
              419 TIE_w_r_State (0.04%)
              419 TIE_w_i_State (0.04%)
@@ -24,34 +24,34 @@ estimated power using hardware synthesis tool as design attains maturity.
              419 TIE_a_i_State (0.04%)
              419 TIE_b_r_State (0.04%)
              419 TIE_b_i_State (0.04%)
-            1290 TIE_u_r_State (0.11%)
-            1290 TIE_u_i_State (0.11%)
-            1290 TIE_v_r_State (0.11%)
-            1290 TIE_v_i_State (0.11%)
-            1290 TIE_q_r_State (0.11%)
-            1290 TIE_q_i_State (0.11%)
-            6018 TIE_wv_State (0.53%)
-           10157 TIE_av_State (0.90%)
-           10157 TIE_bv_State (0.90%)
+            1290 TIE_u_r_State (0.12%)
+            1290 TIE_u_i_State (0.12%)
+            1290 TIE_v_r_State (0.12%)
+            1290 TIE_v_i_State (0.12%)
+            1290 TIE_q_r_State (0.12%)
+            1290 TIE_q_i_State (0.12%)
+            6018 TIE_wv_State (0.56%)
+           10157 TIE_av_State (0.95%)
+           10157 TIE_bv_State (0.95%)
              237 TIE_done_State (0.02%)
              237 TIE_shift_State (0.02%)
-            1290 TIE_even_ix_State (0.11%)
-            1290 TIE_odd_ix_State (0.11%)
-            1290 TIE_even_const_State (0.11%)
-            1290 TIE_w_ix_State (0.11%)
-            1290 TIE_w_inc_State (0.11%)
-            1290 TIE_m_ix_State (0.11%)
-            1290 TIE_l_State (0.11%)
+            1290 TIE_even_ix_State (0.12%)
+            1290 TIE_odd_ix_State (0.12%)
+            1290 TIE_even_const_State (0.12%)
+            1290 TIE_w_ix_State (0.12%)
+            1290 TIE_w_inc_State (0.12%)
+            1290 TIE_m_ix_State (0.12%)
+            1290 TIE_l_State (0.12%)
              419 TIE_n_State (0.04%)
-            1290 TIE_n_2_State (0.11%)
+            1290 TIE_n_2_State (0.12%)
              419 TIE_lg2_n_State (0.04%)
-            1290 TIE_step_State (0.11%)
+            1290 TIE_step_State (0.12%)
              684 TIE_ptr_data_State (0.06%)
              684 TIE_ptr_w_State (0.06%)
-            2253 TIE_debug_reg_State (0.20%)
+            2253 TIE_debug_reg_State (0.21%)
              159 TIE_time_decimation_State (0.01%)
-            1185 TIE_qv_r_State (0.10%)
-            1185 TIE_qv_i_State (0.10%)
+            1185 TIE_qv_r_State (0.11%)
+            1185 TIE_qv_i_State (0.11%)
                0 TIE_slot1_semantic_NOP (0.00%)
               35 TIE_slot0_semantic_RUR_w_r (0.00%)
              105 TIE_slot0_semantic_WUR_w_r (0.01%)
@@ -77,12 +77,12 @@ estimated power using hardware synthesis tool as design attains maturity.
               35 TIE_slot0_semantic_WUR_q_r (0.00%)
               35 TIE_slot0_semantic_RUR_q_i (0.00%)
               35 TIE_slot0_semantic_WUR_q_i (0.00%)
-            2774 TIE_slot0_semantic_wv_wur_sem (0.24%)
-            1296 TIE_slot0_semantic_wv_rur_sem (0.11%)
-            2699 TIE_slot0_semantic_av_wur_sem (0.24%)
-            1296 TIE_slot0_semantic_av_rur_sem (0.11%)
-            2699 TIE_slot0_semantic_bv_wur_sem (0.24%)
-            1296 TIE_slot0_semantic_bv_rur_sem (0.11%)
+            2774 TIE_slot0_semantic_wv_wur_sem (0.26%)
+            1296 TIE_slot0_semantic_wv_rur_sem (0.12%)
+            2699 TIE_slot0_semantic_av_wur_sem (0.25%)
+            1296 TIE_slot0_semantic_av_rur_sem (0.12%)
+            2699 TIE_slot0_semantic_bv_wur_sem (0.25%)
+            1296 TIE_slot0_semantic_bv_rur_sem (0.12%)
               35 TIE_slot0_semantic_RUR_done (0.00%)
               35 TIE_slot0_semantic_WUR_done (0.00%)
               35 TIE_slot0_semantic_RUR_shift (0.00%)
@@ -117,39 +117,35 @@ estimated power using hardware synthesis tool as design attains maturity.
               35 TIE_slot0_semantic_WUR_debug_reg (0.00%)
               35 TIE_slot0_semantic_RUR_time_decimation (0.00%)
              105 TIE_slot0_semantic_WUR_time_decimation (0.01%)
-            1477 TIE_slot0_semantic_qv_r_wur_sem (0.13%)
+            1477 TIE_slot0_semantic_qv_r_wur_sem (0.14%)
              753 TIE_slot0_semantic_qv_r_rur_sem (0.07%)
-            1477 TIE_slot0_semantic_qv_i_wur_sem (0.13%)
+            1477 TIE_slot0_semantic_qv_i_wur_sem (0.14%)
              753 TIE_slot0_semantic_qv_i_rur_sem (0.07%)
-           66968 TIE_slot0_semantic_FFT_SIMPLE_MUL (5.91%)
-           84060 TIE_slot0_semantic_FFT_COM_MUL (7.41%)
+           84060 TIE_slot0_semantic_FFT_COM_MUL (7.88%)
               35 TIE_slot0_semantic_FFT_2_f_LD (0.00%)
-           87966 TIE_slot0_semantic_FFT_2_FFT (7.76%)
-          353105 TIE_slot0_semantic_FFT_8_FFT_DIT (31.15%)
-          353105 TIE_slot0_semantic_FFT_8_FFT_DIF (31.15%)
-            6420 TIE_slot0_semantic_FFT_BIT_REVERSE (0.57%)
+           87966 TIE_slot0_semantic_FFT_2_FFT (8.25%)
+          353105 TIE_slot0_semantic_FFT_8_FFT_DIT (33.12%)
+          356825 TIE_slot0_semantic_FFT_8_FFT_DIF (33.46%)
+            6420 TIE_slot0_semantic_FFT_BIT_REVERSE (0.60%)
             1214 TIE_slot0_semantic_FFT_INIT (0.11%)
-            7493 TIE_slot0_semantic_FFT_LOAD_EVEN (0.66%)
-            4946 TIE_slot1_semantic_FFT_LOAD_ODD (0.44%)
-           14360 TIE_slot0_semantic_FFT_LOAD_W (1.27%)
-            3190 TIE_slot0_semantic_FFT_STORE_EVEN (0.28%)
-           10079 TIE_slot1_semantic_FFT_STORE_ODD (0.89%)
-            8934 TIE_slot0_semantic_FFT_UPDATE (0.79%)
-            1386 TIE_slot0_operand_opnd_FFT_SIMPLE_MUL_b (0.12%)
-            1386 TIE_slot0_operand_opnd_FFT_SIMPLE_MUL_a (0.12%)
-            1386 TIE_slot0_operand_opnd_FFT_SIMPLE_MUL_c (0.12%)
-            1386 TIE_slot0_operand_opnd_FFT_COM_MUL_b_i (0.12%)
-            1386 TIE_slot0_operand_opnd_FFT_COM_MUL_a_i (0.12%)
-            1386 TIE_slot0_operand_opnd_FFT_COM_MUL_b_r (0.12%)
-            1386 TIE_slot0_operand_opnd_FFT_COM_MUL_a_r (0.12%)
-            1386 TIE_slot0_operand_opnd_FFT_BIT_REVERSE_n (0.12%)
-            1386 TIE_slot0_operand_opnd_FFT_UPDATE_done_out (0.12%)
-           39978 TIE toplogic for muxing and pipeline management (3.53%)
+            7493 TIE_slot0_semantic_FFT_LOAD_EVEN (0.70%)
+            4946 TIE_slot1_semantic_FFT_LOAD_ODD (0.46%)
+           14360 TIE_slot0_semantic_FFT_LOAD_W (1.35%)
+            3190 TIE_slot0_semantic_FFT_STORE_EVEN (0.30%)
+           10079 TIE_slot1_semantic_FFT_STORE_ODD (0.95%)
+            8934 TIE_slot0_semantic_FFT_UPDATE (0.84%)
+            1386 TIE_slot0_operand_opnd_FFT_COM_MUL_b_i (0.13%)
+            1386 TIE_slot0_operand_opnd_FFT_COM_MUL_a_i (0.13%)
+            1386 TIE_slot0_operand_opnd_FFT_COM_MUL_b_r (0.13%)
+            1386 TIE_slot0_operand_opnd_FFT_COM_MUL_a_r (0.13%)
+            1386 TIE_slot0_operand_opnd_FFT_BIT_REVERSE_n (0.13%)
+            1386 TIE_slot0_operand_opnd_FFT_UPDATE_done_out (0.13%)
+           39968 TIE toplogic for muxing and pipeline management (3.75%)
 
 
   ACTIVATED BLOCK POWER BEGIN
 
-  decoder     4.412 toplogic   39.978
+  decoder     4.410 toplogic   39.968
   Instruction                            core semantic    state  regfile
   RUR_w_r                                 nop    0.035    0.000    0.000
   WUR_w_r                                 nop    0.105    0.419    0.000
@@ -241,12 +237,11 @@ estimated power using hardware synthesis tool as design attains maturity.
   WUR_qv_i_0                              nop    1.477    1.185    0.000
   RUR_qv_i_1                              nop    0.753    0.000    0.000
   WUR_qv_i_1                              nop    1.477    1.185    0.000
-  FFT_SIMPLE_MUL                          nop   66.968    0.000    0.000
   FFT_COM_MUL                             nop   84.060    0.000    0.000
   FFT_2_f_LD                              nop    0.035    2.580    0.000
   FFT_2_FFT                               nop   87.966    5.160    0.000
   FFT_8_FFT_DIT                           nop  353.105   22.894    0.000
-  FFT_8_FFT_DIF                           nop  353.105   22.894    0.000
+  FFT_8_FFT_DIF                           nop  356.825   22.894    0.000
   FFT_BIT_REVERSE                         nop    6.420    0.000    0.000
   FFT_INIT                                nop    1.214   10.557    0.000
   FFT_UPDATE                              nop    8.934    8.214    0.000
@@ -348,12 +343,11 @@ estimated power using hardware synthesis tool as design attains maturity.
   wur.qv_i_0                              nop    1.379
   rur.qv_i_1                              nop    0.673
   wur.qv_i_1                              nop    1.379
-  fft_simple_mul                          nop   59.823
   fft_com_mul                             nop   75.091
   fft_2_f_ld                              nop    0.160
   fft_2_fft                               nop   78.838
   fft_8_fft_dit                           nop  316.573
-  fft_8_fft_dif                           nop  316.573
+  fft_8_fft_dif                           nop  319.896
   fft_bit_reverse                         nop    5.735
   fft_init                                nop    1.612
   fft_load_even                          load    7.314
@@ -368,4 +362,4 @@ estimated power using hardware synthesis tool as design attains maturity.
 
 
 
-cpu_seconds 0.23
+cpu_seconds 0.05
